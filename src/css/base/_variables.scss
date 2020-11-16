@@ -1,50 +1,84 @@
+
+
 //==============================================================================
-// Configuration
-//==============================================================================
-@import 'base/fonts';
-@import 'base/variables';
-@import 'base/mixins-layout';
-@import 'base/mixins-misc';
-@import 'base/global';
-@import 'base/helpers';
-//==============================================================================
-// Reset
+// Breakpoints
 //==============================================================================
 
-@import 'base/normalize';
-@import 'base/reset';
+$mobile: 770px !default;
+$tablet: 1000px !default;
+$desktop: 1200px !default;
+$desktop-wide: 1600px !default;
+
+
+//==============================================================================
+// Colors
+
+//Raw Colors
+$color-swatch-headstand-1 : teal;
+$color-swatch-headstand-2 : #568203 ;
+$color-swatch-headstand-3 : #296192;
+
+//Applied Colors
+$background-global: $color-swatch-headstand-1;
+$text-color-primary:  white;
+
+//==============================================================================
+// fonts
+//==============================================================================
+
+$font-default: Quicksand;
+$font-fallback: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$font-serif-fallback: Georgia, serif;
+$line-height-global: initial;
+
+//==============================================================================
+// Spacing
+//==============================================================================
+	
+// $container-margin-lg: 10rem;
 
 //==============================================================================
 // Components
 //==============================================================================
 
-// @import 'components/wp-classes';
-@import 'components/hero';
-@import 'components/effects';
-@import 'components/nav';
+//Header____________
 
-//==============================================================================
-// Layouts
-//==============================================================================
-@import "layouts/content";   // Keep at bottom of file?
-@import 'layouts/footer';
-@import 'layouts/header';
-@import 'layouts/pages';
-@import 'layouts/posts';
+$header-logo-visibility: hidden;
+$header-affix: fixed;
+$header-padding: 24px;
+$header-height: 64px;
+
+//Footer____________
+
+$footer-height: 96px;
+$footer-text-align: center;
+$footer-content-justify: center;
+$footer-affix: relative;
+
+//Hero_____________
+
+
+//Nav_____________
+
+
 //==============================================================================
 // Pages
 //==============================================================================
-@import 'pages/home';
-@import 'pages/404';
 
+//Generic Page_______________
+
+
+//Home______________
+
+
+//Posts_____________
+
+
+
+//404______________
 
 //==============================================================================
-// Plugins
+// FX
 //==============================================================================
 
-
-//==============================================================================
-// Utilities
-//==============================================================================
-
-@import 'utilities/tinymce';
+$fade-global: 1s;
