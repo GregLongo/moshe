@@ -1,0 +1,5 @@
+<div>
+	{%  for image in post.meta('parallax-gallery') %}
+		<img src="{{Image(image)}}" />
+	{% endfor %}
+</div>

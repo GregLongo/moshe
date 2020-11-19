@@ -1,0 +1,8 @@
+{% extends "base.twig" %}
+ 	{% block content %}
+ 		<div class="slideshow">
+	 		{% for image in page.meta('gallery') %}
+				<img src="{{image(image)}}" />
+			{% endfor %}
+		</div>
+	{% endblock %}
