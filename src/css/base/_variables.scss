@@ -17,10 +17,11 @@ $desktop-wide: 1600px !default;
 $color-swatch-headstand-1 : teal;
 $color-swatch-headstand-2 : #568203 ;
 $color-swatch-headstand-3 : #296192;
+$charcoal: #333333;
 
 //Applied Colors
-$background-global: $color-swatch-headstand-1;
-$text-color-primary:  white;
+$background-global: white;
+$text-color-primary:  $charcoal;
 
 //==============================================================================
 // fonts

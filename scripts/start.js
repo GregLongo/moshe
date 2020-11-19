@@ -16,8 +16,8 @@ const bundler = webpack(webpackConfig);
 const bsOptions = {
   files: [
     `${PATHS.base()}/compiled/css/*.css`,
-    // `${PATHS.base()}/templates/*.twig`,
-    // `${PATHS.base()}/*.php`,
+    `${PATHS.base()}/templates/*.twig`,
+    `${PATHS.base()}/*.php`,
     {
       fn: synchronize
     }

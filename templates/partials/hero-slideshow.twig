@@ -1,0 +1,8 @@
+<div class="slider">
+	{% for image in post.meta('home-slider') %}
+		<div>
+			<img src="{{ Image(image) }}" />
+			<span>{{ Image(image).caption }}</span>
+		</div>
+	{% endfor %}
+</div>
