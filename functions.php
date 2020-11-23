@@ -21,6 +21,7 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+		add_theme_support('custom-logo');
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
@@ -37,6 +38,7 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
+		$context['custom_logo_url'] = wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'large');
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 		return $context;
@@ -54,6 +56,7 @@ new StarterSite();
 
 function _moshe_assets() {
 	wp_enqueue_script('moshe-js', get_stylesheet_directory_uri() . '/compiled/js/main.js');
+	wp_enqueue_script('burger-menu-script-js', get_stylesheet_directory_uri() . '/src/js/burger-menu-script.js');
 }
 add_action( 'wp_enqueue_scripts', '_moshe_assets' );
 
@@ -346,3 +349,5 @@ add_filter( 'page_row_actions', 'moshe_duplicate_post_link', 10, 2 );
 add_filter( 'post_row_actions', 'moshe_duplicate_post_link', 10, 2 );
 
 add_post_type_support( 'page', 'excerpt' );
+
+

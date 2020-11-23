@@ -1,0 +1,18 @@
+.header{
+	z-index: $header-z;
+	position: $header-affix;
+	height: $header-height;
+	background: $header-bg;
+	width: 100%;
+	padding-left: $header-padding-left;
+	padding-right: $header-padding-right;
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;	
+	}
+	&__logo{
+		height: $header-height;
+		display: flex;
+	}
+}

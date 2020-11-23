@@ -22,33 +22,34 @@ $charcoal: #333333;
 //Applied Colors
 $background-global: white;
 $text-color-primary:  $charcoal;
-
+$text-color-light: white;
 //==============================================================================
 // fonts
 //==============================================================================
 
-$font-default: Quicksand;
-$font-fallback: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$font-headings: Quicksand;
+$font-text: Ebrima;
+$font-fallback: -apple-system, BlinkMacSystemFont, 'Open Sans', Arial, Helvetica, sans-serif;
 $font-serif-fallback: Georgia, serif;
 $line-height-global: initial;
 
 //==============================================================================
 // Spacing
 //==============================================================================
-	
-// $container-margin-lg: 10rem;
-
+$container-margin-large: 120px;
+$section-spacer-default: 120px;
 //==============================================================================
 // Components
 //==============================================================================
 
 //Header____________
 
-$header-logo-visibility: hidden;
-$header-affix: fixed;
-$header-padding: 24px;
-$header-height: 64px;
-
+$header-affix: absolute;
+$header-padding-left: 64px;
+$header-padding-right: 64px;
+$header-height: 120px;
+$header-z: 10;
+$header-bg: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
 //Footer____________
 
 $footer-height: 96px;
@@ -58,10 +59,23 @@ $footer-affix: relative;
 
 //Hero_____________
 
-
+$slider-height: 95vh;
+$slider-content-vertical: flex-end;
+$slider-content-horizontal: flex-end;
+$slider-content-margin-right: 64px;
+$slider-content-margin-bottom: 40px;
+$slider-caption-font-size: 96px;
+$slider-caption-font-weight: 200;
+$slider-caption-margin-bottom: 40px;
+$slider-button-padding: 24px;
+$slider-button-font: $font-text ;
+$slider-button-font-size: 32px;
+$slider-button-border: $text-color-light solid 2px ;
+$slider-scrim: linear-gradient(160deg, rgba(31,142,163,0) 0%,rgba(31,142,163,0) 40%,rgba(31,142,163,1) 80%,rgba(31,142,163,1) 100%);
 //Nav_____________
-
-
+$nav-link-color: $text-color-light;
+$nav-link-size: 24px;
+$nav-link-margin: 16px;
 //==============================================================================
 // Pages
 //==============================================================================

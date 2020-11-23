@@ -1,0 +1,9 @@
+.parallax-gallery{
+	margin: $container-margin-large;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-gap: 1em;
+	img{
+		width: calc(100% - 1em);
+	}
+}

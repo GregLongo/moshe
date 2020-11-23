@@ -1,0 +1,40 @@
+.class-gallery{
+	//this would be cooler to do with grid, but ces la vie, deadlines
+	display: flex;
+	flex-direction: row;
+	margin: $container-margin-large;
+	flex-wrap: wrap;
+	&__item{
+
+		height: 300px;
+		margin-bottom: 1.5vw;
+		overflow:hidden;
+		 &:nth-child(1){
+		 	width:70%;
+		 }
+		 &:nth-child(2){
+		 	width:28%;
+		 	margin-left: 2%;
+		 }
+		 &:nth-child(3){
+		 	width:30%;
+		 }
+		  &:nth-child(4){
+		  	width:68%;
+		  	margin-left: 2%;
+		 }
+		}
+	&__label{
+		color: $text-color-light;
+		font-family: $font-text;
+		font-size: 28px;
+	}
+	&__scrim{
+		display:flex;
+		align-items: flex-end;
+		padding: 24px;
+		height:100%;
+		width:100%;
+		background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+	}
+}

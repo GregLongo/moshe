@@ -1,0 +1,56 @@
+.hamburger{
+	outline: none !important;
+	@include tablet {
+			display: none !important;
+	}
+}
+
+
+
+.nav{
+  overflow: hidden;
+  	  display:none;
+  	  		transition: padding .3s ease;
+
+	 a {
+	  color: white;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  display: block;
+	}
+	&.is-active{
+  		display:flex;
+  		position: absolute;
+  		background: teal;
+  		width: 100%;
+  		height: 400px;
+  		left: 0;
+  		top: 0;
+  	}
+	@include tablet {
+			display:flex;
+			ul{
+				display: flex;
+			}
+		a{
+			color: $nav-link-color;
+			margin-right: $nav-link-margin;
+			font-family: $font-text;
+			font-size: $nav-link-size;
+		}
+	}
+}
+
+.push {
+	.wrapper{
+		padding-top: 400px;
+		transition: padding .3s ease;
+	}
+	.header__logo{
+		margin-top: 400px;
+	}
+	.hamburger{
+		margin-top: 400px;
+	}
+}

@@ -17,6 +17,7 @@ const bsOptions = {
   files: [
     `${PATHS.base()}/compiled/css/*.css`,
     `${PATHS.base()}/templates/*.twig`,
+    `${PATHS.base()}/templates/partials/*.twig`,
     `${PATHS.base()}/*.php`,
     {
       fn: synchronize
