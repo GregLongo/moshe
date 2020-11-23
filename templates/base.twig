@@ -9,11 +9,25 @@
 	<body class="{{body_class}}" data-template="base.twig">
 		<header class="header" >
 			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+				<div class="header__wrapper">
+				{% if custom_logo_url %} 
+							<a class="header__logo-link" href="{{site.url}}" rel="home">
+								<img class="header__logo" src="{{ custom_logo_url }}" />
+							</a>
+				{% else %}
+					<h1 class="header__logo" role="banner">
+						<a class="header__logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
+				{%  endif %}
+
+					<button class="hamburger hamburger--collapse" type="button">
+					  <span class="hamburger-box">
+					    <span class="hamburger-inner"></span>
+					  </span>
+					</button>  
+
+
+					<nav id="nav-main" class="nav nav--main" role="navigation">
 						{% include "menu.twig" with {'menu': menu.get_items} %}
 					</nav><!-- #nav -->
 				</div>

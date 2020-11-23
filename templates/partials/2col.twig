@@ -1,0 +1,13 @@
+<div>
+	{% if direction == 'rtl' %}
+			<img src="{{ Image(post.meta('2col-img')).src('large') }}" />
+		<h1>
+			{{ post.meta('2col-text') }}
+		</h1>
+	{% else %}
+		<h1>
+			{{ post.meta('2col-text') }}
+		</h1>
+			<img src="{{ Image(post.meta('2col-img')).src('large') }}" />
+	{% endif %}
+</div>

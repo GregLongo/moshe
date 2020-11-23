@@ -1,0 +1,41 @@
+.wysiwyg{
+	font-family: $font-text;
+	font-size: 20px;
+	font-weight: 200;
+	&--home{
+	margin-left: $container-margin-large;
+	margin-right: $container-margin-large;
+	margin-top: $section-spacer-default;
+	margin-bottom: $section-spacer-default;
+	}
+}
+
+.title-large--home{
+	text-align: center;
+}
+
+.qotd{
+	background: $color-swatch-headstand-3;
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 48px;
+	font-family: $font-text;
+	font-size: 32px;
+	color: white;
+	font-style: italic;
+}
+
+.promo-video{
+	width: 60%;
+	video{
+		height:360px;
+	}
+}
+
+.home__misc{
+	margin: $container-margin-large;
+	display: flex;
+	height: 360px;
+}

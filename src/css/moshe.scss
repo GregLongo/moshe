@@ -22,7 +22,11 @@
 @import 'components/hero';
 @import 'components/effects';
 @import 'components/nav';
-
+@import 'components/class-gallery';
+@import 'components/anim-section';
+@import 'components/parallax-gallery';
+@import 'components/cta-parallax';
+@import 'components/hamburger';
 //==============================================================================
 // Layouts
 //==============================================================================
@@ -43,7 +47,8 @@
 //==============================================================================
 @import "~slick-carousel/slick/slick";
 @import "~slick-carousel/slick/slick-theme";
-
+@import 'plugins/zoom';
+@import 'plugins/hamburgers/hamburgers';
 //==============================================================================
 // Utilities
 //==============================================================================

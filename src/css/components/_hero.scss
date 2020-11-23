@@ -1,2 +1,40 @@
-
-
+.slider{
+	&__slide{
+		height: $slider-height;
+		background-size: cover;
+		display: flex !important;
+		align-items: $slider-content-vertical;
+		justify-content: $slider-content-horizontal;
+	}
+	&__cta{
+		z-index: 11;
+		margin-right: $slider-content-margin-right;
+		margin-bottom: $slider-content-margin-bottom;
+	}
+	&__caption{
+		font-size: $slider-caption-font-size;
+		font-family: $font-headings;
+		font-weight: $slider-caption-font-weight;
+		color: $text-color-light;
+		white-space: nowrap;
+		margin-bottom: $slider-caption-margin-bottom;
+	}
+	&__button{
+		z-index: 11;
+		border: $slider-button-border;
+		padding: $slider-button-padding;
+		color: $text-color-light;
+		font-family: $font-text;
+		font-size: $slider-button-font-size;
+		float: right;
+	}
+	&__scrim{
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		right: 0;
+		background: $slider-scrim;
+		position: absolute;
+	}
+}
