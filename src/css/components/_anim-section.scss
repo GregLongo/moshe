@@ -1,22 +1,34 @@
 .anim-section{
+	width: 100%;
 	&__animation{
 		text-align: center;
 	}
-	margin: $container-margin-large;
 	&__row{	
-		padding: $container-margin-large 48px $container-margin-large 48px ;
-		display: grid;
+		@include tablet{
 		grid-template-columns: 50% 50%;
-		margin-bottom: $container-margin-large;
+		}
+		padding: (2 * $section-spacer-default) $container-margin-large ;
+		grid-template-columns: 100%;
+		display: grid;
 		align-items: center;
 		&:nth-child(2){
-			background-color: teal;
+		background: $color-swatch-headstand-2;
+		background-size: cover;
+		background-repeat: no-repeat;
 			color: white;
 			span{
-				order: 1;
+				order: 2;
 			}
 			.anim-section__animation{
-				order: 2;
+				order: 1;
+			}
+			@include tablet{
+				span{
+					order: 1;
+				}
+				.anim-section__animation{
+					order: 2;
+				}
 			}
 		}
 		p{	

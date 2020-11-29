@@ -1,12 +1,22 @@
 .wysiwyg{
+	// background: url(../images/goldhalfcurve.png);
+	background: $color-swatch-headstand-2;
+	background-size: cover;
 	font-family: $font-text;
-	font-size: 20px;
 	font-weight: 200;
+	color: $intro-paragraph-color;
 	&--home{
-	margin-left: $container-margin-large;
-	margin-right: $container-margin-large;
-	margin-top: $section-spacer-default;
-	margin-bottom: $section-spacer-default;
+		font-size: $home-intro-text;
+		font-weight: $home-intro-text-weight;
+	@include tablet{
+		h1{
+			margin-top:0;
+		}
+		padding-left: $container-margin-large;
+		padding-right: $container-margin-large;
+		padding-top: $section-spacer-default;
+		padding-bottom: 2 * $section-spacer-default;
+		}
 	}
 }
 
@@ -15,27 +25,38 @@
 }
 
 .qotd{
-	background: $color-swatch-headstand-3;
-	width: 40%;
+	background: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 48px;
 	font-family: $font-text;
 	font-size: 32px;
-	color: white;
+	color: $color-swatch-headstand-4;
 	font-style: italic;
 }
 
 .promo-video{
+	@include mobile{
 	width: 60%;
+	}
+	width: 100%;
 	video{
-		height:360px;
+		width: 360px;
+		@include tablet{
+			width: initial;	
+		}
 	}
 }
 
 .home__misc{
-	margin: $container-margin-large;
-	display: flex;
-	height: 360px;
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	margin-top: $section-spacer-default;
+	margin-bottom: $section-spacer-default * 2;
+	@include mobile{
+		display: flex;
+		height: 360px;		
+	}
+	display: block;		
 }

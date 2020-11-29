@@ -10,8 +10,7 @@
 .nav{
   overflow: hidden;
   	  display:none;
-  	  		transition: padding .3s ease;
-
+  	  transition: padding .3s ease;
 	 a {
 	  color: white;
 	  padding: 14px 16px;
@@ -34,10 +33,12 @@
 				display: flex;
 			}
 		a{
-			color: $nav-link-color;
+			color: $nav-link-color;;
+			font-weight: $nav-link-weight;
 			margin-right: $nav-link-margin;
-			font-family: $font-text;
 			font-size: $nav-link-size;
+			font-family: $font-headings;
+
 		}
 	}
 }

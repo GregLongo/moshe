@@ -3,13 +3,14 @@ body{
 	text-decoration: none;
 	// color: initial;
 	}
+	background-color: $background-global;
 
 }
 
 //probably not best practice for font hierarchy. decorator classes? mixins?
 h1{
-	font-family: $font-headings;
-	font-size: 56px;
+	font-family: $font-gothic;
+	font-size: 72px;
 	font-weight: 200;
 }
 
@@ -24,5 +25,6 @@ a{
 }
 
 p{
+
 }
 

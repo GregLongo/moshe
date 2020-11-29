@@ -351,3 +351,12 @@ add_filter( 'post_row_actions', 'moshe_duplicate_post_link', 10, 2 );
 add_post_type_support( 'page', 'excerpt' );
 
 
+register_sidebar( array(
+  'name' => __( 'Footer Widget Area', 'moshe' ),
+  'id' => 'footer-widget-area',
+  'description' => __( ' footer widget area', 'moshe' ),
+  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h3 class="widget-title">',
+  'after_title' => '</h3>',
+)); 
