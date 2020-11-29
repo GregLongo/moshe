@@ -1,10 +1,32 @@
 .footer{
-	height: 200px;
+	height: 300px;
 	background-color: $color-swatch-headstand-2;
 	display: flex;
+	&__social{
+		display:flex;
+		justify-content: space-between;
+		&-wrapper{
+			color: white;
+			text-align: center;
+			width: 50%;	
+			// background-color:lime;
+			padding-left:48px;
+			padding-right: 48px;
+			h2{
+				font-family: $font-gothic !important;	
+			}
+		}
+		&-logo svg{
+			font-size: 56px;
+		}
+	}
 }
 .copyright{	
 	color: white;
-	display:flex;
+	display:block;
 	align-self: flex-end;
+	margin-left: -50%;
+	padding-left: 56px;
+	padding-bottom: 8px;
 }
+

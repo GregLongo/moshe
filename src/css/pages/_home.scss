@@ -8,7 +8,6 @@
 	&--home{
 		font-size: $home-intro-text;
 		font-weight: $home-intro-text-weight;
-	@include tablet{
 		h1{
 			margin-top:0;
 		}
@@ -16,7 +15,6 @@
 		padding-right: $container-margin-large;
 		padding-top: $section-spacer-default;
 		padding-bottom: 2 * $section-spacer-default;
-		}
 	}
 }
 
