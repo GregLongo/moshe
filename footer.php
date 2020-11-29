@@ -7,6 +7,8 @@
  * WooCommerce) you can delete this file and header.php
  */
 
+$timberContext['footer_widgets'] = Timber::get_widgets( 'footer_widgets' );
+
 $timberContext = $GLOBALS['timberContext'];
 if ( ! isset( $timberContext ) ) {
 	throw new \Exception( 'Timber context not set in footer.' );

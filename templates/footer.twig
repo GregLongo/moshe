@@ -1,1 +1,11 @@
-Copyright {{"now"|date('Y')}}
+<div class="footer">
+	<div class="footer-social">
+	{% for item in post.meta('social_media') %}
+		<div class="social-logo">
+			<i class="fa fa-'{{ item.social_channel }} '" aria-hidden="true"></i>
+		</div>
+	{% endfor %}
+	</div>
+		<span class="copyright" >Copyright {{"now"|date('Y')}} Feldenkrais San Diego | Genius of Movement</span>
+		{# <div>{{ widget_set_1 }}</div> #}
+</div>

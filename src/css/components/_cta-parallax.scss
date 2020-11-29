@@ -1,7 +1,10 @@
 .cta-parallax{
 	height: 400px;
+	background-color: $color-swatch-headstand-2;
 	background-size:cover;
 	background-affix: fixed;
+	background-position: -50%;
+	background-blend-mode: multiply;
 	display: flex;
 	justify-content: center;
 	align-items: center;

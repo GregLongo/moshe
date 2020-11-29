@@ -1,29 +1,29 @@
 <div class="class-gallery">
 	<div class="class-gallery__item" style="background-image: url({{ Image(post.meta('class-primary-img')).src('large') }})">
 			<div class="class-gallery__scrim">
-				<a href="{{post.meta('class-primary-link')}}">
 				<span class="class-gallery__label"> {{ post.meta('class-primary-label') }}</span>
+				<a class="class-gallery__link" href="{{post.meta('class-primary-link')}}">Learn More
 				</a>
 			</div>
 	</div>
 	<div class="class-gallery__item" style="background-image: url({{ Image(post.meta('class-secondary-img')).src('large') }})">
 		<div class="class-gallery__scrim">
-			<a href="{{post.meta('class-secondary-link')}}">
-				<span class="class-gallery__label"> {{ post.meta('class-secondary-label') }}</span>
+			<span class="class-gallery__label"> {{ post.meta('class-secondary-label') }}</span>
+			<a class="class-gallery__link" href="{{post.meta('class-secondary-link')}}">Learn More
 			</a>
 		</div>
 	</div>
 	<div class="class-gallery__item" style="background-image: url({{ Image(post.meta('class-tertiary-img')).src('large') }})">
 			<div class="class-gallery__scrim">
-				<a href="{{post.meta('class-tertiary-link')}}">
-					<span class="class-gallery__label"> {{ post.meta('class-tertiary-label') }}</span>
+				<span class="class-gallery__label"> {{ post.meta('class-tertiary-label') }}</span>
+				<a class="class-gallery__link" href="{{post.meta('class-tertiary-link')}}">Learn More
 				</a>
 			</div>
 	</div>
 	<div class="class-gallery__item" style="background-image: url({{ Image(post.meta('class-quaternary-img')).src('large') }})">
 			<div class="class-gallery__scrim">
-			<a href="{{post.meta('class-quaternary-link')}}">
-				<span class="class-gallery__label"> {{ post.meta('class-quaternary-label') }}</span>
+				<span class="class-gallery__label"> {{ post.meta('class-quaternary-label') }}</span>		
+			<a class="class-gallery__link" href="{{post.meta('class-quaternary-link')}}">Learn More
 			</a>
 			</div>
 	</div>

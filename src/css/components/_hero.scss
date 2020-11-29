@@ -1,40 +1,70 @@
 .slider{
 	&__slide{
-		height: $slider-height;
+		height: $slider-height-mobile;
 		background-size: cover;
-		display: flex !important;
-		align-items: $slider-content-vertical;
-		justify-content: $slider-content-horizontal;
+		background-position: center center;
+		@include tablet {
+			height: $slider-height;
+			display: flex !important;
+			align-items: $slider-content-vertical;
+			justify-content: $slider-content-horizontal;	
+		}
 	}
 	&__cta{
 		z-index: 11;
-		margin-right: $slider-content-margin-right;
-		margin-bottom: $slider-content-margin-bottom;
+		margin-top:80%;
+		@include tablet{
+			margin-right: $slider-content-margin-right;
+			margin-bottom: $slider-content-margin-bottom;	
+		}
 	}
 	&__caption{
-		font-size: $slider-caption-font-size;
-		font-family: $font-headings;
+		z-index: 11;
+		position: relative;
+		text-align: center;
+		font-size: 3em;
+		whitespace: wrap;
+		font-family: $font-gothic;
 		font-weight: $slider-caption-font-weight;
 		color: $text-color-light;
-		white-space: nowrap;
 		margin-bottom: $slider-caption-margin-bottom;
+		@include tablet{
+			font-size: $slider-caption-font-size;
+			white-space: nowrap;
+			text-align: initial;
+			position: initial;
+		}
 	}
 	&__button{
 		z-index: 11;
+		position: relative;
+		background: $slider-button-background;
 		border: $slider-button-border;
 		padding: $slider-button-padding;
 		color: $text-color-light;
 		font-family: $font-text;
 		font-size: $slider-button-font-size;
-		float: right;
+		width: $slider-button-width-mobile;
+		margin: auto;
+		whitespace: nowrap;
+		@include tablet{
+			width: unset;
+			float: right;			
+		}
 	}
-	&__scrim{
+	&__scrim{//i need a better mobile solution
 		z-index: 1;
 		height: 100%;
 		width: 100%;
 		left: 0;
 		right: 0;
-		background: $slider-scrim;
+		background: $slider-scrim-mobile;
+		opacity: .8;
 		position: absolute;
+		@include tablet{
+			opacity: 1;
+			height: 100%;
+			background: $slider-scrim;
+		}
 	}
 }
