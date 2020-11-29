@@ -1,0 +1,11 @@
+.2col{
+	&__wrapper{
+		display: flex;
+	}
+	&__text{
+		flex:50%;
+	}
+	&__img{
+		flex:50%;
+	}
+}
