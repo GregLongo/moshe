@@ -1,6 +1,6 @@
 .header{
 	z-index: $header-z;
-	position: $header-affix;
+	position: $header-affix-page;
 	height: $header-height;
 	background: $header-bg;
 	width: 100%;
@@ -13,10 +13,8 @@
 		height: 100%;
 	}
 	&__logo{
-		width: 90vw;
+		width: 70vw;
 		display: block;
-		position: absolute;
-		left: 5vw;
 		top:$header-logo-top-mobile;
 		@include tablet{
 			height: $header-logo-height;

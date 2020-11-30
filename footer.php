@@ -7,7 +7,6 @@
  * WooCommerce) you can delete this file and header.php
  */
 
-$timberContext['footer_widgets'] = Timber::get_widgets( 'footer_widgets' );
 
 $timberContext = $GLOBALS['timberContext'];
 if ( ! isset( $timberContext ) ) {
@@ -17,3 +16,5 @@ $timberContext['content'] = ob_get_contents();
 ob_end_clean();
 $templates = array( 'page-plugin.twig' );
 Timber::render( $templates, $timberContext );
+
+$timberContext['options'] = get_fields('options');
