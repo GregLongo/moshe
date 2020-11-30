@@ -360,3 +360,16 @@ register_sidebar( array(
   'before_title' => '<h3 class="widget-title">',
   'after_title' => '</h3>',
 )); 
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+};
+
+add_filter( 'timber_context', 'mytheme_timber_context'  );
+
+function mytheme_timber_context( $context ) {
+    $context['options'] = get_fields('option');
+    return $context;
+}

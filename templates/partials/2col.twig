@@ -1,16 +1,16 @@
-<div class="2col__wrapper">
+<div class="two-col__wrapper">
 	{% if direction == 'rtl' %}
-		<div class="2col_img">
+		<div class="two-col__img">
 			<img src="{{ Image(post.meta('2col-img')).src('large') }}" />
 		</div>
-		<div class="2col_text">
+		<div class="two-col__text">
 			{{ post.meta('2col-text') }}
 		</div>
 	{% else %}
-		<div class="2col_text">
+		<div class="two-col__text">
 			{{ post.meta('2col-text') }}
 		</div>
-		<div class="2col_img">
+		<div class="two-coll__img">
 			<img src="{{ Image(post.meta('2col-img')).src('large') }}" />
 		</div>
 	{% endif %}

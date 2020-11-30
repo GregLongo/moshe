@@ -1,0 +1,47 @@
+.about{
+	&__title{
+		padding-bottom: $section-spacer-default / 2;
+		text-align: center;
+	}
+	&__sculpture{
+		display: flex;
+		align-items: center;
+		width: 100vw;
+		padding-left: $container-margin-large;
+		padding-right: $container-margin-large;
+		flex-direction: column;
+		@include tablet{
+			flex-direction: row;
+			margin-top: $section-spacer-default;
+			margin-bottom: $section-spacer-default;
+		}
+	}
+}
+
+
+.wysiwyg--about{
+	flex: 100%;
+	font-family: $font-text;
+	font-weight: 200;
+	font-size: $home-intro-text;
+	font-weight: $home-intro-text-weight;
+	padding-top: $section-spacer-default;
+	padding-bottom: 2 * $section-spacer-default;
+	h1{
+		margin-top:0;
+	}
+}
+
+//where did this come from?
+.title-large--about{
+	display: none;
+}
+
+.mission{
+	padding-top: $section-spacer-default;
+	padding-bottom: $section-spacer-default;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	background-size: cover;
+	background-position: -50%;
+}

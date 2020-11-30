@@ -1,11 +1,28 @@
-.2col{
+.two-col{
 	&__wrapper{
 		display: flex;
-	}
-	&__text{
-		flex:50%;
+		margin-right: $container-margin-large;
+		margin-left: $container-margin-large;
+		flex-direction: column;
+		@include tablet{
+			flex-direction: row;
+		}
 	}
 	&__img{
 		flex:50%;
+		text-align: center;
+		@include tablet{
+			text-align: unset;
+		} 
+		img{
+			width: 80%;
+		}
+	}
+	&__text{
+		flex:50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 4em;
 	}
 }

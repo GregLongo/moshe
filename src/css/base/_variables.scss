@@ -52,7 +52,8 @@ $section-spacer-default: 120px;
 
 //Header____________
 
-$header-affix: absolute;
+$header-affix-home: absolute;
+$header-affix-page: relative;
 $header-padding-left: 64px;
 $header-padding-right: 64px;
 $header-height: 200px;

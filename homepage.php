@@ -9,3 +9,4 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 Timber::render( 'homepage.twig' , $context );
+$timberContext['options'] = get_fields('options');

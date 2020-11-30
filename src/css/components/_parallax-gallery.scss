@@ -1,20 +1,32 @@
 .parallax-gallery{
 	@include tablet{
 		grid-template-columns: repeat(4, 25%);
-		grid-gap: 1em;
 	}
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: $section-spacer-default * 2;
 	margin-bottom: $section-spacer-default * 2;
 	display: grid;
-	grid-gap: 1em;
 	justify-content:center;
-	img{
-		display: block;
+	&__img{
 		width: 300px;
-		@include tablet{
-			width: calc(100% - 1em);
+		display:flex;
+		flex-shrink:1;
+		img{
+			display: block;
+			filter: saturate(0) contrast(.9);
+			mix-blend-mode:hard-light;
+			@include tablet{
+				width: calc(100%);
+			}
 		}
 	}
+
+}
+
+.parallax-gallery__img:nth-child(odd){
+	background-color: $color-swatch-headstand-3;
+}
+.parallax-gallery__img:nth-child(even){
+	background-color: $color-swatch-headstand-4;
 }
