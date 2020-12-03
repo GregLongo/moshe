@@ -1,7 +1,9 @@
 .parallax-gallery{
 	@include tablet{
-		grid-template-columns: repeat(4, 25%);
+		grid-template-columns: repeat(4, 1fr);
 	}
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: $section-spacer-default * 2;
@@ -12,13 +14,14 @@
 		width: 300px;
 		display:flex;
 		flex-shrink:1;
+		@include tablet{
+			width: 100%;
+		}
 		img{
+			width: 100%;
 			display: block;
 			filter: saturate(0) contrast(.9);
 			mix-blend-mode:hard-light;
-			@include tablet{
-				width: calc(100%);
-			}
 		}
 	}
 

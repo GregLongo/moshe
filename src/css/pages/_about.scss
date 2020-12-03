@@ -1,7 +1,6 @@
 .about{
 	&__title{
-		padding-bottom: $section-spacer-default / 2;
-		text-align: center;
+		//generic styles moved to page__title
 	}
 	&__sculpture{
 		display: flex;

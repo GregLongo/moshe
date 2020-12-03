@@ -2,8 +2,11 @@
 
 {% block content %}
 	{% include "partials/hero-class.twig" %}
-	{% include "partials/windowpane.twig" %}
-	{% include "partials/wysiwyg.twig" with {location: 'class'} %}
-	{% include "partials/2col.twig" with {direction:'rtl'} %}
+	{% include "partials/wysiwyg.twig" with {location:'class'} %}
+	<div class="class__description">
+		{% include "partials/windowpane.twig" %}
+		{% include "partials/wysiwyg-class.twig" %}
+	</div>
+	{% include "partials/class-gallery.twig" %}
 	{% include "partials/buy-course.twig" %}
 {% endblock %}

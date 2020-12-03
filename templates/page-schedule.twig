@@ -1,0 +1,6 @@
+{%  extends "base.twig" %}
+
+{%  block content %}
+	<h1 class="page__title">{{ post.title }} </h1>
+	{% include "partials/zoom-gallery.twig" with {viewschedule:'hidden'}%}
+{%  endblock %}

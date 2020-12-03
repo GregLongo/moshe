@@ -1,5 +1,6 @@
-<div>
+<div class="zoom">
  {% filter shortcodes %}
-	[zoom_list_meetings per_page="5" filter="no" ]
- {%  endfilter %}}
+	[zoom_list_meetings per_page="{{meetings}}" filter="no" ]
+ {%  endfilter %}
+ <a href="schedule" id="schedule-btn" class="zoom__view-schedule" style="visibility: {{viewschedule}}"> View Full Schedule </a>
 </div>
