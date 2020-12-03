@@ -68,3 +68,30 @@
 		}
 	}
 }
+
+//bem local inheritance for modified elements, no modifiers on subclass
+//see https://seesparkbox.com/foundry/bem_by_example
+.hero--class{//maybe i should be the global hero?
+	height: $hero-height;
+	background-size:100%;
+	background-position: center;
+	display: flex; 
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding-left: $header-padding-left;
+	padding-right: $header-padding-right;
+	.hero__title{
+		color: white;
+		margin-bottom: $slider-caption-margin-bottom;
+		z-index: 11;
+		position: relative;
+	}
+	.slider__scrim{
+		height: $hero-height;
+		position: absolute;
+		top: 32px;//for some reason
+		background: $slider-scrim-dark;
+		z-index: 1;
+
+	}
+}

@@ -1,0 +1,73 @@
+.page{
+	&__title{
+		padding-bottom: $section-spacer-default / 2;
+		text-align: $page-title-align-generic; 
+	}
+}
+
+.page-template-class-page{
+	.header{
+		a{
+			color: white;			
+		}
+		position: $header-affix-home;
+		background: $header-bg-dark;
+	}
+	.footer{
+		background: $color-swatch-headstand-4;
+	}
+}
+
+.class{
+	&__description{
+		margin-top: $section-spacer-default;
+		margin-bottom: $section-spacer-default;
+		padding-left: $container-margin-large;
+		padding-right: $container-margin-large;
+		display: flex;
+		align-items: center;
+		.windowpane{
+			&__pane{
+				flex-shrink:1;
+				width: 75%;
+				text-align: center;
+				img{
+				width: 100%;
+				filter: saturate(0) contrast(.9);
+				mix-blend-mode: hard-light;					
+				}
+			}
+		}
+	}
+}
+
+.wysiwyg--class{
+	color: white;
+	padding-top: $section-spacer-default;
+	padding-bottom: $section-spacer-default;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	background: $color-swatch-headstand-4;		
+	&__description{
+		background: none;
+	}
+}
+
+//why's it like this? 
+.class__description .windowpane__pane:nth-child(1),
+.class__description .windowpane__pane:nth-child(4){
+	background: $color-swatch-headstand-1;
+}
+.class__description .windowpane__pane:nth-child(2),
+.class__description .windowpane__pane:nth-child(3){
+	background: $color-swatch-headstand-4;
+}
+// .class__description .windowpane__pane:nth-child(2) img,
+// .class__description .windowpane__pane:nth-child(3) img{
+// 	margin-top: 30px;
+// }
+
+.class__description .windowpane__pane{
+	margin-top: 0;
+}
+

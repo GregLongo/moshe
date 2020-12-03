@@ -350,7 +350,7 @@ add_filter( 'post_row_actions', 'moshe_duplicate_post_link', 10, 2 );
 
 add_post_type_support( 'page', 'excerpt' );
 
-
+//register custom widget area
 register_sidebar( array(
   'name' => __( 'Footer Widget Area', 'moshe' ),
   'id' => 'footer-widget-area',
@@ -361,6 +361,7 @@ register_sidebar( array(
   'after_title' => '</h3>',
 )); 
 
+//acf options page
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();
@@ -373,3 +374,19 @@ function mytheme_timber_context( $context ) {
     $context['options'] = get_fields('option');
     return $context;
 }
+
+//exclude node_modules on backup/migration (this issnt working come back to this)
+
+add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
+  $exclude_filters[] = 'themes/moshe/node_modules';
+  return $exclude_filters;
+});
+
+
+//woocommerce point of entry aka enter the woo (return to later or delete)
+
+// function theme_add_woocommerce_support() {
+//     add_theme_support( 'woocommerce' );
+// }
+
+// add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );

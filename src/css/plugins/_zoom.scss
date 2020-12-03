@@ -1,7 +1,4 @@
 .vczapi-list-zoom-meetings{ 
-	margin-left: $container-margin-large;
-	margin-right: $container-margin-large;
-	margin-top: $section-spacer-default;
 	&--item{
 		&s{
 			justify-content: center;
@@ -17,7 +14,7 @@
 			img{
 				width: 100% !important;
 				height: auto;
-				filter: contrast(.9);
+				filter: saturate(0) contrast(.9);
 				opacity: 1; 
 				mix-blend-mode: hard-light;
 			}
@@ -53,3 +50,28 @@
 		background-color: $color-swatch-headstand-3;
 	}
 }
+
+
+.zoom{
+	margin-left: $container-margin-large;
+	margin-right: $container-margin-large;
+	margin-top: $section-spacer-default;
+	&__view-schedule{
+		background: $color-swatch-headstand-1;
+		color: white;
+		padding: 10px 24px 10px 24px;	
+		font-family: $font-text;
+		height: fit-content;
+		align-self: center;
+	}
+}
+
+//zoom theater
+
+.dpn-zvc-single-content-wrapper{
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	display: flex;
+	justify-content: center;
+}
+
