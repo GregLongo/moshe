@@ -8,13 +8,13 @@
 .page-template-class-page{
 	.header{
 		a{
-			color: white;			
+			// color: white;			
 		}
 		position: $header-affix-home;
-		background: $header-bg-dark;
+		background: $header-bg;
 	}
 	.footer{
-		background: $color-swatch-headstand-4;
+		background: $color-swatch-headstand-2;
 	}
 }
 
@@ -47,21 +47,27 @@
 	padding-bottom: $section-spacer-default;
 	padding-left: $container-margin-large;
 	padding-right: $container-margin-large;
-	background: $color-swatch-headstand-4;		
+	background: $color-swatch-headstand-2;		
 	&__description{
 		background: none;
 	}
 }
 
+.class__description .windowpane__pane:nth-child(2),
+.class__description .windowpane__pane:nth-child(4){
+	transform: translateY(48px);
+}
+
 //why's it like this? 
 .class__description .windowpane__pane:nth-child(1),
 .class__description .windowpane__pane:nth-child(4){
-	background: $color-swatch-headstand-1;
+	// background: $color-swatch-headstand-1;
 }
 .class__description .windowpane__pane:nth-child(2),
 .class__description .windowpane__pane:nth-child(3){
-	background: $color-swatch-headstand-4;
+	// background: $color-swatch-headstand-4;
 }
+
 // .class__description .windowpane__pane:nth-child(2) img,
 // .class__description .windowpane__pane:nth-child(3) img{
 // 	margin-top: 30px;

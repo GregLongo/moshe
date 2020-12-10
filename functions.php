@@ -56,7 +56,6 @@ new StarterSite();
 
 function _moshe_assets() {
 	wp_enqueue_script('moshe-js', get_stylesheet_directory_uri() . '/compiled/js/main.js');
-	wp_enqueue_script('burger-menu-script-js', get_stylesheet_directory_uri() . '/src/js/burger-menu-script.js');
 }
 add_action( 'wp_enqueue_scripts', '_moshe_assets' );
 
@@ -368,19 +367,19 @@ if( function_exists('acf_add_options_page') ) {
 	
 };
 
-add_filter( 'timber_context', 'mytheme_timber_context'  );
+add_filter( 'timber_context', 'moshe_timber_context'  );
 
-function mytheme_timber_context( $context ) {
+function moshe_timber_context( $context ) {
     $context['options'] = get_fields('option');
     return $context;
 }
 
 //exclude node_modules on backup/migration (this issnt working come back to this)
 
-add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
-  $exclude_filters[] = 'themes/moshe/node_modules';
-  return $exclude_filters;
-});
+// add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
+//   $exclude_filters[] = 'themes/moshe/node_modules';
+//   return $exclude_filters;
+// });
 
 
 //woocommerce point of entry aka enter the woo (return to later or delete)
