@@ -10,6 +10,7 @@ const ENV = utils.getEnv();
 const WATCH = global.watch || false;
 
 module.exports = {
+	
 	entry: getEntry(),
 	mode: ENV,
 
@@ -87,7 +88,7 @@ module.exports = {
 
 	target: "web",
 
-	watch: WATCH
+	watch: WATCH,
 };
 
 /*

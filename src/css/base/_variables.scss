@@ -71,7 +71,7 @@ $footer-affix: relative;
 
 //Hero_____________
 
-$slider-height: 95vh;
+$slider-height: 100vh;
 $slider-height-mobile: 95vh;
 $slider-content-vertical: flex-end;
 $slider-content-horizontal: flex-end;
@@ -97,6 +97,7 @@ $nav-link-color: #033F63;
 $nav-link-size: 36px;
 $nav-link-margin: 30px;
 $nav-link-weight: 100;
+$nav-link-font: $font-headings;
 //==============================================================================
 // Pages
 //==============================================================================
@@ -120,4 +121,7 @@ $home-intro-text-weight: 400;
 // FX
 //==============================================================================
 
-$fade-global: 1s;
+$fade-global: 2s;
+
+$ken-burns-speed: 5s;
+$ken-burns-depth: 105%;

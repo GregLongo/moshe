@@ -12,7 +12,7 @@
 		@include tablet{
 			flex-direction: row;
 			margin-top: $section-spacer-default;
-			margin-bottom: $section-spacer-default;
+			margin-bottom: $section-spacer-default * 2;
 		}
 	}
 }

@@ -4,7 +4,7 @@
 	flex-direction: row;
 	margin-left: $container-margin-large;
 	margin-right: $container-margin-large;
-	margin-top: $container-margin-large / 2;
+	margin-top: $section-spacer-default;
 	margin-bottom: 0; 
 	flex-wrap: wrap;
 	&__item{

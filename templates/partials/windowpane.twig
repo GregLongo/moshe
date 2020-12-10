@@ -1,7 +1,7 @@
 <div class="windowpane">
 	{% for image in post.meta('windowpane-images') %}
-		<div class="windowpane__pane" id='windowpane-{{loop.index}}'>
-			<img src="{{ Image(image).src('large') }}" />
+		<div class="windowpane__pane windowpane__pane--{{location}}" id='windowpane-{{loop.index}}'>
+			<img class="windowpane__img" src="{{ Image(image).src('large') }}" />
 		</div>
 	{% endfor %} 
 </div>
