@@ -58,10 +58,10 @@ body{
 	transition: all 1s ease-in-out;	
 	opacity: 0;
 	&:nth-child(odd){
-		transform: translateX(-48px);
+		transform: translateX(-24px);
 	}
 	&:nth-child(even){
-		transform: translateX(48px);
+		transform: translateX(24px);
 	}
 	&:nth-child(2){
 		transition-delay:0.2s;
