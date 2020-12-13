@@ -212,8 +212,7 @@ if($('.page__title--about').length){
 }
 
 //service page
-if($('page__title--services')){
-
+if($('.page__title--services').length){
 	new ScrollMagic.Scene({
 		triggerElement:".class-gallery__item",
 		triggerHook: .8,
@@ -226,7 +225,7 @@ if($('page__title--services')){
 }
 
 //schedule page
-if($('page__title--schedule')){
+if($('.page__title--schedule').length){
 
 	new ScrollMagic.Scene({
 		triggerElement:".zoom",

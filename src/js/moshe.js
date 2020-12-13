@@ -6,5 +6,5 @@ import '@fortawesome/fontawesome-free/js/brands'
 import './magic'
 import './homepage'
 import './burger'
-
+import './learn'
 

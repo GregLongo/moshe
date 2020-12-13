@@ -389,3 +389,11 @@ function moshe_timber_context( $context ) {
 // }
 
 // add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
+
+//gsap
+
+wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', null, null, true );
+wp_enqueue_script('gsap');
+
+wp_register_script( 'scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js', null, null, true );
+wp_enqueue_script('scrollTo');

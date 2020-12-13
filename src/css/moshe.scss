@@ -20,7 +20,6 @@
 
 // @import 'components/wp-classes';
 @import 'components/hero';
-@import 'components/effects';
 @import 'components/nav';
 @import 'components/class-gallery';
 @import 'components/anim-section';
@@ -29,6 +28,8 @@
 @import 'components/hamburger';
 @import 'components/2col';
 @import 'components/windowpane';
+@import 'components/learn';
+
 //==============================================================================
 // Layouts
 //==============================================================================
@@ -60,3 +61,4 @@
 //==============================================================================
 
 @import 'utilities/tinymce';
+@import 'components/effects';
