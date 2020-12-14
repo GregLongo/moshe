@@ -3,64 +3,49 @@
 	justify-self: center;
 	display: flex;
 	@include tablet {
-			display: none !important;
+		display: none !important;
 	}
 }
 
+// apparently you can style hamburgers.js via variables
+// in a hamburgers-settings.scss file. refer to docs for specifics
+// overriding here just cause
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,{
+	background-color: $hamburger-color !important;
+}
 
+//i only exist on desktop
 .nav{
-  	overflow: hidden;
     display:none;
-  	height:0;
-	 a {
-	 	font-family: $nav-link-font;
-	 	font-weight: $nav-link-weight;
-	  color: white;
-	  padding: 14px 16px;
-	  text-decoration: none;
-	  font-size: 17px;
-	  display: block;
+	a{
+		font-family: $nav-link-font;
+		font-weight: $nav-link-weight;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		display: block;
+		margin-right: $nav-link-margin;
+		color: $nav-link-color;
+		font-size: $nav-link-size;
 	}
-	&.is-active{
-		  transition: height 1s ease;
-	 	display: flex;
-  		position: absolute;
-  		background: teal;
-  		width: 100%;
-  		height: 400px;
-  		left: 0;
-  		top: 0;
-  		align-items: center;
-  		justify-content: center;
-  	}
 	@include tablet {
-			display:flex;
-			 height:initial;
-
-			ul{
-				display: flex;
-			}
-		a{
-			margin-right: $nav-link-margin;
-			color: $nav-link-color;;
-			font-size: $nav-link-size;
-
+		display:flex;
+		ul{
+			display: flex;
 		}
 	}
 }
-.wrapper{
-}
-.push {
-	.wrapper{
-		transition: padding .3s ease;	
-		padding-top: 400px;
-	}
-	.header__logo{
-		margin-top: 400px;
-		position: relative;
-	}
-	.hamburger{
 
-		margin-top: 710px;
+//mmenu styles
+.nav--mobile{
+	&.mm-spn{
+		font-family: $nav-link-font;
+		font-size: $nav-link-size-mobile;
 	}
+	&.mm-spn.mm-spn--light{
+    	background: $nav-bg-mobile;
+    	color: $nav-link-color-mobile;
+    }
 }

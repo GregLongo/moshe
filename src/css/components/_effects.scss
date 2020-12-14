@@ -52,16 +52,17 @@ body{
 	opacity:0;
 	transition-delay:0.5s;
 	transition: all 1s ease-in-out;	
+	transform: translateY(56px);
 }
 
 .class-gallery__item{
 	transition: all 1s ease-in-out;	
 	opacity: 0;
 	&:nth-child(odd){
-		transform: translateX(-24px);
+		transform: translateX(-16px);
 	}
 	&:nth-child(even){
-		transform: translateX(24px);
+		transform: translateX(20px);
 	}
 	&:nth-child(2){
 		transition-delay:0.2s;

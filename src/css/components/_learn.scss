@@ -3,8 +3,12 @@
 .page-id-700  #footer{
     display:none;
 }
+.page-id-700 .content-wrapper#content{
+    overflow-x: unset;
+}
 
-.container{
+
+.container--slides{
     height: 100vh;
     // width: 100vw;
 
