@@ -4,8 +4,10 @@
 	height: $header-height;
 	background: $header-bg;
 	width: 100%;
-	padding-left: $header-padding-left;
-	padding-right: $header-padding-right;
+	@include tablet{
+		padding-left: $header-padding-left;
+		padding-right: $header-padding-right;		
+	}
 	&__wrapper{
 		display: flex;
 		justify-content: space-between;

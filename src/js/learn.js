@@ -12,6 +12,9 @@ var controller = new ScrollMagic.Controller();
 //hijacked scroll suuucks on mobile (short window too)
 controller.scrollPos(function () {
 	if(window.innerWidth <= 768 || window.innerHeight <= 600){
+		$("p").each(function(){
+			$(this).css({opacity: 1})
+		});
 		return 0;
 	} else {
 		return window.pageYOffset;

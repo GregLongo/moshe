@@ -2,6 +2,7 @@ html{
 	margin-top: 0 !important;
 }
 body{
+
 	a{
 	text-decoration: none;
 	// color: initial;
@@ -11,6 +12,12 @@ body{
 	@include fadein;
 }
 
+.content-wrapper{
+	overflow-x: hidden;
+	// @include tablet{
+	// 	overflox-x: scroll;
+	// }
+}
 //probably not best practice for font hierarchy. decorator classes? mixins?
 h1{
 	font-family: $font-gothic;

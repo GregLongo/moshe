@@ -25,7 +25,7 @@
 @import 'components/anim-section';
 @import 'components/parallax-gallery';
 @import 'components/cta-parallax';
-@import 'components/hamburger';
+// @import 'components/hamburger';
 @import 'components/2col';
 @import 'components/windowpane';
 @import 'components/learn';
@@ -49,6 +49,7 @@
 //==============================================================================
 // Plugins
 //==============================================================================
+@import "~mmenu-light/dist/mmenu-light";
 @import "~slick-carousel/slick/slick";
 @import "~slick-carousel/slick/slick-theme";
 @import 'plugins/zoom';

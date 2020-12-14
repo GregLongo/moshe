@@ -19,15 +19,16 @@
 						<a class="header__logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
 				{%  endif %}
-
-					<button class="hamburger hamburger--collapse" type="button">
+				{# using hamburgers.js, hamburger style via bem modifier how cool #}
+					<a href="#nav-mobile" class="hamburger hamburger--arrow" type="button" aria-label="Menu" aria-controls="navigation">
 					  <span class="hamburger-box">
 					    <span class="hamburger-inner"></span>
 					  </span>
-					</button>  
-
-
+					</a>  
 					<nav id="nav-main" class="nav nav--main" role="navigation">
+						{% include "menu.twig" with {'menu': menu.get_items} %}
+					</nav><!-- #nav -->
+					<nav id="nav-mobile" class="nav--mobile" >
 						{% include "menu.twig" with {'menu': menu.get_items} %}
 					</nav><!-- #nav -->
 				</div>
