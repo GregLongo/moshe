@@ -1,10 +1,11 @@
 .header{
 	z-index: $header-z;
 	position: $header-affix-page;
-	height: $header-height;
 	background: $header-bg;
 	width: 100%;
+	height: $header-height-mobile;
 	@include tablet{
+		height: $header-height;
 		padding-left: $header-padding-left;
 		padding-right: $header-padding-right;		
 	}
@@ -17,7 +18,7 @@
 	&__logo{
 		width: 70vw;
 		display: block;
-		top:$header-logo-top-mobile;
+		// top:$header-logo-top-mobile;
 		@include tablet{
 			height: $header-logo-height;
 			display: flex;	
