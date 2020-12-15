@@ -1,9 +1,10 @@
 .slider{
 	&__slide{
 		height: $slider-height-mobile;
-		background-size: cover;
+		background-size: auto 100% !important;
 		background-position: center center;
 		@include tablet {
+			background-size: unset;
 			height: $slider-height;
 			display: flex !important;
 			align-items: $slider-content-vertical;
@@ -12,15 +13,25 @@
 	}
 	&__cta{
 		z-index: 11;
-		margin-top:80%;
+		bottom: 30%;
+		position: absolute;
+		text-align: center;
+		align-items: flex-end;
+		width: 100%;
 		@include tablet{
 			margin-right: $slider-content-margin-right;
 			margin-bottom: $slider-content-margin-bottom;	
+			margin-top:unset;
+			bottom: unset;
+			position: unset;
+			text-align: unset;
+			align-items: unset;
+			width: unset;
 		}
 	}
 	&__caption{
 		z-index: 11;
-		position: relative;
+		position:flex;
 		text-align: center;
 		font-size: 3em;
 		whitespace: wrap;
@@ -37,17 +48,20 @@
 	}
 	&__button{
 		z-index: 11;
-		position: relative;
+		position: flex;
 		background: $slider-button-background;
+		padding: $slider-button-padding-mobile;
 		border: $slider-button-border;
-		padding: $slider-button-padding;
 		color: $text-color-light;
 		font-family: $font-text;
-		font-size: $slider-button-font-size;
-		width: $slider-button-width-mobile;
+		font-size: $slider-button-font-size-mobile;
+		width: fit-content;
+		text-align: center;
 		margin: auto;
-		whitespace: nowrap;
+		white-space: nowrap;
 		@include tablet{
+			padding: $slider-button-padding;
+			font-size: $slider-button-font-size;
 			width: unset;
 			float: right;			
 		}
