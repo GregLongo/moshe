@@ -41,9 +41,9 @@ $text-color-light: white;
 
 $font-headings: Quicksand;
 $font-text: Ebrima;
-$font-fallback: -apple-system, BlinkMacSystemFont, 'Open Sans', Arial, Helvetica, sans-serif;
+$font-fallback:'Open Sans', Arial, Helvetica, sans-serif;
 $font-serif-fallback: Georgia, serif;
-$font-gothic: ltc-globe-gothic, sans-serif;
+$font-gothic: ltc-globe-gothic, sans-seriff;
 $line-height-global: initial;
 
 //==============================================================================
@@ -54,7 +54,9 @@ $section-spacer-default: 120px;
 //==============================================================================
 // Components
 //==============================================================================
+//atoms
 
+$button-color: $color-swatch-headstand-1;
 //Header____________
 
 $header-affix-home: absolute;
@@ -66,7 +68,7 @@ $header-height-mobile: 100px;
 $header-z: 10;
 $header-bg: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0) 100%);
 $header-bg-dark: linear-gradient(to bottom, rgba(8,75,131,0.65) 0%,rgba(8,75,131,0) 100%);
-$header-logo-height: 120px;
+$header-logo-height: 100px;
 $header-logo-top-mobile: 20vh;
 //Footer____________
 
@@ -83,17 +85,18 @@ $slider-content-vertical: flex-end;
 $slider-content-horizontal: flex-end;
 $slider-content-margin-right: 64px;
 $slider-content-margin-bottom: 120px;
-$slider-caption-font: $font-headings;
+$slider-caption-font: $font-gothic;
 $slider-caption-font-size: 90px;
 $slider-caption-font-weight: 500;
 $slider-caption-margin-bottom: 40px;
+$slider-caption-y-mobile: 40%;
 $slider-button-padding: 24px 52px 24px 52px;
 $slider-button-padding-mobile: 24px;
 $slider-button-font: $font-headings ;
 $slider-button-font-size: 32px;
 $slider-button-font-size-mobile: 24px;
 $slider-button-border: none ;
-$slider-button-background: $color-swatch-headstand-1;
+$slider-button-background: $button-color;
 $slider-button-width-mobile: 60%;
 // $slider-scrim: linear-gradient(160deg, rgba(31,142,163,0) 0%,rgba(31,142,163,0) 40%,rgba(31,142,163,1) 80%,rgba(31,142,163,1) 100%);
 $slider-scrim: linear-gradient(160deg, rgba(202,204,144,0) 0%,rgba(202,204,144,0) 40%,rgba(202,204,144,.8) 70%,rgba(202,204,144,1) 100%);
@@ -110,7 +113,13 @@ $nav-link-font: $font-headings;
 $nav-link-size-mobile: 1.5em;
 $nav-bg-mobile: $color-swatch-headstand-2;
 $nav-link-color-mobile: white;
+$nav-menu-link-color-hover: $color-swatch-headstand-1;
 $hamburger-color: $color-swatch-headstand-4;
+
+
+$nav-submenu-flex-direction: column;
+$nav-submenu-link-color: $color-swatch-headstand-1;
+$nav-submenu-bg-filter: blur(40px) ;
 //==============================================================================
 // Pages
 //==============================================================================
@@ -122,8 +131,19 @@ $page-title-align-generic: center;
 //Home______________
 
 $intro-paragraph-color: white;
+$intro-paragraph-bg: url('../images/goldhalfcurve.png');
+$intro-paragraph-header-mobile: 36px;
+$intro-paragraph-header: 56px;
 $home-intro-text: 24px;
+$home-intro-text-mobile: 20px;
 $home-intro-text-weight: 400;
+
+$anim-section-vertical-padding: 200px;
+$anim-section-bg: url('../images/goldcurve.png');
+
+
+
+
 //Posts_____________
 
 
@@ -138,3 +158,16 @@ $fade-global: 2s;
 
 $ken-burns-speed: 5s;
 $ken-burns-depth: 105%;
+
+
+
+//==============================================================================
+// Plugins
+//==============================================================================
+
+
+$zoom-join-link-color : $color-swatch-headstand-1;
+$zoom-start-link-color : $color-swatch-headstand-3;
+$zoom-header-color : $color-swatch-headstand-4;
+$zoom-timer-color : $color-swatch-headstand-1;
+$zoom-sidebar-color : transparent;

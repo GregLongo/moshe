@@ -15,10 +15,10 @@
 </div>
   <div id="wrapper" class="container--slides ">
 
-		<div id="panel-1" class="panel one">
+		<div id="panel-1" class="panel one" style="background-image:url({{post.meta('imageslide_0')}})">
 		  	<div class="panel__text" >{{post.content}}</div>
-		  	<div class="out-trigger"></div>
-		</div>
+{# 		  	<div class="out-trigger"></div>
+ #}		</div>
 		<div style="background-image:url({{post.meta('imageslide_1')}})" id="panel-2" class="panel two">
 			<div class="panel__text">
 				{{ post.meta('slidetext_1') }}

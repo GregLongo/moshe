@@ -20,16 +20,17 @@
 		img{
 			width: 100%;
 			display: block;
-			filter: saturate(0) contrast(.9);
-			mix-blend-mode:hard-light;
+			// filter: saturate(0) contrast(.9);
+			// mix-blend-mode:hard-light;
 		}
 	}
 
 }
-
-.parallax-gallery__img:nth-child(odd){
-	background-color: $color-swatch-headstand-3;
-}
-.parallax-gallery__img:nth-child(even){
-	background-color: $color-swatch-headstand-4;
-}
+//(turned off for dovetail client no like)
+// kinda changes the effect of this section. maybe subtle filter?
+// .parallax-gallery__img:nth-child(odd){
+// 	background-color: $color-swatch-headstand-3;
+// }
+// .parallax-gallery__img:nth-child(even){
+// 	background-color: $color-swatch-headstand-4;
+// }

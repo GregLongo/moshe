@@ -22,8 +22,17 @@ jQuery(document).ready(function() {
     });
 
 
+//submenus too just for fun
+	$('.menu-item-has-children').hover(function(){
+		console.log('heymaaan');
+		$(this).find('.nav__submenu').toggleClass('open');
+	});
+
+
+
 
 
 });
+
 
 

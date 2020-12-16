@@ -2,17 +2,25 @@
 	height: 300px;
 	background-color: $color-swatch-headstand-2;
 	display: flex;
+	flex-direction: column;
+	@include tablet{
+		flex-direction: row;
+	}
 	&__social{
 		display:flex;
 		justify-content: space-between;
 		&-wrapper{
 			color: white;
 			text-align: center;
-			width: 50%;	
-			// background-color:lime;
+			width: 100%;	
+			margin-bottom: 48px;
+			padding-left: 16px;
+			padding-right: 16px;;				
 			@include tablet{
+				width: 50%;	
 				padding-left:48px;
-				padding-right: 48px;				
+				padding-right: 48px;
+				margin-bottom: unset;				
 			}
 			h2{
 				font-family: $font-gothic !important;	

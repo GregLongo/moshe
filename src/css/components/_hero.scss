@@ -1,19 +1,20 @@
 .slider{
 	&__slide{
 		height: $slider-height-mobile;
-		background-size: auto 100% !important;
-		background-position: center center;
+		// background-position: center center;
 		@include tablet {
-			background-size: unset;
 			height: $slider-height;
 			display: flex !important;
 			align-items: $slider-content-vertical;
 			justify-content: $slider-content-horizontal;	
 		}
+		@include tablet-max{
+			background-size: auto 100% !important;
+		}
 	}
 	&__cta{
 		z-index: 11;
-		bottom: 30%;
+		bottom: $slider-caption-y-mobile;
 		position: absolute;
 		text-align: center;
 		align-items: flex-end;
@@ -87,13 +88,16 @@
 //see https://seesparkbox.com/foundry/bem_by_example
 .hero--class{//maybe i should be the global hero?
 	height: $hero-height;
-	background-size:100%;
 	background-position: center;
+	background-size: auto 100%;		
 	display: flex; 
 	align-items: flex-end;
 	justify-content: flex-end;
 	padding-left: $header-padding-left;
 	padding-right: $header-padding-right;
+	@include tablet{
+	background-size:100%;		
+	}
 	.hero__title{
 		color: white;
 		margin-bottom: $slider-caption-margin-bottom;
@@ -109,3 +113,5 @@
 
 	}
 }
+
+

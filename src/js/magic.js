@@ -176,6 +176,17 @@ if ($('body.page-template-class-page').length){
 	})
 	.setClassToggle(".wysiwyg--class__description", "magic__fade--basic")
 	.addTo(controller);
+
+	// new ScrollMagic.Scene({
+	// 	triggerElement:".class-gallery__item",
+	// 	triggerHook: .8,
+	// 	duration: "150%",
+	// 	offset: 50
+	// })
+	// .setClassToggle(".class-gallery__item", "magic__fade--slide")
+	// .addTo(controller);
+	$('.class-gallery__item').addClass("magic__fade--slide");
+
 }
 
 //About Us Page
@@ -195,7 +206,7 @@ if($('.page__title--about').length){
 		triggerElement:".windowpane__pane--about",
 		triggerHook: .5,
 		duration: "200%",
-		offset: 50
+		offset: -50
 	})
 	.setClassToggle(".windowpane__pane--about", "magic__fade--basic")
 	.addTo(controller);
@@ -213,15 +224,15 @@ if($('.page__title--about').length){
 
 //service page
 if($('.page__title--services').length){
-	new ScrollMagic.Scene({
-		triggerElement:".class-gallery__item",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".class-gallery__item", "magic__fade--slide")
-	.addTo(controller);
-
+	// new ScrollMagic.Scene({
+	// 	triggerElement:".class-gallery__item",
+	// 	triggerHook: .8,
+	// 	duration: "150%",
+	// 	offset: 50
+	// })
+	// .setClassToggle(".class-gallery__item", "magic__fade--slide")
+	// .addTo(controller);
+	$('.class-gallery__item').addClass("magic__fade--slide");
 }
 
 //schedule page

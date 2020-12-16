@@ -1,9 +1,9 @@
 <div class="cta-parallax__outer">
 	<div class="cta-parallax__inner">
 		<div class="cta-parallax__msg">{{ post.meta('cta-parallax-msg') }}</div>
-		<div class="cta-parallax__link"><a href="{{ post.meta('cta-parallax-link') }}">Do Thing</a></div>
+			{% include 'partials/newsletter.twig' %}
+{# 		<div class="cta-parallax__link"><a href="{{ post.meta('cta-parallax-link') }}">Do Thing</a></div> #}
 	</div>
 	<div class="cta-parallax" style="background-image:url({{Image(post.meta('cta-parallax-img')).src}})">
-
 	</div>
 </div>

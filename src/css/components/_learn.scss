@@ -53,7 +53,7 @@
 .panel.one {
     position: relative;
     z-index: -1;
-    background-image: url('http://picsum.photos/1000');
+    // background-image: url('http://picsum.photos/1000');
     background-color: $color-swatch-headstand-2;
 }
 .panel.two {
@@ -83,10 +83,10 @@
     justify-content: center;
     align-items: center;
     .hero__title--learn{ 
-        font-family: $font-headings;
+        font-family: $font-gothic;
         font-size: 4em;
         color: white;
-        margin-top: -64px;
+        margin-top: -120px;
     }
 }
 

@@ -19,6 +19,11 @@
 //i only exist on desktop
 .nav{
     display:none;
+    li {
+		&:hover a{
+			color: $nav-menu-link-color-hover;
+		}
+	}
 	a{
 		font-family: $nav-link-font;
 		font-weight: $nav-link-weight;
@@ -33,7 +38,34 @@
 	@include tablet {
 		display:flex;
 		ul{
+			display: -webkit-box;
+		}
+	}
+	&__submenu{
+		@include tablet{
+		pointer-events: none; //slightly hacky workaround to account for menu recursion
+		display: none;
+		opacity:0;
+		transition: all .4s;
+		ul{
 			display: flex;
+			flex-direction: $nav-submenu-flex-direction;
+		}
+		a{
+			color: $nav-submenu-link-color !important;
+			opacity:.8;
+			&:hover{
+				opacity: 1;
+			}
+		}
+		position: absolute;
+		backdrop-filter: $nav-submenu-bg-filter;
+		// overflow: visible;
+		&.open{
+			display: flex;
+			opacity: 1;
+			pointer-events: auto;
+			}
 		}
 	}
 }

@@ -1,11 +1,15 @@
 .page{
 	&__title{
-		padding-bottom: $section-spacer-default / 2;
+		// padding-bottom: $section-spacer-default / 2;
 		text-align: $page-title-align-generic; 
 	}
-}
-
-.page-template-class-page{
+	&-template-default,{
+		.content-wrapper{
+		margin-bottom: $section-spacer-default;			
+		}
+	}
+	&-template-class-page{
+		margin-bottom: $section-spacer-default;
 	.header{
 		a{
 			// color: white;			
@@ -15,22 +19,36 @@
 	}
 	.footer{
 		background: $color-swatch-headstand-2;
+		}
 	}
 }
 
+.page
+
 .class{
 	&__description{
+		font-family: $font-text;
 		margin-top: $section-spacer-default;
-		margin-bottom: $section-spacer-default;
+		margin-bottom: none;
 		padding-left: $container-margin-large;
 		padding-right: $container-margin-large;
 		display: flex;
 		align-items: center;
+		flex-direction: column;
+		@include tablet{
+			flex-direction: row;
+			margin-bottom: $section-spacer-default * 2;
+		}
 		.windowpane{
+			margin-bottom: $section-spacer-default;
+			@include tablet{
+				margin-bottom: inherit;
+			}
 			&__pane{
-				flex-shrink:1;
-				width: 75%;
+				// flex-shrink:1;
+				// width: 75%;
 				text-align: center;
+				// padding-bottom: 200px;
 				img{
 				width: 100%;
 				filter: saturate(0) contrast(.9);
@@ -42,14 +60,21 @@
 }
 
 .wysiwyg--class{
-	color: white;
 	padding-top: $section-spacer-default;
-	padding-bottom: $section-spacer-default;
+	padding-bottom: $section-spacer-default * 2;
 	padding-left: $container-margin-large;
 	padding-right: $container-margin-large;
-	background: $color-swatch-headstand-2;		
-	&__description{
+	background: $intro-paragraph-bg;	
+	overflow: visible !important;
+	background-size: auto 100%;
+	font-family: $font-text;
+	color: $intro-paragraph-color;
+	font-size: $home-intro-text;
+	font-weight: $home-intro-text-weight;
+	// padding-bottom: 440px;
+		&__description{
 		background: none;
+		padding-left: $container-margin-large/2;
 	}
 }
 
