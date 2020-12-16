@@ -4,6 +4,7 @@
 	background: $header-bg;
 	width: 100%;
 	height: $header-height-mobile;
+	padding-left: 15px;//just matching default margins of hamburger
 	@include tablet{
 		height: $header-height;
 		padding-left: $header-padding-left;

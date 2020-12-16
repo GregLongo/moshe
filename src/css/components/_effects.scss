@@ -54,7 +54,6 @@ body{
 	transition: all 1s ease-in-out;	
 	transform: translateY(56px);
 }
-
 .class-gallery__item{
 	transition: all 1s ease-in-out;	
 	opacity: 0;
@@ -96,7 +95,7 @@ body{
 
 .parallax-gallery{
 	margin-top: $section-spacer-default !important;
-	margin-bottom: $section-spacer-default*6 !important;
+	margin-bottom: $section-spacer-default*5 !important;
 }
 
 
@@ -134,7 +133,7 @@ body{
 
 .windowpane__pane--class,
 .windowpane__pane--about {
-	overflow: hidden;
+	// overflow: hidden;
 	height: auto;
 	opacity:0;
 	transition: all 1s ease-in-out;		

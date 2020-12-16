@@ -2,42 +2,41 @@
 	width: 100%;
 	&__animation{
 		text-align: center;
+		margin-bottom: $section-spacer-default/2;
+		&-2{
+			order:1;
+		@include tablet{
+			order:2
+			}		
+		}
+	}&__blurb{
+		&-2{
+			order:2;
+		@include tablet{
+			order:1
+			}		
+		}
 	}
 	&__row{	
 		// overflow-x: hidden;
 		@include tablet{
 		grid-template-columns: 50% 50%;
+		background-size: 100%;
 		}
-		padding: $section-spacer-default $container-margin-large ;
+		padding: $anim-section-vertical-padding $container-margin-large ;
 		grid-template-columns: 100%;
 		display: grid;
 		align-items: center;
 		&:nth-child(1){
-			margin-bottom: $section-spacer-default*2;
+			// margin-bottom: $section-spacer-default*2;
 		}
 		&:nth-child(2){
 		// background: $color-swatch-headstand-2;
-		padding-top: 300px;
-		padding-bottom: 300px;
-		background-image: url('../images/goldcurve.png');
-		background-size: cover;
+		background-image: $anim-section-bg;
+		background-size: auto 100%;
 		background-repeat: no-repeat;
 		overflow-y: visible;
-			color: white;
-			span{
-				order: 2;
-			}
-			.anim-section__animation{
-				order: 1;
-			}
-			@include tablet{
-				span{
-					order: 1;
-				}
-				.anim-section__animation{
-					order: 2;
-				}
-			}
+		color: white;
 		}
 		p{	
 			font-family: $font-text;
