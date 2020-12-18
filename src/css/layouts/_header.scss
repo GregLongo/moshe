@@ -1,4 +1,5 @@
 .header{
+	// overflow-x: hidden; //still kinda confuse what's happening here
 	z-index: $header-z;
 	position: $header-affix-page;
 	background: $header-bg;

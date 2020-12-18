@@ -27,7 +27,7 @@ if($(window).width() >= 768 && $(window).height() >= 600 ){
 
 function addPinning(){
 var myscene;
-$(".panel").each(function() {
+$(".learn-panel").each(function() {
 	var target = $(this).find("p");
 	var tl = new TimelineMax();
 
@@ -60,7 +60,7 @@ $("#menu").on("click","a", function (e) {
 		e.preventDefault();
 
 // trigger scroll
-if(id == '#panel-5'){
+if(id == '#learn-panel-5'){
 	controller.scrollTo(id, 10);
 }
 else{

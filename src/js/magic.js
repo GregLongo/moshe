@@ -8,6 +8,20 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 $(document).ready(function(){
 
 	var controller = new ScrollMagic.Controller();
+	
+	//section titles
+	if($('.section-title').length){
+			$(".section-title").each(function(){
+				new ScrollMagic.Scene({
+					triggerElement: this,
+					triggerHook: .8,
+					duration: "150%",
+					offset: 50
+				})
+				.setClassToggle(this, "magic__fade--basic")
+				.addTo(controller);
+		});
+	}
 
 //Homepage
 if($('body.home').length){
@@ -34,7 +48,7 @@ if($('body.home').length){
 	new ScrollMagic.Scene({
 		triggerElement:".zoom",
 		triggerHook: .8,
-		duration: "150%",
+		duration: "200%",
 		offset: 50
 	})
 	.setClassToggle(".vczapi-list-zoom-meetings--item", "magic__fade--up")
@@ -43,7 +57,7 @@ if($('body.home').length){
 	new ScrollMagic.Scene({
 		triggerElement:".zoom",
 		triggerHook: .8,
-		duration: "150%",
+		duration: "200%",
 		offset: 50
 	})
 	.setClassToggle(".zoom__view-schedule", "magic__fade--up")
@@ -52,7 +66,7 @@ if($('body.home').length){
 	new ScrollMagic.Scene({
 		triggerElement:".class-gallery__item",
 		triggerHook: .8,
-		duration: "150%",
+		duration: "200%",
 		offset: 50
 	})
 	.setClassToggle(".class-gallery__item", "magic__fade--slide")
@@ -115,6 +129,7 @@ if($('body.home').length){
 	$(".parallax-gallery__img").each(function(index){
 		var trig = this.parentNode,
 		speed =  30 * (index) + '%';
+		//speed =  (100 * Math.random()) + '%'; experimental random seeding
 		new ScrollMagic.Scene({
 			triggerElement: trig ,
 			triggerHook: "onEnter",
@@ -154,7 +169,7 @@ if ($('body.page-template-class-page').length){
 	new ScrollMagic.Scene({
 		triggerElement: ".windowpane__pane--class",
 		triggerHook: .6,
-		duration: "100%"
+		duration: "200%"
 	})
 	.setTween(".windowpane__img", {y:"20%"})
 	.addTo(controller);
@@ -162,7 +177,7 @@ if ($('body.page-template-class-page').length){
 	new ScrollMagic.Scene({
 		triggerElement:".windowpane__pane--class",
 		triggerHook: .7,
-		duration: "100%",
+		duration: "200%",
 		offset: 50
 	})
 	.setClassToggle(".windowpane__pane--class", "magic__fade--basic")
@@ -186,6 +201,15 @@ if ($('body.page-template-class-page').length){
 	// .setClassToggle(".class-gallery__item", "magic__fade--slide")
 	// .addTo(controller);
 	$('.class-gallery__item').addClass("magic__fade--slide");
+
+	new ScrollMagic.Scene({
+		triggerElement:".qotd",
+		triggerHook: .8,
+		duration: "150%",
+		offset: 50
+	})
+	.setClassToggle(".qotd", "magic__fade--up")
+	.addTo(controller);
 
 }
 
@@ -241,7 +265,7 @@ if($('.page__title--schedule').length){
 	new ScrollMagic.Scene({
 		triggerElement:".zoom",
 		triggerHook: .8,
-		duration: "150%",
+		duration: "400%",
 		offset: 50
 	})
 	.setClassToggle(".vczapi-list-zoom-meetings--item", "magic__fade--up")

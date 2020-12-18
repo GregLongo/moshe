@@ -34,7 +34,7 @@
 		z-index: 11;
 		position:flex;
 		text-align: center;
-		font-size: 3em;
+		font-size: $slider-caption-font-size-mobile;
 		whitespace: wrap;
 		font-family: $slider-caption-font;
 		font-weight: $slider-caption-font-weight;
@@ -60,11 +60,15 @@
 		text-align: center;
 		margin: auto;
 		white-space: nowrap;
+		cursor: pointer;
 		@include tablet{
 			padding: $slider-button-padding;
 			font-size: $slider-button-font-size;
 			width: unset;
 			float: right;			
+		}
+		&:hover{
+			background-color: $color-swatch-headstand-4;
 		}
 	}
 	&__scrim{//i need a better mobile solution
@@ -95,14 +99,20 @@
 	justify-content: flex-end;
 	padding-left: $header-padding-left;
 	padding-right: $header-padding-right;
+	margin-top: -24px; //fixes weird white space at top. why happen?
 	@include tablet{
-	background-size:100%;		
+	background-size: cover;		
 	}
-	.hero__title{
+	.hero__title h1{
 		color: white;
 		margin-bottom: $slider-caption-margin-bottom;
 		z-index: 11;
 		position: relative;
+		font-size: $slider-caption-font-size-mobile;
+		@include tablet{
+			font-size: $hero-caption-font-size;		
+			white-space: nowrap;	
+		}
 	}
 	.slider__scrim{
 		height: $hero-height;

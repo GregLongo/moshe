@@ -17,7 +17,7 @@
     }
 }
 
-.panel {
+.learn-panel {
     padding-right: $container-margin-large;
     padding-left: $container-margin-large;
     height: 100%;
@@ -50,24 +50,24 @@
         }
     }
 }
-.panel.one {
+.learn-panel.one {
     position: relative;
     z-index: -1;
     // background-image: url('http://picsum.photos/1000');
     background-color: $color-swatch-headstand-2;
 }
-.panel.two {
+.learn-panel.two {
     .panel__text{
         width: 50%;
         margin-left: auto;
     }
 }
-.panel.three {
+.learn-panel.three {
     background: $color-swatch-headstand-4;
     .panel__text{
     }
 }
-.panel.four {
+.learn-panel.four {
     .panel__text{
     }
 }    
@@ -129,16 +129,17 @@
     .container{
     }
 
-    .panel{
+    .learn-panel{
         height: unset;
         &__text{
             opacity: 1 !important;
             width: 100% !important;
             strong{
                 font-size: 2em;
+                padding-bottom: 2em;
             }
             padding-bottom: 200px;
-            padding-top: 1%;
+            // padding-top: 1%;
         }
 
     }

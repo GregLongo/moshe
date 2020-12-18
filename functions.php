@@ -392,6 +392,15 @@ function moshe_timber_context( $context ) {
 
 //gsap
 
+function theme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
+
+
+
+
 wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', null, null, true );
 wp_enqueue_script('gsap');
 

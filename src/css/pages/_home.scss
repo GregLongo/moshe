@@ -32,7 +32,6 @@
 
 
 // .curve.flip{
-// 	transform: scaleY(-1);
 
 // }
 // .title-large--home{
@@ -43,23 +42,22 @@
 	background: none;
 	display: flex;
 	justify-content: center;
-	padding: 48px;
 	font-family: $font-text;
-	font-size: 32px;
-	color: $color-swatch-headstand-4;
+	align-items: center;
+	@include tablet{
+		font-size: $qotd-font-size;		
+		padding: 48px;
+	}
+	padding-top: $section-spacer-default;
+	font-size: $qotd-font-size-mobile;
+	color: $qotd-color;
 	font-style: italic;
 }
 
 .promo-video{
-	@include mobile{
-	width: 60%;
-	}
 	width: 100%;
-	video{
-		width: 360px;
-		@include tablet{
-			width: initial;	
-		}
+	iframe{
+		width: 100%;
 	}
 }
 
@@ -67,10 +65,11 @@
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: $section-spacer-default;
-	margin-bottom: $section-spacer-default * 2;
+	margin-bottom: $section-spacer-default;		
 	@include mobile{
 		display: flex;
-		height: 360px;		
+		height: 360px;
+		margin-bottom: $section-spacer-default * 2;		
 	}
 	display: block;		
 }
