@@ -11,13 +11,19 @@
 	z-index: 1;
 	position:relative;
 	&__inner{
-		margin-top: $section-spacer-default/2;
+		@include tablet{
+			margin-top: $section-spacer-default/1.5;			
+		}
+		margin-top: $section-spacer-default/1.5;
 		text-align: center;
 		position: relative;
 		z-index: 10;
 	}
 	&__msg{
-		font-size: 48px;
+		@include tablet{
+			font-size: 48px;			
+		}
+		font-size: 32px;
 		font-family: $font-headings;
 		color: white;
 		display: block;

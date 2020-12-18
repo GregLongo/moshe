@@ -59,7 +59,7 @@
 .zoom{
 	margin-left: $container-margin-large;
 	margin-right: $container-margin-large;
-	margin-top: $section-spacer-default;
+	// margin-top: $section-spacer-default;
 	&__view-schedule{
 		background: $button-color;
 		color: white;
@@ -77,6 +77,7 @@
 	margin-left: $container-margin-large;
 	display: flex;
 	justify-content: center;
+	flex-direction: column-reverse;
 }
 
 .btn-join-link{
@@ -94,3 +95,4 @@
 .dpn-zvc-timer-cell{
 	background-color: $zoom-timer-color !important;		
 }
+

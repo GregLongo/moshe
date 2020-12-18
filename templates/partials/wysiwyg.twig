@@ -1,6 +1,8 @@
 <div class="wysiwyg wysiwyg--{{location}}">
 <div class="wysiwyg__content--{{location}}">
-<h1 class="title-large--{{location}}">{{ post.title }}</h1>
+	{% if location == 'home' %}
+		<h1 class="title-large--{{location}}">{{ post.title }}</h1>
+	{% endif %}
     {{ post.content}}
  </div>
 </div>

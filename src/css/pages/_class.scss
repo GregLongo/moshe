@@ -1,0 +1,144 @@
+
+.class{
+	&__description{
+		font-family: $font-text;
+		margin-top: $section-spacer-default;
+		margin-bottom: none;
+		padding-left: $container-margin-large;
+		padding-right: $container-margin-large;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		@include tablet{
+			flex-direction: row;
+			margin-bottom: $section-spacer-default;
+		}
+		.windowpane{
+			margin-bottom: $section-spacer-default;
+			@include tablet{
+				margin-bottom: inherit;
+			}
+			&__pane{
+				// flex-shrink:1;
+				// width: 75%;
+				text-align: center;
+				// padding-bottom: 200px;
+				img{
+				width: 100%;
+				filter: saturate(0) contrast(.9);
+				mix-blend-mode: hard-light;					
+				}
+			}
+		}
+	}
+}
+
+.wysiwyg--class{
+	padding-top: $section-spacer-default;
+	padding-bottom: $section-spacer-default * 2;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	background: $intro-paragraph-bg;	
+	overflow: visible !important;
+	background-size: auto 100%;
+	font-family: $font-text;
+	color: $intro-paragraph-color;
+	font-size: $home-intro-text;
+	font-weight: $home-intro-text-weight;
+	// padding-bottom: 440px;
+		&__description{
+		font-size: 1.2em;
+		background: none;
+		padding-left: $container-margin-large/2;
+	}
+}
+
+.class__description .windowpane__pane:nth-child(2),
+.class__description .windowpane__pane:nth-child(4){
+	transform: translateY(48px);
+}
+
+//why's it like this? 
+.class__description .windowpane__pane:nth-child(1),
+.class__description .windowpane__pane:nth-child(4){
+	// background: $color-swatch-headstand-1;
+}
+.class__description .windowpane__pane:nth-child(2),
+.class__description .windowpane__pane:nth-child(3){
+	// background: $color-swatch-headstand-4;
+}
+
+// .class__description .windowpane__pane:nth-child(2) img,
+// .class__description .windowpane__pane:nth-child(3) img{
+// 	margin-top: 30px;
+// }
+
+.class__description .windowpane__pane{
+	margin-top: 0;
+}
+
+.buy-course{
+	background-image: $anim-section-bg;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	overflow-y: visible;
+	margin-bottom: $section-spacer-default;
+	margin-top: $section-spacer-default;
+	display: flex;
+	padding: $anim-section-vertical-padding $container-margin-large ;
+	flex-direction: column;
+	text-align: center;
+	@include tablet{
+		background-size: 100% 100%;
+		flex-direction: row;		
+		text-align: left;
+	}
+	&__listing{
+		@include tablet{
+			flex: 50%;				
+		}
+		display: flex;
+		align-items: flex-start;	
+		flex-direction: column;
+		margin: $anim-section-vertical-padding/2 auto auto auto;
+	}
+	&__price{
+		font-family: $font-gothic;
+		color: white !important;
+		font-size: 3em;
+		margin-bottom: 1em;
+	}
+	&__img{
+		height: auto;
+		width: 100%;	
+		@include tablet{
+			flex: 50%;
+			height: 400px;
+			width: auto;				
+		}
+		padding: 1em;
+	}
+	&__button {
+		width: 100%;
+		margin-top: $section-spacer-default;
+		margin-bottom: $section-spacer-default;
+		@include tablet{
+			width: initial;
+			margin-bottom: initial;
+			margin-top: initial;
+		}
+		a{
+		font-family: $font-headings;
+		background: $button-color;
+		font-size: 2em;
+		color: white !important;
+		padding: 16px 96px 16px 96px;
+		text-align: center;
+		width: fit-content;
+		cursor: pointer;
+		&:hover{
+			background: $color-swatch-headstand-4;
+			}
+		}
+	}
+}

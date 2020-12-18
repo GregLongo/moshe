@@ -3,102 +3,42 @@
 		// padding-bottom: $section-spacer-default / 2;
 		text-align: $page-title-align-generic; 
 	}
-	&-template-default,{
-		.content-wrapper{
-		margin-bottom: $section-spacer-default;			
+	&--generic{
+		// margin-top: $section-spacer-default;
+		margin-bottom: $section-spacer-default;
+		margin-right: $container-margin-medium;			
+		margin-left: $container-margin-medium;		
+		display: flex;
+		flex-direction: column;
+		p{
+			font-family: $font-text;
+			font-size: 1.2em;
+			line-height: 1.5;
 		}
+		h1{
+			text-align: center
+		}
+		img{
+			margin: ($section-spacer-default * .5) auto ;
+			display: flex;
+			&.aligncenter{justify-self: center;}
+			&.size-full{widht: 100%};
+			}
 	}
 	&-template-class-page{
-		margin-bottom: $section-spacer-default;
 	.header{
-		a{
-			// color: white;			
-		}
 		position: $header-affix-home;
-		background: $header-bg;
 	}
-	.footer{
-		background: $color-swatch-headstand-2;
-		}
-	}
-}
-
-.page
-
-.class{
-	&__description{
-		font-family: $font-text;
-		margin-top: $section-spacer-default;
-		margin-bottom: none;
-		padding-left: $container-margin-large;
-		padding-right: $container-margin-large;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
+	.qotd{
+		margin-right: $container-margin-medium;
+		margin-left: $container-margin-medium;
+		margin-bottom: $section-spacer-default;
 		@include tablet{
-			flex-direction: row;
-			margin-bottom: $section-spacer-default * 2;
+			padding-top: 0;			
 		}
-		.windowpane{
-			margin-bottom: $section-spacer-default;
-			@include tablet{
-				margin-bottom: inherit;
-			}
-			&__pane{
-				// flex-shrink:1;
-				// width: 75%;
-				text-align: center;
-				// padding-bottom: 200px;
-				img{
-				width: 100%;
-				filter: saturate(0) contrast(.9);
-				mix-blend-mode: hard-light;					
-				}
-			}
-		}
+	}
+
 	}
 }
 
-.wysiwyg--class{
-	padding-top: $section-spacer-default;
-	padding-bottom: $section-spacer-default * 2;
-	padding-left: $container-margin-large;
-	padding-right: $container-margin-large;
-	background: $intro-paragraph-bg;	
-	overflow: visible !important;
-	background-size: auto 100%;
-	font-family: $font-text;
-	color: $intro-paragraph-color;
-	font-size: $home-intro-text;
-	font-weight: $home-intro-text-weight;
-	// padding-bottom: 440px;
-		&__description{
-		background: none;
-		padding-left: $container-margin-large/2;
-	}
-}
-
-.class__description .windowpane__pane:nth-child(2),
-.class__description .windowpane__pane:nth-child(4){
-	transform: translateY(48px);
-}
-
-//why's it like this? 
-.class__description .windowpane__pane:nth-child(1),
-.class__description .windowpane__pane:nth-child(4){
-	// background: $color-swatch-headstand-1;
-}
-.class__description .windowpane__pane:nth-child(2),
-.class__description .windowpane__pane:nth-child(3){
-	// background: $color-swatch-headstand-4;
-}
-
-// .class__description .windowpane__pane:nth-child(2) img,
-// .class__description .windowpane__pane:nth-child(3) img{
-// 	margin-top: 30px;
-// }
-
-.class__description .windowpane__pane{
-	margin-top: 0;
-}
 

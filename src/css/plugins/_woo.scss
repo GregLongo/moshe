@@ -1,6 +1,31 @@
 .woocommerce{
+	.content-wrapper{
 	font-family: $font-text;
-	margin-right: $container-margin-large;
-	margin-left: $container-margin-large;
-	margin-bottom: $section-spacer-default;
+	padding-right: $container-margin-large;
+	padding-left: $container-margin-large;
+	padding-bottom: $section-spacer-default;
+	.single_add_to_cart_button,.checkout-button,#place_order{
+		background-color: $color-swatch-headstand-1 !important;
+		outline: none;
+		&:hover{
+			background-color: $color-swatch-headstand-4 !important;			
+			}
+		}		
+	}
+	h1{
+		font-size: 2em;
+		font-family: $font-headings;
+	}
+	h2{
+		font-size: 2em;
+	}
+	&-breadcrumb{
+		display: none;
+	}
+}
+
+
+.woocommerce img.header__logo,
+ .woocommerce-page img.header__logo {
+	height: $header-logo-height !important;
 }

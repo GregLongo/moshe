@@ -1,5 +1,6 @@
 <div class="promo-video">
-<video controls>
+{# <video controls>
 	<source  src="{{ post.meta('video-embed').url }}" type="video/mp4" >
-</video>
+</video> #}
+	{{ post.meta('video-embed') }}
 </div>

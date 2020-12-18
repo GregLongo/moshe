@@ -1,0 +1,29 @@
+.section-title{
+	display: flex;
+	flex-direction: row;
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	margin-top: $section-spacer-default;
+	align-items: flex-end;
+	justify-content: space-between;
+	@include tablet{
+		justify-content: unset;
+	}
+	h3{
+		font-family: $font-headings;
+		color: $color-swatch-headstand-4;
+		font-size: 36px !important;
+		font-weight: 400;	
+		margin-bottom: 16px;
+		margin-right: 32px;
+		margin-top: 0;
+	}
+
+	h4{
+		font-family: $font-text;
+		color: $color-swatch-headstand-4;
+		font-size: 18px !important;
+		font-weight: 600;	
+		margin-bottom: 16px;
+	}
+}

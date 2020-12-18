@@ -27,9 +27,11 @@ h1{
 
 h2{
 	font-family: $font-headings;
-	font-size: 48px;
+	font-size: 48px; ;
 	font-weight: 200;
 }
+
+
 
 a{
 
@@ -37,5 +39,14 @@ a{
 
 p{
 
+}
+
+
+
+hr{
+	margin-top: $section-spacer-default - 32px;
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	border: 1px solid $color-swatch-headstand-2;
 }
 

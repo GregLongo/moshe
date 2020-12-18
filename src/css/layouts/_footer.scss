@@ -3,9 +3,13 @@
 	background-color: $color-swatch-headstand-2;
 	display: flex;
 	flex-direction: column;
+	&__wrapper{
 	@include tablet{
+		display: flex;
 		flex-direction: row;
+		}		
 	}
+
 	&__social{
 		display:flex;
 		justify-content: space-between;
@@ -13,7 +17,7 @@
 			color: white;
 			text-align: center;
 			width: 100%;	
-			margin-bottom: 48px;
+			margin-top: 48px;
 			padding-left: 16px;
 			padding-right: 16px;;				
 			@include tablet{
@@ -23,20 +27,41 @@
 				margin-bottom: unset;				
 			}
 			h2{
+				@include tablet{
+					font-size: 3em ;// nonsense that Zoom plugin tries to hijack this
+				}
+				font-size: 2em ;
 				font-family: $font-gothic !important;	
 			}
 		}
 		&-logo svg{
-			font-size: 56px;
+			@include tablet{
+				font-size: 56px;
+			}
+			font-size: 48px;
+		}
+	}
+	&__logo{
+		height: 88px;
+		align-self: center;
+		justify-self: center;
+		margin: auto auto 0 auto;
+		&-wrapper{
+		height: 100%;
+		width: 50%;
+		display: none;
+		@include tablet{
+			display: flex;
+		}
 		}
 	}
 }
 .copyright{	
 	color: white;
-	display:block;
-	align-self: flex-end;
-	margin-left: -50%;
-	padding-left: 56px;
-	padding-bottom: 8px;
+	text-align: center;
+	align-self: center;
+	display: flex;
+	margin: auto;
+	font-family: $font-text;
 }
 

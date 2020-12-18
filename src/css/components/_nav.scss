@@ -19,6 +19,7 @@
 //i only exist on desktop
 .nav{
     display:none;
+
     li {
 		&:hover a{
 			color: $nav-menu-link-color-hover;
@@ -29,7 +30,6 @@
 		font-weight: $nav-link-weight;
 		padding: 14px 16px;
 		text-decoration: none;
-		font-size: 17px;
 		display: block;
 		margin-right: $nav-link-margin;
 		color: $nav-link-color;
@@ -37,8 +37,10 @@
 	}
 	@include tablet {
 		display:flex;
-		ul{
+		ul:first-child{
 			display: -webkit-box;
+			flex-wrap: wrap;
+    		min-width: 40%;
 		}
 	}
 	&__submenu{
@@ -47,10 +49,8 @@
 		display: none;
 		opacity:0;
 		transition: all .4s;
-		ul{
-			display: flex;
-			flex-direction: $nav-submenu-flex-direction;
-		}
+		position: absolute;
+		flex-direction: $nav-submenu-flex-direction;
 		a{
 			color: $nav-submenu-link-color !important;
 			opacity:.8;
@@ -58,8 +58,8 @@
 				opacity: 1;
 			}
 		}
-		position: absolute;
-		backdrop-filter: $nav-submenu-bg-filter;
+		background: white;
+		// backdrop-filter: $nav-submenu-bg-filter;
 		// overflow: visible;
 		&.open{
 			display: flex;

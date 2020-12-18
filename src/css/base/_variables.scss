@@ -40,7 +40,8 @@ $text-color-light: white;
 //==============================================================================
 
 $font-headings: Quicksand;
-$font-text: Ebrima;
+// $font-text: Ebrima ;
+$font-text: 'Quattrocento Sans';
 $font-fallback:'Open Sans', Arial, Helvetica, sans-serif;
 $font-serif-fallback: Georgia, serif;
 $font-gothic: ltc-globe-gothic, sans-seriff;
@@ -50,6 +51,7 @@ $line-height-global: initial;
 // Spacing
 //==============================================================================
 $container-margin-large: 10%;
+$container-margin-medium: 20%;
 $section-spacer-default: 120px;
 //==============================================================================
 // Components
@@ -61,14 +63,14 @@ $button-color: $color-swatch-headstand-1;
 
 $header-affix-home: absolute;
 $header-affix-page: relative;
-$header-padding-left: 64px;
-$header-padding-right: 64px;
-$header-height: 200px;
+$header-padding-left: 2em;
+$header-padding-right: 16px;
+$header-height: 160px;
 $header-height-mobile: 100px;
 $header-z: 10;
 $header-bg: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0) 100%);
 $header-bg-dark: linear-gradient(to bottom, rgba(8,75,131,0.65) 0%,rgba(8,75,131,0) 100%);
-$header-logo-height: 100px;
+$header-logo-height: 88px;
 $header-logo-top-mobile: 20vh;
 //Footer____________
 
@@ -83,10 +85,11 @@ $slider-height: 100vh;
 $slider-height-mobile: 95vh;
 $slider-content-vertical: flex-end;
 $slider-content-horizontal: flex-end;
-$slider-content-margin-right: 64px;
+$slider-content-margin-right: $container-margin-large;
 $slider-content-margin-bottom: 120px;
 $slider-caption-font: $font-gothic;
 $slider-caption-font-size: 90px;
+$slider-caption-font-size-mobile: 3em;
 $slider-caption-font-weight: 500;
 $slider-caption-margin-bottom: 40px;
 $slider-caption-y-mobile: 40%;
@@ -103,12 +106,13 @@ $slider-scrim: linear-gradient(160deg, rgba(202,204,144,0) 0%,rgba(202,204,144,0
 $slider-scrim-mobile:  rgba(202,204,144,.8);
 $slider-scrim-dark: linear-gradient(160deg, rgba(8,75,131,0) 0%,rgba(8,75,131,0) 40%,rgba(8,75,131,.8) 70%,rgba(8,75,131,1) 100%);
 
-$hero-height: 75vh;
+$hero-height: 100vh;
+$hero-caption-font-size: $slider-caption-font-size;
 //Nav_____________
 $nav-link-color: $color-swatch-headstand-4;
-$nav-link-size: 1.7em;
-$nav-link-margin: 30px;
-$nav-link-weight: 400;
+$nav-link-size: 1.2em;
+$nav-link-margin: 0px;
+$nav-link-weight: 500;
 $nav-link-font: $font-headings;
 $nav-link-size-mobile: 1.5em;
 $nav-bg-mobile: $color-swatch-headstand-2;
@@ -127,7 +131,8 @@ $nav-submenu-bg-filter: blur(40px) ;
 //Generic Page_______________
 
 $page-title-align-generic: center;
-
+$page-generic-font-size: 1.2em;
+$page-generic-line-height: 1.5;
 //Home______________
 
 $intro-paragraph-color: white;
@@ -138,10 +143,12 @@ $home-intro-text: 24px;
 $home-intro-text-mobile: 20px;
 $home-intro-text-weight: 400;
 
-$anim-section-vertical-padding: 200px;
+$anim-section-vertical-padding: 150px;
 $anim-section-bg: url('../images/goldcurve.png');
 
-
+$qotd-font-size: 32px;
+$qotd-font-size-mobile: 24px;
+$qotd-color: $color-swatch-headstand-4;
 
 
 //Posts_____________
