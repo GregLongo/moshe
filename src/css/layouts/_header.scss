@@ -1,15 +1,18 @@
 .header{
 	// overflow-x: hidden; //still kinda confuse what's happening here
+
 	z-index: $header-z;
-	position: $header-affix-page;
 	background: $header-bg;
 	width: 100%;
 	height: $header-height-mobile;
 	padding-left: 15px;//just matching default margins of hamburger
+	transition: all $header-affix-transition linear;
+	position: absolute;	
 	@include tablet{
 		height: $header-height;
 		padding-left: $header-padding-left;
-		padding-right: $header-padding-right;		
+		padding-right: $header-padding-right;	
+		// position: $header-affix-page;	
 	}
 	&__wrapper{
 		display: flex;
@@ -18,16 +21,29 @@
 		height: 100%;
 	}
 	&__logo{
-		width: 70vw;
+		height: $header-logo-height-mobile;
 		display: block;
 		// top:$header-logo-top-mobile;
-		@include tablet{
+		transition: all $header-affix-transition linear;
+		@include mobile{
 			height: $header-logo-height;
 			display: flex;	
-			width: initial;	
+			// width: initial;	
 			top: auto;
 			left: auto;
 			position: relative;
+		}
+	}
+	&--fixed{
+		@include tablet{
+				box-shadow: 0px 0px 4px 4px rgba(41,41,41,.05);
+
+			position: fixed;
+			background: $header-bg-fixed;
+			height: $header-height/2;
+			.header__logo{
+				transform: scale(.7);							
+			}
 		}
 	}
 }

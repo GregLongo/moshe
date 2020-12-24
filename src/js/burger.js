@@ -4,7 +4,6 @@ jQuery(document).ready(function() {
 	const menu = new MmenuLight(
 			mynav
 		); 
-	console.log(menu);
 	const navigator = menu.navigation();
 	const drawer = menu.offcanvas();
 	navigator.openPanel(
@@ -16,7 +15,6 @@ jQuery(document).ready(function() {
 		drawer.open();
 	});
     $('.mm-ocd__backdrop').on('click mousedown touchstart', function(e) {
-        console.log('heyman');
         e.preventDefault();
         $('a[href="#nav-mobile"]').removeClass('is-active');
     });
@@ -24,12 +22,8 @@ jQuery(document).ready(function() {
 
 //submenus too just for fun
 	$('.menu-item-has-children').hover(function(){
-		console.log('heymaaan');
 		$(this).find('.nav__submenu').toggleClass('open');
 	});
-
-
-
 
 
 });

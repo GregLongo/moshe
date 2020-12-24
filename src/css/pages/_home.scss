@@ -1,6 +1,6 @@
 .home{
 	.header{
-		position: $header-affix-home;
+		// position: $header-affix-home;
 	}
 }
 .wysiwyg--home{
@@ -38,38 +38,3 @@
 // 	text-align: center;
 // }
 
-.qotd{
-	background: none;
-	display: flex;
-	justify-content: center;
-	font-family: $font-text;
-	align-items: center;
-	@include tablet{
-		font-size: $qotd-font-size;		
-		padding: 48px;
-	}
-	padding-top: $section-spacer-default;
-	font-size: $qotd-font-size-mobile;
-	color: $qotd-color;
-	font-style: italic;
-}
-
-.promo-video{
-	width: 100%;
-	iframe{
-		width: 100%;
-	}
-}
-
-.home__misc{
-	margin-right: $container-margin-large;
-	margin-left: $container-margin-large;
-	margin-top: $section-spacer-default;
-	margin-bottom: $section-spacer-default;		
-	@include mobile{
-		display: flex;
-		height: 360px;
-		margin-bottom: $section-spacer-default * 2;		
-	}
-	display: block;		
-}

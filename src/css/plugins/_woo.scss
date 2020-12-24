@@ -1,8 +1,18 @@
 .woocommerce{
+	&-product-gallery{
+		pointer-events: none;
+	}
+	&-info{
+		&:before{
+			color: $color-swatch-headstand-1 !important;
+		}
+		border-top-color: $color-swatch-headstand-1 !important;
+	}
 	.content-wrapper{
 	font-family: $font-text;
 	padding-right: $container-margin-large;
 	padding-left: $container-margin-large;
+	padding-top: $section-spacer-default/2;
 	padding-bottom: $section-spacer-default;
 	.single_add_to_cart_button,.checkout-button,#place_order{
 		background-color: $color-swatch-headstand-1 !important;
@@ -11,6 +21,15 @@
 			background-color: $color-swatch-headstand-4 !important;			
 			}
 		}		
+	}
+	a{
+		color: $color-swatch-headstand-4 !important;			
+		&:hover{
+			color: $color-swatch-headstand-1 !important;		
+		}
+	}
+	li,p{
+		font-family:$font-text;
 	}
 	h1{
 		font-size: 2em;
@@ -21,6 +40,16 @@
 	}
 	&-breadcrumb{
 		display: none;
+	}
+	.button.button.alt{
+		outline: none;
+		background-color: $color-swatch-headstand-1 !important;
+		&:hover{
+			background-color: $color-swatch-headstand-4 !important;			
+		}		
+	}
+	.form-row.woocommerce-validated{
+		border-color: $color-swatch-headstand-1 !important;
 	}
 }
 

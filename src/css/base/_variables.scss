@@ -60,18 +60,20 @@ $section-spacer-default: 120px;
 
 $button-color: $color-swatch-headstand-1;
 //Header____________
-
-$header-affix-home: absolute;
-$header-affix-page: relative;
+$header-affix-transition: .3s;
+$header-affix-home: fixed;
+$header-affix-page: fixed;
 $header-padding-left: 2em;
 $header-padding-right: 16px;
 $header-height: 160px;
 $header-height-mobile: 100px;
 $header-z: 10;
-$header-bg: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0) 100%);
+$header-bg: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,.4) 70%, rgba(255,255,255,0) 100%);
 $header-bg-dark: linear-gradient(to bottom, rgba(8,75,131,0.65) 0%,rgba(8,75,131,0) 100%);
 $header-logo-height: 88px;
 $header-logo-top-mobile: 20vh;
+$header-logo-height-mobile: 64px;
+$header-bg-fixed: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%);
 //Footer____________
 
 $footer-height: 96px;
@@ -111,6 +113,7 @@ $hero-caption-font-size: $slider-caption-font-size;
 //Nav_____________
 $nav-link-color: $color-swatch-headstand-4;
 $nav-link-size: 1.2em;
+$nav-link-size-sm: 1em;
 $nav-link-margin: 0px;
 $nav-link-weight: 500;
 $nav-link-font: $font-headings;

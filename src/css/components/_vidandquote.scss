@@ -1,0 +1,38 @@
+.qotd{
+	background: none;
+	display: flex;
+	justify-content: center;
+	font-family: $font-text;
+	align-items: center;
+	@include desktop{
+		font-size: $qotd-font-size;		
+		padding: 48px;
+	}
+	padding-top: $section-spacer-default;
+	font-size: $qotd-font-size-mobile;
+	color: $qotd-color;
+	font-style: italic;
+}
+
+.promo-video{
+	width: 100%;
+	text-align: center;
+	iframe{
+		@include mobile-max{
+			width: 100%;
+		}
+	}
+}
+
+.home__misc{
+	margin-right: $container-margin-large;
+	margin-left: $container-margin-large;
+	margin-top: $section-spacer-default;
+	margin-bottom: $section-spacer-default;		
+	@include desktop{
+		display: flex;
+		height: 360px;
+		margin-bottom: $section-spacer-default * 2;		
+	}
+	display: block;		
+}

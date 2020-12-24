@@ -1,0 +1,45 @@
+{% extends 'base.twig' %}
+{% block content %}
+	{#whole rigmarole around embedding lazy loaded short codes. still a good idea if canget work #}
+{# {% filter shortcodes %}
+{%  for i in range(1, 24) %}
+ #}
+	{# 
+<iframe src="https://www.youtube.com/embed?v=REA1dWs3H5U&list=PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index={{i}}" loading="lazy"></iframe> #}
+{# [lyte id='PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index={{i}}' audio='true' /] #}
+{# {% endfor%}
+{% endfilter %} #}
+{# {%  set api_url = "https://www.googleapis.com/youtube/v3/search?part=snippet&playlistId=PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&key=AIzaSyBrJTMK8kzm21gHs45VFLJJFOOlvZX8pps" %}
+ #}
+
+{# <div class="audio__container">https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId="PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index"&key="AIzaSyBrJTMK8kzm21gHs45VFLJJFOOlvZX8pps"</div>
+ #}
+{# {{ api_url}} #}
+{# 
+{{ fn('get_youtube_api') }} #}
+	{% include "partials/hero-class.twig" %}
+
+<div class="audio__wrapper">
+	{# <h1 class="page__title page__title--audio">{{ post.title }} </h1> #}
+	<div class="audio__wysiwyg">
+	{{ post.content }}
+	</div>
+	<div class="audio__gallery">
+	{#seem to have hit youtube api quota. no embed for now #}
+		{%  for i in range(1, 24) %}
+			<a href="https://www.youtube.com/embed?v=oZUS6PqVp88&list=PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index={{i}}" target="_blank">
+
+			<div class="audio__item audio__item-{{i}}"
+			 style="background-image: url('https://source.unsplash.com/collection/1240/200x{{200+i}}')">
+				{#random BG image from unsplash API#}
+
+				<h4>ATM Lesson {{ i }}</h4>
+				<span >
+				Listen on Youtube
+				</span>
+			</div>
+			</a>
+		{%  endfor %}
+	</div>
+</div>
+{%  endblock %}

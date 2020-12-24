@@ -8,3 +8,4 @@ import './magic';
 import './homepage';
 import './burger';
 import './learn';
+import './affix-header';

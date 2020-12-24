@@ -27,12 +27,15 @@
 }
 
 
-
-
-
-// awkward special cases desktop first mixin 
+// awkward special cases desktop first mixins 
 @mixin tablet-max{
   @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile-max{
+  @media (max-width: #{$mobile}) {
     @content;
   }
 }
