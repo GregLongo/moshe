@@ -25,7 +25,7 @@
 		&__details{
 			font-family: $font-text;
 			padding:0 24px 24px 24px;
-			white-space: nowrap;
+			// white-space: nowrap;
 			&__meta{
 				.hosted-by{
 					display: none !important;
@@ -73,6 +73,8 @@
 //zoom theater
 
 .dpn-zvc-single-content-wrapper{
+	font-family: $font-text;
+	line-height: 1.2em;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	display: flex;
@@ -99,3 +101,7 @@
 	background-color: $zoom-timer-color !important;		
 }
 
+
+.dpn-zvc-shortcode-op-wrapper{
+	font-family: $font-text;
+}

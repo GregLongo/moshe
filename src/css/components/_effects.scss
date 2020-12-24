@@ -46,14 +46,23 @@ body{
 	transform: translateY(16px);
 }
 
+@mixin delay{
+	@for $i from 1 through 8 {
+		&:nth-child(#{$i}){
+			transition-delay: #{.2 * $i}s;
+		}		
+	}
+}
+
+
 .vczapi-list-zoom-meetings--item{
 	transition: all 1s ease-in-out;	
 	opacity:0;
 	transform: translateY(48px);
-	&:nth-child(2){
-		transition-delay:0.2s;
-	}
+	@include delay;
 }
+
+
 
 .zoom__view-schedule{
 	opacity:0;

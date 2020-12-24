@@ -1,0 +1,66 @@
+.audio{
+	&__wrapper{
+		margin-right: $container-margin-large;
+		margin-left: $container-margin-large;
+	}
+	&__wysiwyg{//this is not ideal but. should the image be a hero? i dunno. i'm tired
+		margin-top: $section-spacer-default;
+
+	img{
+		width: 100%;
+		margin-top: $section-spacer-default/2;
+		}
+	p{
+		font-family: $font-text;
+		font-size: 1.2em;
+		line-height: 1.5em;
+	}
+	h3{
+		font-family: $font-headings;
+		font-size: 32px;
+		margin-top: $section-spacer-default/2;
+		}
+	}
+	&__gallery{
+	margin-top: $section-spacer-default/3;
+	margin-bottom: $section-spacer-default;
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+	@include tablet{
+		grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	&__item{
+		height: 200px;
+		background-size: 100% auto;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor:pointer;
+		transition: all .4s ease;
+		background-position: center;
+		background-color: darkgrey;
+		background-blend-mode: multiply;
+		h4{
+			font-family: $font-headings;
+			font-size: 20px;
+		}
+		span{
+			color: white;
+			opacity: 0;
+			transition: opacity .4s ease;
+			font-family: $font-headings;
+		}
+		&:hover{
+			background-size: 105% auto;
+			span{
+				opacity: 1;
+			}
+		}
+
+	}
+}

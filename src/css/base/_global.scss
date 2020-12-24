@@ -12,12 +12,13 @@ body{
 	@include fadein;
 }
 
-.content-wrapper{
-	overflow-x: hidden;
-	// @include tablet{
-	// 	overflox-x: scroll;
-	// }
-}
+// .content-wrapper{
+// 	overflow-x: hidden;
+// 	// @include tablet{
+// 	// 	overflow-x: auto;
+// 	// 	overflow-y: hidden;
+// 	// }
+// }
 //probably not best practice for font hierarchy. decorator classes? mixins?
 h1{
 	font-family: $font-gothic;

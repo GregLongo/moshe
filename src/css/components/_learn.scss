@@ -35,7 +35,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        padding-top: 10%;
+        padding-top: 12%;
         // opacity: 0;
         // transition: opacity 1s ease-in-out;
         strong{
@@ -76,9 +76,9 @@
     height: 100vh;
     // background: url('http://picsum.photos/1000'); //temp
     background-size: cover;
-    margin-top: - $header-height;
+    // margin-top: - $header-height; 
     background-blend-mode: multiply;
-    background-color: #999999;
+    background-color: #e2e2e2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,14 +94,14 @@
     padding-left: $container-margin-large / 2;
     position: fixed;
     z-index: 1000;
-    top: 100vh - 12vh;
+    top: 100vh - 8vh;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
     font-family: $font-headings;
     background: white;
-    height: 12vh;
+    height: 8vh;
     font-size: 1.2em;
     a{
         margin-right: 80px;

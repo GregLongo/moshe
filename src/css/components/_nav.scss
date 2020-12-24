@@ -28,12 +28,16 @@
 	a{
 		font-family: $nav-link-font;
 		font-weight: $nav-link-weight;
-		padding: 14px 16px;
+		padding: 8px 8px;
 		text-decoration: none;
 		display: block;
 		margin-right: $nav-link-margin;
 		color: $nav-link-color;
-		font-size: $nav-link-size;
+		@include desktop{
+			padding: 8px 12px;
+			font-size: $nav-link-size;		
+		}
+		font-size: $nav-link-size-sm;		
 	}
 	@include tablet {
 		display:flex;
@@ -46,9 +50,9 @@
 	&__submenu{
 		@include tablet{
 		pointer-events: none; //slightly hacky workaround to account for menu recursion
-		display: none;
+		// display: none;
 		opacity:0;
-		transition: all .4s;
+		transition: all .2s ease;
 		position: absolute;
 		flex-direction: $nav-submenu-flex-direction;
 		a{
@@ -72,6 +76,7 @@
 
 //mmenu styles
 .nav--mobile{
+	display: none;
 	&.mm-spn{
 		font-family: $nav-link-font;
 		font-size: $nav-link-size-mobile;

@@ -382,16 +382,6 @@ function moshe_timber_context( $context ) {
 // });
 
 
-//woocommerce point of entry aka enter the woo (return to later or delete)
-
-// function theme_add_woocommerce_support() {
-//     add_theme_support( 'woocommerce' );
-// }
-
-// add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
-
-//gsap
-
 function theme_add_woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
@@ -400,9 +390,28 @@ add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
 
 
 
+//gsap
 
 wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', null, null, true );
 wp_enqueue_script('gsap');
 
 wp_register_script( 'scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js', null, null, true );
 wp_enqueue_script('scrollTo');
+
+//hit youtube api quota. revisit this
+// function get_youtube_api() {
+// 	$API_URL = "https://www.googleapis.com/youtube/v3/part=id&playlistId=PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index=1&key=AIzaSyBrJTMK8kzm21gHs45VFLJJFOOlvZX8pps";
+// 	$videos = file_get_contents($API_URL);
+// 	print_r($videos) ;
+
+// }
+
+// add_action( 'getYoutubeAPI', 'get_youtube_api' );
+
+//tester function
+
+// function echo_test($var){
+
+// 	echo $var;
+// }
+// add_action('echo_hello', echo_test);
