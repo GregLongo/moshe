@@ -5,7 +5,8 @@
 	background: $header-bg;
 	width: 100%;
 	height: $header-height-mobile;
-	padding-left: 15px;//just matching default margins of hamburger
+	padding-left: 1em;
+	padding-right: 1em;
 	transition: all $header-affix-transition linear;
 	position: absolute;	
 	@include tablet{
@@ -21,17 +22,23 @@
 		height: 100%;
 	}
 	&__logo{
-		height: $header-logo-height-mobile;
+		height: $header-logo-height-small;
 		display: block;
 		// top:$header-logo-top-mobile;
 		transition: all $header-affix-transition linear;
+		@include small{
+			height: $header-logo-height-mobile;			
+		}
 		@include mobile{
-			height: $header-logo-height;
+			height: $header-logo-height-tablet;
 			display: flex;	
 			// width: initial;	
 			top: auto;
 			left: auto;
 			position: relative;
+		}
+		@include tablet{
+			height: $header-logo-height;
 		}
 	}
 	&--fixed{
@@ -39,7 +46,7 @@
 				box-shadow: 0px 0px 4px 4px rgba(41,41,41,.05);
 
 			position: fixed;
-			background: $header-bg-fixed;
+			background-color: white;
 			height: $header-height/2;
 			.header__logo{
 				transform: scale(.7);							

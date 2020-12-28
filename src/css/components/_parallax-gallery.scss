@@ -1,17 +1,22 @@
 .parallax-gallery{
-	@include tablet{
-		grid-template-columns: repeat(4, 1fr);
-	}
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
-	margin-top: $section-spacer-default * 2;
 	margin-bottom: $section-spacer-default * 2;
+	margin-top: $section-spacer-default/2;
 	display: grid;
 	justify-content:center;
+	@include xl{
+		margin-right: $container-margin-medium;
+		margin-left: $container-margin-medium;		
+	}
+	@include tablet{
+		grid-template-columns: repeat(4, 1fr);
+		margin-top: $section-spacer-default * 2;
+	}
 	&__img{
-		width: 300px;
+		width: 60vw;
 		display:flex;
 		flex-shrink:1;
 		@include tablet{

@@ -35,7 +35,7 @@ $(".learn-panel").each(function() {
 // tl.to(target, .5, { opacity:0, y:0}, 1);
 
 tl.staggerFrom(target, .8, { opacity:0, y:40}, .1);
-
+var selected  =  $("a[href$='"+this.id+"']");//breadcrumb
 myscene = new ScrollMagic.Scene({
 	triggerElement: this,
 	triggerHook: "0",
@@ -44,9 +44,22 @@ myscene = new ScrollMagic.Scene({
 })
 .setPin(this, {pushFollowers: true})
 .setTween(tl)
+.setClassToggle( selected[0], 'selected')
 .addTo(controller);
 });
 }
+
+//new scene just for last panel breadcrumb
+	var lastpanel  =  $("a[href$='#learn-panel-5']")
+	new ScrollMagic.Scene({
+		triggerElement:"#learn-panel-5",
+		triggerHook: '0',
+		duration: "100%",
+		offset:-100
+	})
+	.setClassToggle(lastpanel[0], "selected")
+	.addTo(controller);
+
 // change behaviour of controller to animate scroll instead of jump
 
 controller.scrollTo(function (newpos, offset) {

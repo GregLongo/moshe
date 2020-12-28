@@ -1,6 +1,13 @@
 .anim-section{
 	width: 100%;
+
 	&__animation{
+		img{
+			@include mobile{
+				transform: scale(1);
+			}
+			transform: scale(.8);
+		}
 		text-align: center;
 		// margin-bottom: $section-spacer-default/2;
 		&-2{
@@ -20,13 +27,18 @@
 	}
 	&__row{	
 		// overflow-x: hidden;
+
 		@include tablet{
 		grid-template-columns: 50% 50%;
 		background-size: 100%;
-		}
 		padding: $anim-section-vertical-padding $container-margin-large ;
+		}
+		padding: $section-spacer-default $container-margin-large $anim-section-vertical-padding $container-margin-large;
 		grid-template-columns: 100%;
 		display: grid;
+		@include xl{
+			padding: $anim-section-vertical-padding $container-margin-medium ;			
+		}
 		// align-items: center;
 		&:nth-child(1){
 			// margin-bottom: $section-spacer-default*2;
@@ -38,8 +50,10 @@
 		background-repeat: no-repeat;
 		overflow-y: visible;
 		color: white;
+		padding-bottom: $anim-section-vertical-padding * 1.5;
 		@include tablet{
-				background-size: 100% 100%;
+			padding-bottom: $anim-section-vertical-padding;
+			background-size: 100% 100%;
 			}
 		}
 		p{	

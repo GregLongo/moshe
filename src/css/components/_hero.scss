@@ -2,10 +2,11 @@
 	overflow-x: hidden;
 	&__slide{
 		height: $slider-height-mobile;
+		align-items: center;
+		display: flex !important;
 		// background-position: center center;
 		@include tablet {
 			height: $slider-height;
-			display: flex !important;
 			align-items: $slider-content-vertical;
 			justify-content: $slider-content-horizontal;	
 		}
@@ -15,18 +16,22 @@
 	}
 	&__cta{
 		z-index: 11;
-		bottom: $slider-caption-y-mobile;
+		// bottom: $slider-caption-y-mobile;
 		position: absolute;
 		text-align: center;
 		align-items: flex-end;
-		width: 100%;
+		// width: 100%;
+		@include mobile{
+			margin-left: $container-margin-large;
+			margin-right: $container-margin-large;				
+		}
 		@include tablet{
 			margin-right: $slider-content-margin-right;
 			margin-bottom: $slider-content-margin-bottom;	
 			margin-top:unset;
 			bottom: unset;
 			position: unset;
-			text-align: unset;
+			text-align: right;
 			align-items: unset;
 			width: unset;
 		}
@@ -35,12 +40,18 @@
 		z-index: 11;
 		position:flex;
 		text-align: center;
-		font-size: $slider-caption-font-size-mobile;
+		font-size: $slider-caption-font-size-small;
 		whitespace: wrap;
 		font-family: $slider-caption-font;
 		font-weight: $slider-caption-font-weight;
 		color: $text-color-light;
 		margin-bottom: $slider-caption-margin-bottom;
+		@include small{
+			font-size: $slider-caption-font-size-mobile;			
+		}
+		@include mobile{
+			font-size: $slider-caption-font-size-tablet;			
+		}
 		@include tablet{
 			font-size: $slider-caption-font-size;
 			white-space: nowrap;
@@ -50,7 +61,11 @@
 	}
 	&__button{
 		z-index: 11;
-		position: flex;
+		position: fixed;
+		bottom: $hero-button-bottom;
+		margin-right: auto;
+		transform: translateX(-50%);
+		left: 50%;
 		background: $slider-button-background;
 		padding: $slider-button-padding-mobile;
 		border: $slider-button-border;
@@ -62,7 +77,14 @@
 		margin: auto;
 		white-space: nowrap;
 		cursor: pointer;
+		@include mobile{
+			padding: $slider-button-padding-tablet;			
+		}
 		@include tablet{
+			transform: none;
+			left: unset;
+			position: relative;
+			bottom: unset;
 			padding: $slider-button-padding;
 			font-size: $slider-button-font-size;
 			width: unset;
@@ -96,12 +118,14 @@
 	background-position: center;
 	background-size: auto 100%;		
 	display: flex; 
-	align-items: flex-end;
+	align-items: center;
+	margin-top: -24px; //fixes weird white space at top. why happen?
+	justify-content: center;
+	@include tablet{
 	justify-content: flex-end;
+	align-items: flex-end;
 	padding-left: $header-padding-left;
 	padding-right: $header-padding-right;
-	margin-top: -24px; //fixes weird white space at top. why happen?
-	@include tablet{
 	background-size: cover;		
 	}
 	.hero__title h1{
@@ -109,19 +133,27 @@
 		margin-bottom: $slider-caption-margin-bottom;
 		z-index: 11;
 		position: relative;
-		font-size: $slider-caption-font-size-mobile;
+		font-size: $slider-caption-font-size-small;
+		@include small{
+			font-size: $slider-caption-font-size-mobile;			
+		}
+		@include mobile{
+			font-size: $slider-caption-font-size-tablet;			
+		}
 		@include tablet{
 			font-size: $hero-caption-font-size;		
-			white-space: nowrap;	
+			// white-space: nowrap;	
 		}
 	}
 	.slider__scrim{
 		height: $hero-height;
 		position: absolute;
-		top: 32px;//for some reason
-		background: $slider-scrim;
+		background: $slider-scrim-mobile;
 		z-index: 1;
-
+		@include tablet{
+			top: 32px;//for some reason
+			background: $slider-scrim;
+		}
 	}
 }
 

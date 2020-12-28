@@ -22,8 +22,11 @@ body{
 //probably not best practice for font hierarchy. decorator classes? mixins?
 h1{
 	font-family: $font-gothic;
-	font-size: 56px;
+	font-size: 48px;
 	font-weight: 200;
+	@include tablet{
+		font-size: 56px;
+	}
 }
 
 h2{
@@ -32,8 +35,19 @@ h2{
 	font-weight: 200;
 }
 
+h4{
+	font-family: $font-headings;
+	font-size: 32px; ;
+	font-weight: 200;
+}
 
-
+//this is incredibly risky but lets see what happens
+	h3{
+		font-family: $font-headings;
+		font-size: 32px;
+		// margin-top: 0;
+		font-weight: 200;
+		}
 a{
 
 }
@@ -45,9 +59,13 @@ p{
 
 
 hr{
-	margin-top: $section-spacer-default - 32px;
+	@include tablet{
+		margin-top: $section-spacer-default - 32px;
+	}
+	margin-top: $section-spacer-default;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
+	margin-bottom: 0;
 	border: 1px solid $color-swatch-headstand-2;
 }
 

@@ -26,10 +26,11 @@ $(document).ready(function(){
 //Homepage
 if($('body.home').length){
 
+	//this has been creating problems
 
 	new ScrollMagic.Scene({
 		triggerElement: ".slider",
-		triggerHook: .2,
+		triggerHook: .1,
 		duration: "100%"
 	})
 	.setTween(".slider__slide", {y:"8%"})
@@ -48,7 +49,7 @@ if($('body.home').length){
 	new ScrollMagic.Scene({
 		triggerElement:".zoom",
 		triggerHook: .8,
-		duration: "200%",
+		duration: "400%",
 		offset: 50
 	})
 	.setClassToggle(".vczapi-list-zoom-meetings--item", "magic__fade--up")
@@ -57,7 +58,7 @@ if($('body.home').length){
 	new ScrollMagic.Scene({
 		triggerElement:".zoom",
 		triggerHook: .8,
-		duration: "200%",
+		duration: "400%",
 		offset: 50
 	})
 	.setClassToggle(".zoom__view-schedule", "magic__fade--up")
@@ -151,7 +152,7 @@ if($('body.home').length){
 if ($('body.page-template-class-page').length){
 	new ScrollMagic.Scene({
 		triggerElement: ".hero__wrapper",
-		triggerHook: .2,
+		triggerHook: 0,
 		duration: "100%"
 	})
 	.setTween(".hero--class", {y:"10%"})
@@ -166,13 +167,14 @@ if ($('body.page-template-class-page').length){
 	.setClassToggle(".wysiwyg__content--class", "magic__fade--up")
 	.addTo(controller);
 
-	new ScrollMagic.Scene({
-		triggerElement: ".windowpane__pane--class",
-		triggerHook: .6,
-		duration: "200%"
-	})
-	.setTween(".windowpane__img", {y:"20%"})
-	.addTo(controller);
+// subtle effect but cool too bad no workee
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".windowpane__pane--class",
+	// 	triggerHook: .6,
+	// 	duration: "200%"
+	// })
+	// .setTween(".windowpane__img", {y:"20%"})
+	// .addTo(controller);
 
 	new ScrollMagic.Scene({
 		triggerElement:".windowpane__pane--class",
@@ -219,7 +221,7 @@ if($('.page__title--about').length){
 	new ScrollMagic.Scene({
 		triggerElement:".wysiwyg--about",
 		triggerHook: .9,
-		duration: "100%",
+		duration: "200%",
 		offset: 50
 	})
 	.setClassToggle(".wysiwyg--about", "magic__fade--basic")
@@ -238,7 +240,7 @@ if($('.page__title--about').length){
 	new ScrollMagic.Scene({
 		triggerElement:".mission",
 		triggerHook: .8,
-		duration: "100%",
+		duration: "200%",
 		offset: 50
 	})
 	.setClassToggle(".mission__content", "magic__fade--basic")

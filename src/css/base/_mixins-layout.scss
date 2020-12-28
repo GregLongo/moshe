@@ -1,4 +1,13 @@
 // Media query for mobile first layout
+
+//Break on small mobile
+@mixin small{
+  @media (min-width: #{$small}) {
+    @content;
+  }
+}
+
+//Break on mobile
 @mixin mobile{
   @media (min-width: #{$mobile}) {
     @content;
@@ -22,6 +31,13 @@
 // Break on desktop
 @mixin widescreen{
   @media (min-width: #{$desktop-wide}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin xl{
+  @media (min-width: #{$desktop-xl}) {
     @content;
   }
 }

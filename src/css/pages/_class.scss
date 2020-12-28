@@ -13,45 +13,49 @@
 			flex-direction: row;
 			margin-bottom: $section-spacer-default;
 		}
+		@include xl{
+			padding-left: $container-margin-medium;
+			padding-right: $container-margin-medium;			
+		}
 		.windowpane{
 			margin-bottom: $section-spacer-default;
 			@include tablet{
 				margin-bottom: inherit;
 			}
-			&__pane{
-				// flex-shrink:1;
-				// width: 75%;
-				text-align: center;
-				// padding-bottom: 200px;
-				img{
-				width: 100%;
-				filter: saturate(0) contrast(.9);
-				mix-blend-mode: hard-light;					
-				}
-			}
 		}
 	}
 }
 
-.wysiwyg--class{
-	padding-top: $section-spacer-default;
-	padding-bottom: $section-spacer-default * 2;
-	padding-left: $container-margin-large;
-	padding-right: $container-margin-large;
-	background: $intro-paragraph-bg;	
-	overflow: visible !important;
-	background-size: auto 100%;
-	font-family: $font-text;
-	color: $intro-paragraph-color;
-	font-size: $home-intro-text;
-	font-weight: $home-intro-text-weight;
-	// padding-bottom: 440px;
-		&__description{
+// .wysiwyg--class{
+// 	padding-top: $section-spacer-default;
+// 	padding-bottom: $section-spacer-default * 2;
+// 	padding-left: $container-margin-large;
+// 	padding-right: $container-margin-large;
+// 	background: $intro-paragraph-bg;	
+// 	overflow: visible !important;
+// 	background-size: auto 100%;
+// 	font-family: $font-text;
+// 	color: $intro-paragraph-color;
+// 	font-size: $home-intro-text-mobile;
+// 	font-weight: $home-intro-text-weight;
+// 	// padding-bottom: 440px;
+// 		&__description{
+// 		font-size: $home-intro-text;
+// 		font-size: 1.2em;
+// 		background: none;
+// 		padding-left: $container-margin-large/2;
+// 	}
+// }
+
+
+.wysiwyg--class__description{
+		font-size: $home-intro-text;
 		font-size: 1.2em;
 		background: none;
 		padding-left: $container-margin-large/2;
-	}
 }
+
+
 
 .class__description .windowpane__pane:nth-child(2),
 .class__description .windowpane__pane:nth-child(4){
@@ -82,16 +86,26 @@
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	overflow-y: visible;
-	margin-bottom: $section-spacer-default;
 	margin-top: $section-spacer-default;
 	display: flex;
-	padding: $anim-section-vertical-padding $container-margin-large ;
 	flex-direction: column;
 	text-align: center;
+	justify-content: center;
+	padding-top: $anim-section-vertical-padding;
+	padding-bottom: $anim-section-vertical-padding * 2;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	margin-bottom: -$anim-section-vertical-padding/1.5;
 	@include tablet{
+		padding:  $container-margin-large ;
+		margin-bottom: $section-spacer-default;
 		background-size: 100% 100%;
 		flex-direction: row;		
 		text-align: left;
+	}
+	@include xl{
+		padding-left: $container-margin-medium;
+		padding-right: $container-margin-medium;			
 	}
 	&__listing{
 		@include tablet{
@@ -106,17 +120,22 @@
 		font-family: $font-gothic;
 		color: white !important;
 		font-size: 3em;
-		margin-bottom: 1em;
+		@include tablet{
+			margin-bottom: 1em;			
+		}
 	}
 	&__img{
 		height: auto;
-		width: 100%;	
+		width: 80%;	
+		// @include mobile{
+		// 	width: 60%;			
+		// }
 		@include tablet{
 			flex: 50%;
 			height: 400px;
-			width: auto;				
+			width: auto;	
+			padding: 1em;			
 		}
-		padding: 1em;
 	}
 	&__button {
 		width: 100%;
