@@ -9,10 +9,11 @@
 		padding-left: $container-margin-large;
 		padding-right: $container-margin-large;
 		flex-direction: column;
-		margin-bottom: $section-spacer-default * 2;
+		margin-bottom: $section-spacer-default ;
 		@include tablet{
 			flex-direction: row;
 			margin-top: $section-spacer-default;
+			margin-bottom: $section-spacer-default * 2;
 		}
 	}
 }
@@ -35,18 +36,19 @@
 	}
 }
 
-.windowpane{
-	margin-right: $container-margin-large;
-	grid-row-gap: 0;
-	&__pane--about{
-		img{
-			width: auto;
-			height: 300px;
-			@include tablet{
-				// width: 60%;
-			}
-		}
-	}
+.about__sculpture .windowpane{
+	// background: red ;
+	// margin-right: $container-margin-large;
+	// grid-row-gap: 0;
+	// &__pane--about{
+	// 	img{
+	// 		width: auto;
+	// 		height: 300px;
+	// 		@include tablet{
+	// 			// width: 60%;
+	// 		}
+	// 	}
+	// }
 }
 
 
@@ -58,18 +60,24 @@
 
 .mission{
 	color: white;
-	font-family: $font-text;
-	font-size: 24px;
+	h4{
+		@include tablet{
+			font-size: 24px;		
+		}
+		font-size: 22px;		
+		font-family: $font-text;		
+	}
 	padding-top: $section-spacer-default;
 	padding-bottom: $section-spacer-default;
 	padding-left: $container-margin-large;
 	padding-right: $container-margin-large;
 	background-size: cover;
-	background-position: -50%;
+	background-position: 0 50%;
+
 }
 
 //awkwardly override bottom margin. maybe a better way?
 
-.page-id-529 .content-wrapper{
-	margin-bottom: 0;
-}
+// .page-id-529 .content-wrapper{
+// 	margin-bottom: 0;
+// }

@@ -15,26 +15,39 @@
 		font-size: 1.2em;
 		line-height: 1.5em;
 	}
-	h3{
-		font-family: $font-headings;
-		font-size: 32px;
-		margin-top: $section-spacer-default/2;
-		}
+	// h3{
+	// 	font-family: $font-headings;
+	// 	font-size: 32px;
+	// 	margin-top: 0;
+	// 	font-weight: 200;
+	// 	}
 	}
 	&__gallery{
 	margin-top: $section-spacer-default/3;
 	margin-bottom: $section-spacer-default;
 	display: grid;
-	grid-template-columns: repeat(2, 2fr);
+	grid-template-columns: repeat(1, 1fr);
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
+	@include small{
+		grid-template-columns: repeat(2, 2fr);
+	}
 	@include tablet{
 		grid-template-columns: repeat(4, 1fr);
 		}
 	}
 	&__item{
+		@include tablet{
+			background-size: 100% auto;
+				&:hover{
+					background-size: 105% auto;
+					span{
+						opacity: 1;
+				}
+			}
+		}
+		background-size: cover;
 		height: 200px;
-		background-size: 100% auto;
 		color: white;
 		display: flex;
 		flex-direction: column;
@@ -55,12 +68,8 @@
 			transition: opacity .4s ease;
 			font-family: $font-headings;
 		}
-		&:hover{
-			background-size: 105% auto;
-			span{
-				opacity: 1;
-			}
-		}
+
 
 	}
 }
+

@@ -13,8 +13,10 @@
 	&__inner{
 		@include tablet{
 			margin-top: $section-spacer-default/1.5;			
+			top: 25%;
 		}
-		margin-top: $section-spacer-default/1.5;
+		top: 50%;
+		transform: translateY(-50%);
 		text-align: center;
 		position: relative;
 		z-index: 10;

@@ -4,10 +4,12 @@
 // Breakpoints
 //==============================================================================
 
-$mobile: 770px !default;
+$small: 362px !default;
+$mobile: 760px !default;
 $tablet: 1000px !default;
 $desktop: 1200px !default;
 $desktop-wide: 1600px !default;
+$desktop-xl: 2000px !default;
 
 
 //==============================================================================
@@ -18,7 +20,7 @@ $desktop-wide: 1600px !default;
 // $color-swatch-headstand-1 : teal;
 // $color-swatch-headstand-2 : #568203 ;
 // $color-swatch-headstand-3 : #296192;
-
+$color-tasteful-green: #77a464;
 $color-swatch-headstand-1 : #008983;//teal
 $color-swatch-headstand-2 : #C4C581;//gold
 $color-swatch-headstand-3 : #98473E;//rust
@@ -59,8 +61,9 @@ $section-spacer-default: 120px;
 //atoms
 
 $button-color: $color-swatch-headstand-1;
+$button-color-hover: $color-swatch-headstand-4;
 //Header____________
-$header-affix-transition: .3s;
+$header-affix-transition: .2s;
 $header-affix-home: fixed;
 $header-affix-page: fixed;
 $header-padding-left: 2em;
@@ -72,7 +75,9 @@ $header-bg: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,
 $header-bg-dark: linear-gradient(to bottom, rgba(8,75,131,0.65) 0%,rgba(8,75,131,0) 100%);
 $header-logo-height: 88px;
 $header-logo-top-mobile: 20vh;
-$header-logo-height-mobile: 64px;
+$header-logo-height-small: 42px;
+$header-logo-height-mobile: 56px;
+$header-logo-height-tablet: 64px;
 $header-bg-fixed: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%);
 //Footer____________
 
@@ -84,19 +89,22 @@ $footer-affix: relative;
 //Hero_____________
 
 $slider-height: 100vh;
-$slider-height-mobile: 95vh;
+$slider-height-mobile: 101vh;
 $slider-content-vertical: flex-end;
 $slider-content-horizontal: flex-end;
 $slider-content-margin-right: $container-margin-large;
 $slider-content-margin-bottom: 120px;
 $slider-caption-font: $font-gothic;
 $slider-caption-font-size: 90px;
+$slider-caption-font-size-small: 2em;
 $slider-caption-font-size-mobile: 3em;
+$slider-caption-font-size-tablet: 4em;
 $slider-caption-font-weight: 500;
 $slider-caption-margin-bottom: 40px;
-$slider-caption-y-mobile: 40%;
+$slider-caption-y-mobile: 20vh;
 $slider-button-padding: 24px 52px 24px 52px;
-$slider-button-padding-mobile: 24px;
+$slider-button-padding-mobile: 12px;
+$slider-button-padding-tablet: 12px;
 $slider-button-font: $font-headings ;
 $slider-button-font-size: 32px;
 $slider-button-font-size-mobile: 24px;
@@ -104,12 +112,13 @@ $slider-button-border: none ;
 $slider-button-background: $button-color;
 $slider-button-width-mobile: 60%;
 // $slider-scrim: linear-gradient(160deg, rgba(31,142,163,0) 0%,rgba(31,142,163,0) 40%,rgba(31,142,163,1) 80%,rgba(31,142,163,1) 100%);
-$slider-scrim: linear-gradient(160deg, rgba(202,204,144,0) 0%,rgba(202,204,144,0) 40%,rgba(202,204,144,.8) 70%,rgba(202,204,144,1) 100%);
+$slider-scrim: linear-gradient(166deg, rgba(202,204,144,0) 0%,rgba(202,204,144,0) 40%,rgba(202,204,144,.8) 60%,rgba(202,204,144,1) 100%);
 $slider-scrim-mobile:  rgba(202,204,144,.8);
 $slider-scrim-dark: linear-gradient(160deg, rgba(8,75,131,0) 0%,rgba(8,75,131,0) 40%,rgba(8,75,131,.8) 70%,rgba(8,75,131,1) 100%);
 
 $hero-height: 100vh;
 $hero-caption-font-size: $slider-caption-font-size;
+$hero-button-bottom: 20vh;
 //Nav_____________
 $nav-link-color: $color-swatch-headstand-4;
 $nav-link-size: 1.2em;
@@ -136,6 +145,7 @@ $nav-submenu-bg-filter: blur(40px) ;
 $page-title-align-generic: center;
 $page-generic-font-size: 1.2em;
 $page-generic-line-height: 1.5;
+$page-padding-top-generic-mobile: $section-spacer-default/1.75;
 //Home______________
 
 $intro-paragraph-color: white;
@@ -154,6 +164,10 @@ $qotd-font-size-mobile: 24px;
 $qotd-color: $color-swatch-headstand-4;
 
 
+//Class
+
+$windowpane-pane-width: 220px;
+$windowpane-pane-height: 300px;
 //Posts_____________
 
 
@@ -181,3 +195,4 @@ $zoom-start-link-color : $color-swatch-headstand-3;
 $zoom-header-color : $color-swatch-headstand-4;
 $zoom-timer-color : $color-swatch-headstand-1;
 $zoom-sidebar-color : transparent;
+$zoom-start-link-hover-color: $color-tasteful-green;

@@ -1,31 +1,58 @@
 .page{
 	&__title{
 		// padding-bottom: $section-spacer-default / 2;
-			padding-top: $header-height;		
 		text-align: $page-title-align-generic; 
+		padding-top: $page-padding-top-generic-mobile;		
+		@include tablet{
+			padding-top: $header-height;		
+		}
 	}
 	&--generic{
-		margin-top: $header-height;						
+		@include tablet{
+			margin-right: $container-margin-medium;			
+			margin-left: $container-margin-medium;				
+		}
 		margin-bottom: $section-spacer-default;
-		margin-right: $container-margin-medium;			
-		margin-left: $container-margin-medium;		
+		margin-right: $container-margin-large;			
+		margin-left: $container-margin-large;		
 		display: flex;
 		flex-direction: column;
-
 		p{
 			font-family: $font-text;
-			font-size: 1.2em;
+			font-size: 1.1em;
 			line-height: 1.5;
+			@include mobile{
+				font-size: 1.2em;
+			}
+		}
+		ul{
+			@include mobile{
+				//this is why grid rocks
+				display: grid;
+				grid-template-columns: repeat(2, auto);			
+			}
+		}
+		li{
+			// text-align: center;
+			font-family: $font-headings;
+			font-size: 1.5em;
+			line-height: 2;		
+			font-weight: 700;
 		}
 		h1{
 			text-align: center
 		}
 		img{
-			margin: ($section-spacer-default * .5) auto ;
 			display: flex;
 			&.aligncenter{justify-self: center;}
-			&.size-full{widht: 100%};
+			width: 100%;
+			height: auto;
+			margin: $section-spacer-default/2 auto;
+			@include tablet{
+				width: initial;
+				margin: ($section-spacer-default * .5) auto ;
 			}
+		}
 	}
 	&-template-class-page{
 	.header{
@@ -44,7 +71,10 @@
 }
 
 .single .site-main{
-	margin-top: $header-height;		
+	margin-top: $header-height-mobile;				
+	@include tablet{
+		margin-top: $header-height;				
+	}
 }
 
 .content-wrapper{
@@ -54,3 +84,8 @@
 	// 	overflow-y: hidden;
 	// }
 }
+
+//hide main button on audio page. probably need to change this
+	.page-template-default .slider__button{
+		display: none;
+	}

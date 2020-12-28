@@ -26,6 +26,10 @@
 				padding-right: 48px;
 				margin-bottom: unset;				
 			}
+			@include widescreen{
+				padding-left: $container-margin-large;
+				padding-right: $container-margin-large;		
+			}
 			h2{
 				@include tablet{
 					font-size: 3em ;// nonsense that Zoom plugin tries to hijack this

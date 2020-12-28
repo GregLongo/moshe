@@ -23,6 +23,12 @@
 			}
 		}
 		&__details{
+			a:nth-child(1),a:nth-child(2){
+				color: $color-swatch-headstand-4;
+				&:hover{
+					color: $color-swatch-headstand-1;					
+				}
+			}
 			font-family: $font-text;
 			padding:0 24px 24px 24px;
 			// white-space: nowrap;
@@ -39,6 +45,9 @@
 		color: white;
 		padding: 10px 24px 10px 24px;
 		margin-top: 10px;
+		&:hover{
+			background-color: $button-color-hover;
+		}
 	}
 }
 
@@ -57,6 +66,10 @@
 
 
 .zoom{
+	@include xl{
+	margin-left: $container-margin-medium;
+	margin-right: $container-margin-medium;		
+	}
 	margin-left: $container-margin-large;
 	margin-right: $container-margin-large;
 	// margin-top: $section-spacer-default;
@@ -67,6 +80,10 @@
 		font-family: $font-text;
 		height: fit-content;
 		align-self: center;
+		&:hover{
+			background-color: $button-color-hover;
+			transition: opacity .2s;
+		}
 	}
 }
 
@@ -74,22 +91,31 @@
 
 .dpn-zvc-single-content-wrapper{
 	font-family: $font-text;
-	line-height: 1.2em;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
+	margin-top: 0 !important;
 	display: flex;
 	justify-content: center;
 	@include tablet{
 		flex-direction: row;		
 	}
 	flex-direction: column-reverse;
+	p{
+		line-height: 1.2em;
+	}
 }
 
 .btn-join-link{
 	background-color: $zoom-join-link-color !important;
+		&:hover{
+			background-color: $button-color-hover !important;
+		}
 }
 .btn-start-link{
 	background-color: $zoom-start-link-color !important;
+		&:hover{
+			background-color: $zoom-start-link-hover-color !important;
+		}
 }
 .dpn-zvc-sidebar-content{
 	background-color: $zoom-sidebar-color !important;			

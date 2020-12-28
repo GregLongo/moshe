@@ -6,7 +6,11 @@
 	margin-top: $section-spacer-default;
 	align-items: flex-end;
 	justify-content: space-between;
-	@include tablet{
+	@include xl{
+		margin-left: $container-margin-medium;
+		margin-right: $container-margin-medium;		
+	}	@include tablet{
+		margin-top: $section-spacer-default;
 		justify-content: unset;
 	}
 	h3{
@@ -25,5 +29,10 @@
 		font-size: 18px !important;
 		font-weight: 600;	
 		margin-bottom: 16px;
+		margin-top: 0;
+	}
+	//all but first title override. slightly hacky but kinda neat
+	~ .section-title{
+		margin-top: $section-spacer-default;
 	}
 }

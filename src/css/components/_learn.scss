@@ -38,15 +38,20 @@
         padding-top: 12%;
         // opacity: 0;
         // transition: opacity 1s ease-in-out;
-        strong{
-            font-size: 48px;
-            font-family: $font-headings;
-            line-height: 1.5;
-        }
         p{
-            font-size: 20px;
+            @include tablet{
+                font-size: 20px;
+            }
+            font-size: 18px;
             font-family: $font-text;    
             line-height: 1.2;
+        }
+        strong{
+            font-size: 2em;
+            font-family: $font-headings;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 3em;
         }
     }
 }
@@ -83,10 +88,14 @@
     justify-content: center;
     align-items: center;
     .hero__title--learn{ 
+        text-align: center;
+        font-size: 3em;            
         font-family: $font-gothic;
-        font-size: 4em;
         color: white;
         margin-top: -120px;
+        @include tablet{
+            font-size: 4em;            
+        }
     }
 }
 
@@ -153,4 +162,9 @@
         display: none;
     }
 
+}
+
+//breadcrumb
+.selected{
+    color: $color-swatch-headstand-2;
 }

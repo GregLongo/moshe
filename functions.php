@@ -400,7 +400,7 @@ wp_enqueue_script('scrollTo');
 
 //hit youtube api quota. revisit this
 // function get_youtube_api() {
-// 	$API_URL = "https://www.googleapis.com/youtube/v3/part=id&playlistId=PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index=1&key=AIzaSyBrJTMK8kzm21gHs45VFLJJFOOlvZX8pps";
+// 	$API_URL = "https://www.googleapis.com/youtube/v3/part=id&playlistId=PLtOWkDblhNvDD9GatkEGQy2jfnhi7DWhd&index=1&key=##APIKEY##";
 // 	$videos = file_get_contents($API_URL);
 // 	print_r($videos) ;
 
@@ -415,3 +415,4 @@ wp_enqueue_script('scrollTo');
 // 	echo $var;
 // }
 // add_action('echo_hello', echo_test);
+
