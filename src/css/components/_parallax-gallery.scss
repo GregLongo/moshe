@@ -1,12 +1,12 @@
 .parallax-gallery{
+	display: grid;
+	justify-content:center;
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-bottom: $section-spacer-default * 2;
 	margin-top: $section-spacer-default/2;
-	display: grid;
-	justify-content:center;
 	@include xl{
 		margin-right: $container-margin-medium;
 		margin-left: $container-margin-medium;		
@@ -16,15 +16,15 @@
 		margin-top: $section-spacer-default * 2;
 	}
 	&__img{
-		width: 60vw;
 		display:flex;
 		flex-shrink:1;
+		width: $parallax-gallery-img-width-mobile;
 		@include tablet{
 			width: 100%;
 		}
 		img{
-			width: 100%;
 			display: block;
+			width: 100%;
 			// filter: saturate(0) contrast(.9);
 			// mix-blend-mode:hard-light;
 		}

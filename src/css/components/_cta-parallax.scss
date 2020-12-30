@@ -1,45 +1,33 @@
 .cta-parallax{
-	height: 400px;
-	background-color: $color-swatch-headstand-2;
-	background-size:cover;
-	background-affix: fixed;
-	background-position: -50%;
-	background-blend-mode: multiply;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 1;
 	position:relative;
+	z-index: 1;
+	height: $cta-parallax-height;
+	background-size:cover;
+	background-affix: fixed;
+	background-position: -50%;
+	background-color: $color-swatch-headstand-2;
+	background-blend-mode: multiply;
 	&__inner{
-		@include tablet{
-			margin-top: $section-spacer-default/1.5;			
-			top: 25%;
-		}
+		position: relative;
 		top: 50%;
+		z-index: 10;
 		transform: translateY(-50%);
 		text-align: center;
-		position: relative;
-		z-index: 10;
+		@include tablet{
+			top: 25%;
+			margin-top: $section-spacer-default/1.5;			
+		}
 	}
 	&__msg{
-		@include tablet{
-			font-size: 48px;			
-		}
-		font-size: 32px;
+		display: block;
+		font-size: $cta-parallax-header-size-mobile;
 		font-family: $font-headings;
 		color: white;
-		display: block;
-	}
-	&__link a{
-		font-size: 48px;
-		font-family: $font-headings;
-		color: #ffffff !important;
-		display: block;
-		border: 2px solid white;
-		padding: 24px;
-		margin:24px;
-		&:hover{
-			background-color: rgba(255,255,255,.2);
+		@include tablet{
+			font-size: $cta-parallax-header-size;			
 		}
 	}
 }

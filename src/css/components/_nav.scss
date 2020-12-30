@@ -1,8 +1,8 @@
 .hamburger{
+	display: flex;
+	justify-self: center;
 	padding: 0 !important;
 	outline: none !important;
-	justify-self: center;
-	display: flex;
 	@include tablet {
 		display: none !important;
 	}
@@ -20,25 +20,24 @@
 //i only exist on desktop
 .nav{
     display:none;
-
     li {
 		&:hover a{
 			color: $nav-menu-link-color-hover;
 		}
 	}
 	a{
+		display: block;
+		padding: 8px 8px;
+		margin-right: $nav-link-margin;
 		font-family: $nav-link-font;
 		font-weight: $nav-link-weight;
-		padding: 8px 8px;
-		text-decoration: none;
-		display: block;
-		margin-right: $nav-link-margin;
+		font-size: $nav-link-size-sm;		
 		color: $nav-link-color;
+		text-decoration: none;
 		@include desktop{
 			padding: 8px 12px;
 			font-size: $nav-link-size;		
 		}
-		font-size: $nav-link-size-sm;		
 	}
 	@include tablet {
 		display:flex;
@@ -49,23 +48,20 @@
 		}
 	}
 	&__submenu{
+		background: $nav-submenu-bg;
 		@include tablet{
-		pointer-events: none; //slightly hacky workaround to account for menu recursion
-		// display: none;
-		opacity:0;
-		transition: all .2s ease;
-		position: absolute;
-		flex-direction: $nav-submenu-flex-direction;
+			flex-direction: $nav-submenu-flex-direction;
+			position: absolute;
+			opacity:0;
+			transition: all .2s ease;
+			pointer-events: none; //slightly hacky workaround to account for menu recursion
 		a{
-			color: $nav-submenu-link-color !important;
 			opacity:.8;
+			color: $nav-submenu-link-color !important;
 			&:hover{
 				opacity: 1;
 			}
 		}
-		background: white;
-		// backdrop-filter: $nav-submenu-bg-filter;
-		// overflow: visible;
 		&.open{
 			display: flex;
 			opacity: 1;

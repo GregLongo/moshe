@@ -1,25 +1,24 @@
-.wysiwyg{
+.wysiwyg:not(.wysiwyg--about){
+	overflow: visible !important;
+	padding-left: $container-margin-large;
+	padding-right: $container-margin-large;
+	padding-top: $section-spacer-default/2;
+	padding-bottom: $section-spacer-default * 1.5;
+	background: $intro-paragraph-bg;
+	background-size: auto 100%;
+	font-family: $font-text;
+	font-size: $home-intro-text-mobile;
+	font-weight: $home-intro-text-weight;
+	color: $intro-paragraph-color;
 	@include mobile{
-		font-size: $home-intro-text;
-		background-size: 100% 100%;
 		padding-top: $section-spacer-default;
+		background-size: 100% 100%;
+		font-size: $home-intro-text;
 	}
 	@include xl{
 		padding-left: $container-margin-medium;
 		padding-right: $container-margin-medium;		
 	}
-	font-size: $home-intro-text-mobile;
-	background: $intro-paragraph-bg;
-	overflow: visible !important;
-	background-size: auto 100%;
-	font-family: $font-text;
-	color: $intro-paragraph-color;
-	font-weight: $home-intro-text-weight;
-	padding-left: $container-margin-large;
-	padding-right: $container-margin-large;
-	padding-top: $section-spacer-default/2;
-	// padding-bottom: $section-spacer-default * 2;
-	padding-bottom: $section-spacer-default * 1.5;
 	h1{
 		margin-top:0;
 		font-size: $intro-paragraph-header-mobile;

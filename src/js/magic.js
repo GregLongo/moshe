@@ -28,13 +28,13 @@ if($('body.home').length){
 
 	//this has been creating problems
 
-	new ScrollMagic.Scene({
-		triggerElement: ".slider",
-		triggerHook: .1,
-		duration: "100%"
-	})
-	.setTween(".slider__slide", {y:"8%"})
-	.addTo(controller);
+	// new ScrollMagic.Scene({
+	// 	triggerElement: ".slider",
+	// 	triggerHook: .1,
+	// 	duration: "100%"
+	// })
+	// .setTween(".slider__slide", {y:"8%"})
+	// .addTo(controller);
 
 
 	new ScrollMagic.Scene({
@@ -57,7 +57,7 @@ if($('body.home').length){
 
 	new ScrollMagic.Scene({
 		triggerElement:".zoom",
-		triggerHook: .8,
+		triggerHook: .1,
 		duration: "400%",
 		offset: 50
 	})

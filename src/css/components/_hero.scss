@@ -1,51 +1,49 @@
 .slider{
 	overflow-x: hidden;
 	&__slide{
-		height: $slider-height-mobile;
-		align-items: center;
 		display: flex !important;
-		// background-position: center center;
+		align-items: center;
+		height: $slider-height-mobile;
+		justify-content: center;	
 		@include tablet {
-			height: $slider-height;
 			align-items: $slider-content-vertical;
 			justify-content: $slider-content-horizontal;	
+			height: $slider-height;
 		}
 		@include tablet-max{
 			background-size: auto 100% !important;
 		}
 	}
 	&__cta{
-		z-index: 11;
-		// bottom: $slider-caption-y-mobile;
-		position: absolute;
-		text-align: center;
 		align-items: flex-end;
-		// width: 100%;
+		position: absolute;
+		z-index: 11;
+		text-align: center;
 		@include mobile{
-			margin-left: $container-margin-large;
-			margin-right: $container-margin-large;				
+			margin-right: $container-margin-large;	
+			margin-left: $container-margin-large;			
 		}
 		@include tablet{
+			align-items: unset;
+			position: unset;
+			bottom: unset;
+			margin-top:unset;
 			margin-right: $slider-content-margin-right;
 			margin-bottom: $slider-content-margin-bottom;	
-			margin-top:unset;
-			bottom: unset;
-			position: unset;
-			text-align: right;
-			align-items: unset;
 			width: unset;
+			text-align: right;
 		}
 	}
 	&__caption{
-		z-index: 11;
-		position:flex;
-		text-align: center;
-		font-size: $slider-caption-font-size-small;
 		whitespace: wrap;
+		position:flex; //?
+		z-index: 11;
+		margin-bottom: $slider-caption-margin-bottom;
+		font-size: $slider-caption-font-size-small;
 		font-family: $slider-caption-font;
 		font-weight: $slider-caption-font-weight;
+		text-align: center;
 		color: $text-color-light;
-		margin-bottom: $slider-caption-margin-bottom;
 		@include small{
 			font-size: $slider-caption-font-size-mobile;			
 		}
@@ -53,56 +51,55 @@
 			font-size: $slider-caption-font-size-tablet;			
 		}
 		@include tablet{
-			font-size: $slider-caption-font-size;
 			white-space: nowrap;
-			text-align: initial;
 			position: initial;
+			text-align: initial;
+			font-size: $slider-caption-font-size;
 		}
 	}
 	&__button{
-		z-index: 11;
 		position: fixed;
-		bottom: $hero-button-bottom;
-		margin-right: auto;
-		transform: translateX(-50%);
+		z-index: 11;
+		white-space: nowrap;
 		left: 50%;
-		background: $slider-button-background;
+		bottom: $hero-button-bottom;
+		transform: translateX(-50%);
+		width: fit-content;
+		margin: auto;
 		padding: $slider-button-padding-mobile;
 		border: $slider-button-border;
-		color: $text-color-light;
+		background: $slider-button-background;
+		cursor: pointer;
 		font-family: $font-text;
 		font-size: $slider-button-font-size-mobile;
-		width: fit-content;
 		text-align: center;
-		margin: auto;
-		white-space: nowrap;
-		cursor: pointer;
+		color: $text-color-light;
 		@include mobile{
 			padding: $slider-button-padding-tablet;			
 		}
 		@include tablet{
-			transform: none;
 			left: unset;
 			position: relative;
 			bottom: unset;
+			float: right;			
+			transform: none;
+			width: unset;
 			padding: $slider-button-padding;
 			font-size: $slider-button-font-size;
-			width: unset;
-			float: right;			
 		}
 		&:hover{
 			background-color: $color-swatch-headstand-4;
 		}
 	}
-	&__scrim{//i need a better mobile solution
-		z-index: 1;
-		height: 100%;
-		width: 100%;
+	&__scrim{
+		position: absolute;
 		left: 0;
 		right: 0;
-		background: $slider-scrim-mobile;
+		z-index: 1;
 		opacity: .8;
-		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: $slider-scrim-mobile;
 		@include tablet{
 			opacity: 1;
 			height: 100%;
@@ -114,26 +111,26 @@
 //bem local inheritance for modified elements, no modifiers on subclass
 //see https://seesparkbox.com/foundry/bem_by_example
 .hero--class{//maybe i should be the global hero?
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: $hero-height;
+	margin-top: -24px; //fixes weird white space at top. why happen?
 	background-position: center;
 	background-size: auto 100%;		
-	display: flex; 
-	align-items: center;
-	margin-top: -24px; //fixes weird white space at top. why happen?
-	justify-content: center;
 	@include tablet{
-	justify-content: flex-end;
-	align-items: flex-end;
-	padding-left: $header-padding-left;
-	padding-right: $header-padding-right;
-	background-size: cover;		
+		justify-content: flex-end;
+		align-items: flex-end;
+		padding-left: $header-padding-left;
+		padding-right: $header-padding-right;
+		background-size: cover;		
 	}
 	.hero__title h1{
-		color: white;
-		margin-bottom: $slider-caption-margin-bottom;
-		z-index: 11;
 		position: relative;
+		z-index: 11;
+		margin-bottom: $slider-caption-margin-bottom;
 		font-size: $slider-caption-font-size-small;
+		color: white;
 		@include small{
 			font-size: $slider-caption-font-size-mobile;			
 		}
@@ -142,14 +139,13 @@
 		}
 		@include tablet{
 			font-size: $hero-caption-font-size;		
-			// white-space: nowrap;	
 		}
 	}
 	.slider__scrim{
-		height: $hero-height;
 		position: absolute;
-		background: $slider-scrim-mobile;
 		z-index: 1;
+		height: $hero-height;
+		background: $slider-scrim-mobile;
 		@include tablet{
 			top: 32px;//for some reason
 			background: $slider-scrim;

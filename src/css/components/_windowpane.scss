@@ -1,26 +1,24 @@
 .windowpane{
-	@include tablet{
-		width: 100%;		
-		grid-row-gap: 40px;
-		grid-column-gap: 40px;
-	}
-		grid-row-gap: 20px;
-		grid-column-gap: 20px;
-	// height: 50%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
+	grid-row-gap: $windowpane-grid-gap-mobile;
+	grid-column-gap: $windowpane-grid-gap-mobile;
+	@include tablet{
+		grid-row-gap: $windowpane-grid-gap;
+		grid-column-gap: $windowpane-grid-gap;
+	}
 	&__pane{
+		overflow: hidden;
+		width: $windowpane-pane-width/2 ;	
+		height: $windowpane-pane-height/2;
+		text-align: center;
 		@include mobile{
 			width: $windowpane-pane-width ;	
 			height: $windowpane-pane-height;
 		}
-		width: $windowpane-pane-width/2 ;	
-		height: $windowpane-pane-height/2;
-		overflow: hidden;
-		text-align: center;
 		&:nth-child(even){
-			margin-top: 48px;
+			transform: translateY($windowpane-vert-offset);
 		}
 	}
 	&__img{

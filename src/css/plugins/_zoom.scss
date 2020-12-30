@@ -1,18 +1,18 @@
 .vczapi-list-zoom-meetings{ 
 	&--item{
+		margin-bottom: $zoom-gallery-item-margin !important;
+		min-width: $zoom-gallery-item-min-width;
+		border: $zoom-gallery-item-border;
+		background: $zoom-gallery-item-bg;
 		&s{
 			justify-content: center;
 			@include tablet{
-			justify-content: unset;				
+				justify-content: unset;				
 			}
 		}
-		border: 1px solid lightgrey;
-		margin-bottom: 30px !important;
-		background: white;
-		min-width: 300px;
 		&__image{
-			height: 240px;
 			overflow: hidden;
+			height: $zoom-gallery-item-img-height;
 			img{
 				object-fit: cover;
 				width: 100%;
@@ -23,28 +23,27 @@
 			}
 		}
 		&__details{
+			font-family: $font-text;
+			padding: 0 24px 24px 24px;
 			a:nth-child(1),a:nth-child(2){
 				color: $color-swatch-headstand-4;
 				&:hover{
 					color: $color-swatch-headstand-1;					
 				}
 			}
-			font-family: $font-text;
-			padding:0 24px 24px 24px;
-			// white-space: nowrap;
 			&__meta{
 				.hosted-by{
-					display: none !important;
+					display: $zoom-gallery-show-host !important;
 				}
 				margin-bottom: 24px;
 			}
 		}
 	}
 	.btn{
+		margin-top: 10px;
+		padding: $zoom-gallery-item-button-padding;
 		background: $button-color;
 		color: white;
-		padding: 10px 24px 10px 24px;
-		margin-top: 10px;
 		&:hover{
 			background-color: $button-color-hover;
 		}
@@ -66,23 +65,22 @@
 
 
 .zoom{
+	margin-left: $container-margin-large;
+	margin-right: $container-margin-large;
 	@include xl{
 	margin-left: $container-margin-medium;
 	margin-right: $container-margin-medium;		
 	}
-	margin-left: $container-margin-large;
-	margin-right: $container-margin-large;
-	// margin-top: $section-spacer-default;
 	&__view-schedule{
-		background: $button-color;
-		color: white;
-		padding: 10px 24px 10px 24px;	
-		font-family: $font-text;
-		height: fit-content;
 		align-self: center;
+		height: fit-content;
+		padding: $zoom-gallery-item-button-padding;	
+		background: $button-color;
+		font-family: $font-text;
+		color: white;
 		&:hover{
-			background-color: $button-color-hover;
 			transition: opacity .2s;
+			background-color: $button-color-hover;
 		}
 	}
 }
@@ -90,18 +88,18 @@
 //zoom theater
 
 .dpn-zvc-single-content-wrapper{
-	font-family: $font-text;
+	display: flex;
+	justify-content: center;
+	flex-direction: column-reverse;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: 0 !important;
-	display: flex;
-	justify-content: center;
+	font-family: $font-text;
 	@include tablet{
 		flex-direction: row;		
 	}
-	flex-direction: column-reverse;
 	p{
-		line-height: 1.2em;
+		line-height: $page-generic-line-height;
 	}
 }
 
@@ -126,7 +124,6 @@
 .dpn-zvc-timer-cell{
 	background-color: $zoom-timer-color !important;		
 }
-
 
 .dpn-zvc-shortcode-op-wrapper{
 	font-family: $font-text;

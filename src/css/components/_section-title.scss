@@ -1,38 +1,36 @@
 .section-title{
 	display: flex;
 	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: $section-spacer-default;
-	align-items: flex-end;
-	justify-content: space-between;
+	@include tablet{
+		justify-content: unset;
+		margin-top: $section-spacer-default;
+	}
 	@include xl{
 		margin-left: $container-margin-medium;
 		margin-right: $container-margin-medium;		
-	}	@include tablet{
-		margin-top: $section-spacer-default;
-		justify-content: unset;
 	}
 	h3{
-		font-family: $font-headings;
-		color: $color-swatch-headstand-4;
-		font-size: 36px !important;
-		font-weight: 400;	
-		margin-bottom: 16px;
-		margin-right: 32px;
 		margin-top: 0;
+		margin-bottom: $section-title-margin-bottom;
+		margin-right: $section-title-horiz-spacer;
+		font-family: $h3-section-title-font;
+		font-size: $h3-section-title-size !important;
+		font-weight: $h3-section-title-weight;	
+		color: $h3-section-title-color;
 	}
 
 	h4{
-		font-family: $font-text;
-		color: $color-swatch-headstand-4;
-		font-size: 18px !important;
-		font-weight: 600;	
-		margin-bottom: 16px;
 		margin-top: 0;
+		margin-bottom: $section-title-margin-bottom;
+		font-family: $h4-section-subtitle-font;
+		font-size: $h4-section-subtitle-size !important;
+		font-weight: $h4-section-subtitle-weight;	
+		color: $h4-section-subtitle-color;
 	}
-	//all but first title override. slightly hacky but kinda neat
-	~ .section-title{
-		margin-top: $section-spacer-default;
-	}
+
 }

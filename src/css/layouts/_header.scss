@@ -1,19 +1,16 @@
 .header{
-	// overflow-x: hidden; //still kinda confuse what's happening here
-
+	position: absolute;	
 	z-index: $header-z;
-	background: $header-bg;
+	transition: all $header-affix-transition linear;
 	width: 100%;
 	height: $header-height-mobile;
-	padding-left: 1em;
-	padding-right: 1em;
-	transition: all $header-affix-transition linear;
-	position: absolute;	
+	padding-left: $header-padding-mobile;
+	padding-right: $header-padding-mobile;
+	background: $header-bg;
 	@include tablet{
 		height: $header-height;
 		padding-left: $header-padding-left;
 		padding-right: $header-padding-right;	
-		// position: $header-affix-page;	
 	}
 	&__wrapper{
 		display: flex;
@@ -22,20 +19,18 @@
 		height: 100%;
 	}
 	&__logo{
-		height: $header-logo-height-small;
 		display: block;
-		// top:$header-logo-top-mobile;
 		transition: all $header-affix-transition linear;
+		height: $header-logo-height-small;
 		@include small{
 			height: $header-logo-height-mobile;			
 		}
 		@include mobile{
-			height: $header-logo-height-tablet;
 			display: flex;	
-			// width: initial;	
+			position: relative;
 			top: auto;
 			left: auto;
-			position: relative;
+			height: $header-logo-height-tablet;
 		}
 		@include tablet{
 			height: $header-logo-height;
@@ -43,13 +38,12 @@
 	}
 	&--fixed{
 		@include tablet{
-				box-shadow: 0px 0px 4px 4px rgba(41,41,41,.05);
-
 			position: fixed;
-			background-color: white;
-			height: $header-height/2;
+			height: $header-height-fixed;
+			box-shadow: $header-fixed-shadow;
+			background-color: $header-bg-fixed;
 			.header__logo{
-				transform: scale(.7);							
+				transform: scale($header-logo-fixed-scale-factor);							
 			}
 		}
 	}

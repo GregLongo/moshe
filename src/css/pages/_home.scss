@@ -1,45 +1,11 @@
 .home{
-	.header{
-		// position: $header-affix-home;
+	.section-title{
+		@include tablet-max{
+		margin-top: 0;
+		//all but first title override. slightly hacky but kinda neat
+		~ .section-title{
+				margin-top: $section-spacer-default !important;
+			}
+		}
 	}
 }
-// .wysiwyg--home{
-// 	// background: url(../images/goldhalfcurve.png);
-// 	// background: $color-swatch-headstand-2;
-// 	@include tablet{
-// 		font-size: $home-intro-text;
-// 		background-size: 100% 100%;
-// 		padding-top: $section-spacer-default;
-// 	}
-// 	@include xl{
-// 		padding-left: $container-margin-medium;
-// 		padding-right: $container-margin-medium;		
-// 	}
-// 	font-size: $home-intro-text-mobile;
-// 	background: $intro-paragraph-bg;
-// 	overflow: visible !important;
-// 	background-size: auto 100%;
-// 	font-family: $font-text;
-// 	color: $intro-paragraph-color;
-// 	font-weight: $home-intro-text-weight;
-// 	padding-left: $container-margin-large;
-// 	padding-right: $container-margin-large;
-// 	padding-top: $section-spacer-default/2;
-// 	padding-bottom: $section-spacer-default * 2;
-// 	h1{
-// 		margin-top:0;
-// 		font-size: $intro-paragraph-header-mobile;
-// 		@include tablet{
-// 			font-size: $intro-paragraph-header;
-// 		}
-// 	}
-// }
-
-
-// .curve.flip{
-
-// }
-// .title-large--home{
-// 	text-align: center;
-// }
-

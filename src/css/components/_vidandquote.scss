@@ -1,17 +1,17 @@
 .qotd{
-	background: none;
 	display: flex;
 	justify-content: center;
-	font-family: $font-text;
 	align-items: center;
-	@include desktop{
-		font-size: $qotd-font-size;		
-		padding: 48px;
-	}
 	padding-top: $section-spacer-default;
+	background: none;
+	font-family: $font-text;
 	font-size: $qotd-font-size-mobile;
 	color: $qotd-color;
-	font-style: italic;
+	font-style: $qotd-font-syle;
+	@include desktop{
+		padding: 48px;
+		font-size: $qotd-font-size;		
+	}
 }
 
 .promo-video{
@@ -25,6 +25,7 @@
 }
 
 .home__misc{
+	display: block;		
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: $section-spacer-default;
@@ -34,5 +35,4 @@
 		height: 360px;
 		margin-bottom: $section-spacer-default * 2;		
 	}
-	display: block;		
 }
