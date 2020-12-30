@@ -22,7 +22,7 @@ controller.scrollPos(function () {
 });
 
 if($('.hero__title--learn').length && $(window).width() >= 768 && $(window).height() >= 600 ){
-	// addPinning();
+	addPinning();
 }
 
 function addPinning(){
