@@ -21,8 +21,8 @@ controller.scrollPos(function () {
 	}
 });
 
-if($(window).width() >= 768 && $(window).height() >= 600 ){
-	addPinning();
+if($('.hero__title--learn').length && $(window).width() >= 768 && $(window).height() >= 600 ){
+	// addPinning();
 }
 
 function addPinning(){
@@ -47,7 +47,6 @@ myscene = new ScrollMagic.Scene({
 .setClassToggle( selected[0], 'selected')
 .addTo(controller);
 });
-}
 
 //new scene just for last panel breadcrumb
 	var lastpanel  =  $("a[href$='#learn-panel-5']")
@@ -59,7 +58,7 @@ myscene = new ScrollMagic.Scene({
 	})
 	.setClassToggle(lastpanel[0], "selected")
 	.addTo(controller);
-
+}
 // change behaviour of controller to animate scroll instead of jump
 
 controller.scrollTo(function (newpos, offset) {
@@ -83,7 +82,7 @@ else{
 // if (window.history && window.history.pushState) {
 //  history.pushState("", document.title, id);
 // }
-}
-});
+		}
+	});
 });
 

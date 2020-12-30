@@ -1,28 +1,27 @@
 .page{
 	&__title{
-		// padding-bottom: $section-spacer-default / 2;
-		text-align: $page-title-align-generic; 
 		padding-top: $page-padding-top-generic-mobile;		
+		text-align: $page-title-align-generic; 
 		@include tablet{
 			padding-top: $header-height;		
 		}
 	}
 	&--generic{
+		display: flex;
+		flex-direction: column;
+		margin-right: $container-margin-large;			
+		margin-left: $container-margin-large;		
+		margin-bottom: $section-spacer-default;
 		@include tablet{
 			margin-right: $container-margin-medium;			
 			margin-left: $container-margin-medium;				
 		}
-		margin-bottom: $section-spacer-default;
-		margin-right: $container-margin-large;			
-		margin-left: $container-margin-large;		
-		display: flex;
-		flex-direction: column;
 		p{
 			font-family: $font-text;
-			font-size: 1.1em;
-			line-height: 1.5;
+			font-size: $page-generic-font-size-mobile;
+			line-height: $page-generic-line-height;
 			@include mobile{
-				font-size: 1.2em;
+				font-size: $page-generic-font-size;
 			}
 		}
 		ul{
@@ -33,18 +32,16 @@
 			}
 		}
 		li{
-			// text-align: center;
-			font-family: $font-headings;
-			font-size: 1.5em;
-			line-height: 2;		
-			font-weight: 700;
+			font-family: $page-generic-list-item-font;
+			font-size: $page-generic-list-item-size;
+			line-height: $page-generic-list-line-height;		
+			font-weight: $page-generic-list-item-weight;
 		}
 		h1{
-			text-align: center
+			text-align: $h1-page-generic-align;
 		}
 		img{
 			display: flex;
-			&.aligncenter{justify-self: center;}
 			width: 100%;
 			height: auto;
 			margin: $section-spacer-default/2 auto;
@@ -52,21 +49,23 @@
 				width: initial;
 				margin: ($section-spacer-default * .5) auto ;
 			}
+			&.aligncenter{
+				justify-self: center;
+			}
 		}
+
 	}
 	&-template-class-page{
-	.header{
-		// position: $header-affix-home;
-	}
-	.qotd{
-		margin-right: $container-margin-medium;
-		margin-left: $container-margin-medium;
-		margin-bottom: $section-spacer-default;
-		@include tablet{
-			padding-top: 0;			
+		.header{
 		}
-	}
-
+		.qotd{
+			margin-right: $container-margin-medium;
+			margin-left: $container-margin-medium;
+			margin-bottom: $section-spacer-default;
+			@include tablet{
+				padding-top: 0;			
+			}
+		}
 	}
 }
 
@@ -77,15 +76,22 @@
 	}
 }
 
-.content-wrapper{
-	overflow-x: hidden;
-	// @include tablet{
-	// 	overflow-x: auto;
-	// 	overflow-y: hidden;
-	// }
-}
+	.content-wrapper{
+		overflow-x: hidden;
+		.schedule{
+			overflow-y: hidden;		
+		}
+	}	
+
 
 //hide main button on audio page. probably need to change this
-	.page-template-default .slider__button{
-		display: none;
+.page-template-default .slider__button{
+	display: none;
+}
+
+.page-template-default .section-title{
+	margin-top: 0;
+	~ .section-title{
+		margin-top: $section-spacer-default !important;
 	}
+}

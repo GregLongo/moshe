@@ -1,14 +1,14 @@
 .fourohfour{
-	height: 100vh;
-	background-size: cover;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-family: $font-gothic;
-	font-size: 64px;
-	flex-direction: column;
 	width: 100%;
-	color: white;
+	height: 100vh;
 	background-color: darkgrey;
 	background-blend-mode: multiply;	
+	background-size: cover;
+	font-family: $fourohfour-font;
+	font-size: $fourohfour-font-size;
+	color: $fourohfour-font-color;
 }

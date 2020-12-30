@@ -49,6 +49,29 @@ $font-serif-fallback: Georgia, serif;
 $font-gothic: ltc-globe-gothic, sans-seriff;
 $line-height-global: initial;
 
+$h1-global-size: 56px;
+$h1-global-size-mobile: 48px;
+$h1-global-size-tablet: tbd;
+$h1-global-weight: 200;
+$h1-global-font: $font-gothic;
+
+$h2-global-size: 48px;
+$h2-global-size-mobile: tbd;
+$h2-global-size-tablet: tbd;
+$h2-global-weight: 200;
+$h2-global-font: $font-headings;
+
+$h3-global-size: 32px;
+$h3-global-size-mobile: tbd;
+$h3-global-size-tablet: tbd;
+$h3-global-weight: 200;
+$h3-global-font: $font-headings;
+
+$h4-global-size: 32px;
+$h4-global-size-mobile: tbd;
+$h4-global-size-tablet: tbd;
+$h4-global-weight: 200;
+$h4-global-font: $font-headings;
 //==============================================================================
 // Spacing
 //==============================================================================
@@ -62,12 +85,30 @@ $section-spacer-default: 120px;
 
 $button-color: $color-swatch-headstand-1;
 $button-color-hover: $color-swatch-headstand-4;
+$button-font: $font-text;
+$button-padding-class-gallery: 8px 12px 8px 12px;
+$button-border-class-gallery: 1px solid white;
+
+
+$h3-section-title-font: $font-headings;
+$h3-section-title-color: $color-swatch-headstand-4;
+$h3-section-title-size: 36px;
+$h3-section-title-weight: 400;
+$h4-section-subtitle-font: $font-headings;
+$h4-section-subtitle-color: $color-swatch-headstand-4;
+$h4-section-subtitle-size: 18px;
+$h4-section-subtitle-weight: 600;
+
+$section-title-horiz-spacer: 32px;
+$section-title-margin-bottom: 16px;
+
 //Header____________
 $header-affix-transition: .2s;
 $header-affix-home: fixed;
 $header-affix-page: fixed;
 $header-padding-left: 2em;
 $header-padding-right: 16px;
+$header-padding-mobile: 1em;
 $header-height: 160px;
 $header-height-mobile: 100px;
 $header-z: 10;
@@ -78,13 +119,23 @@ $header-logo-top-mobile: 20vh;
 $header-logo-height-small: 42px;
 $header-logo-height-mobile: 56px;
 $header-logo-height-tablet: 64px;
-$header-bg-fixed: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%);
+$header-bg-fixed: white;
+$header-fixed-shadow: 0px 0px 4px 4px rgba(41,41,41,.05);
+$header-height-fixed: $header-height/2;
+$header-logo-fixed-scale-factor: .7;
 //Footer____________
 
 $footer-height: 96px;
 $footer-text-align: center;
 $footer-content-justify: center;
 $footer-affix: relative;
+$footer-height-real: 300px;
+$footer-title-size: 3em;
+$footer-title-size-mobile: 2em;
+$footer-title-font: $font-gothic;
+$footer-social-icon-size: 56px;
+$footer-social-icon-size-mobile: 48px;
+$footer-logo-height: 88px;
 
 //Hero_____________
 
@@ -132,7 +183,7 @@ $nav-link-color-mobile: white;
 $nav-menu-link-color-hover: $color-swatch-headstand-1;
 $hamburger-color: $color-swatch-headstand-4;
 
-
+$nav-submenu-bg: white;
 $nav-submenu-flex-direction: column;
 $nav-submenu-link-color: $color-swatch-headstand-1;
 $nav-submenu-bg-filter: blur(40px) ;
@@ -144,8 +195,17 @@ $nav-submenu-bg-filter: blur(40px) ;
 
 $page-title-align-generic: center;
 $page-generic-font-size: 1.2em;
+$page-generic-font-size-mobile: 1.1em;
 $page-generic-line-height: 1.5;
 $page-padding-top-generic-mobile: $section-spacer-default/1.75;
+
+$page-generic-list-item-font: $font-headings;
+$page-generic-list-item-size: 1.5em;
+$page-generic-list-item-weight: 700;
+$page-generic-list-line-height: 2;
+
+$h1-page-generic-align: center;
+
 //Home______________
 
 $intro-paragraph-color: white;
@@ -156,23 +216,72 @@ $home-intro-text: 24px;
 $home-intro-text-mobile: 20px;
 $home-intro-text-weight: 400;
 
+$class-gallery-item-height: 300px;
+$class-gallery-font-size: 28px;
+
 $anim-section-vertical-padding: 150px;
 $anim-section-bg: url('../images/goldcurve.png');
+$anim-section-text-size: 24px;
+$anim-mobile-shrink-factor: .8;
+
+$parallax-gallery-img-width-mobile: 60vw;
 
 $qotd-font-size: 32px;
 $qotd-font-size-mobile: 24px;
 $qotd-color: $color-swatch-headstand-4;
+$qotd-font-syle: italic;
 
+$two-col-text: 18px;
+
+$cta-parallax-height: 400px;
+$cta-parallax-header-size: 48px;
+$cta-parallax-header-size-mobile: 32px;
+
+$newsletter-email-align: center;
+$newsletter-email-height: 3em;
+$newsletter-email-width: 80vw;
+$newsletter-email-width-mobile: 40vw;
 
 //Class
 
 $windowpane-pane-width: 220px;
 $windowpane-pane-height: 300px;
+$windowpane-grid-gap: 40px;
+$windowpane-grid-gap-mobile: 20px;
+$windowpane-vert-offset: 48px;
+
+$buy-course-price-font: $font-gothic;
+$buy-course-price-size: 3em;
+$buy-course-price-color: white;
+$buy-course-price-margin: 1em;
+$buy-course-img-width-mobile: 80%; 
+$buy-course-img-height: 400px;
+$buy-course-button-text: 2em;
+$buy-course-button-padding: 16px 96px 16px 96px;
+
+//About
+
+$h4-mission-size: 24px;
+$h4-mission-size-mobile: 22px;
+$h4-mission-font: $font-text;
+$mission-font-color: white;
+$mission-background-position: 0 50%;
+
+//Audio
+
+$audio-grid-gap: 16px;
+$audio-grid-item-zoom: 105%;
+$audio-grid-label-font: $font-headings;
+$audio-grid-label-size: 20px;
+
 //Posts_____________
 
 
 
 //404______________
+$fourohfour-font: $font-gothic;
+$fourohfour-font-size: 64px;
+$fourohfour-font-color: white;
 
 //==============================================================================
 // FX
@@ -183,16 +292,29 @@ $fade-global: 2s;
 $ken-burns-speed: 5s;
 $ken-burns-depth: 105%;
 
+$scrim-darken-basic : linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
 
 
 //==============================================================================
 // Plugins
 //==============================================================================
-
-
+$zoom-gallery-item-border: 1px solid lightgrey;
+$zoom-gallery-item-margin: 30px;
+$zoom-gallery-item-bg: white;
+$zoom-gallery-item-min-width: 300px;
+$zoom-gallery-item-img-height: 240px;
+$zoom-gallery-item-button-padding: 10px 24px 10px 24px;
+$zoom-gallery-show-host: none;
 $zoom-join-link-color : $color-swatch-headstand-1;
 $zoom-start-link-color : $color-swatch-headstand-3;
 $zoom-header-color : $color-swatch-headstand-4;
 $zoom-timer-color : $color-swatch-headstand-1;
 $zoom-sidebar-color : transparent;
 $zoom-start-link-hover-color: $color-tasteful-green;
+
+$woo-accent-color: $color-swatch-headstand-1;
+$woo-product-gallery-zoom: none;
+$woo-show-breadcrumb: none;
+$h1-woo-product-title-size: 32px;
+$h1-woo-product-align: left;
+$h2-woo-product-description-title-size: 2em;

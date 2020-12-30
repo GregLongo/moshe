@@ -6,71 +6,71 @@
 		}
 	}
 	&-product-gallery{
-		pointer-events: none;
+		pointer-events: $woo-product-gallery-zoom;
 	}
 	&-info{
+		border-top-color: $woo-accent-color !important;
 		&:before{
-			color: $color-swatch-headstand-1 !important;
+			color: $woo-accent-color !important;
 		}
-		border-top-color: $color-swatch-headstand-1 !important;
 	}
 	.content-wrapper{
-	font-family: $font-text;
 	padding-right: $container-margin-large;
 	padding-left: $container-margin-large;
 	padding-top: $section-spacer-default/4;
+	font-family: $font-text;
 	@include tablet{
 		padding-top: $section-spacer-default/1.5;
 		padding-bottom: $section-spacer-default;
 	}
 	.single_add_to_cart_button,.checkout-button,#place_order{
-		background-color: $color-swatch-headstand-1 !important;
+		background-color: $button-color !important;
 		outline: none;
 		&:hover{
-			background-color: $color-swatch-headstand-4 !important;			
+			background-color: $button-color-hover !important;			
 			}
 		}		
 	}
 	a{
 		@include tablet{
-			color: $color-swatch-headstand-4 !important;			
+			color: $nav-link-color !important;			
 			&:hover{
-				color: $color-swatch-headstand-1 !important;		
+				color: $nav-menu-link-color-hover !important;		
 			}			
 		}
 	}
 	li,p{
 		font-family:$font-text;
+		line-height: $page-generic-line-height;
 	}
 	h1{
-		&.entry-title{
-			font-size: 32px;
-			// font-family: $font-headings;
-			
+		&.entry-title.product_title{
+			font-size: $h1-woo-product-title-size;
+			text-align: $h1-woo-product-align;
 		}
-		text-align: center;
-		// font-size: 2em;
-		// font-family: $font-headings;
+		&.page-title{
+			text-align: center;
+		}
 	}
 	h2{
-		font-size: 2em;
+		font-size: $h2-woo-product-description-title-size;
 	}
 	&-breadcrumb{
-		display: none;
+		display: $woo-show-breadcrumb;
 	}
 	.button.button.alt{
 		outline: none;
-		background-color: $color-swatch-headstand-1 !important;
+		background-color: $button-color !important;
 		&:hover{
-			background-color: $color-swatch-headstand-4 !important;			
+			background-color: $button-color-hover !important;			
 		}		
 	}
 	.form-row.woocommerce-validated{
-		border-color: $color-swatch-headstand-1 !important;
+		border-color: $woo-accent-color !important;
 	}
 }
 
-
+//woocomerce tries to hijack site logo wtf
 .woocommerce img.header__logo,
  .woocommerce-page img.header__logo {
  	height: $header-logo-height-small;				

@@ -1,8 +1,8 @@
 .footer{
-	height: 300px;
-	background-color: $color-swatch-headstand-2;
 	display: flex;
 	flex-direction: column;
+	height: $footer-height-real;
+	background-color: $color-swatch-headstand-2;
 	&__wrapper{
 	@include tablet{
 		display: flex;
@@ -14,17 +14,17 @@
 		display:flex;
 		justify-content: space-between;
 		&-wrapper{
-			color: white;
-			text-align: center;
 			width: 100%;	
 			margin-top: 48px;
 			padding-left: 16px;
-			padding-right: 16px;;				
+			padding-right: 16px;
+			text-align: center;
+			color: white;				
 			@include tablet{
 				width: 50%;	
+				margin-bottom: unset;				
 				padding-left:48px;
 				padding-right: 48px;
-				margin-bottom: unset;				
 			}
 			@include widescreen{
 				padding-left: $container-margin-large;
@@ -32,28 +32,28 @@
 			}
 			h2{
 				@include tablet{
-					font-size: 3em ;// nonsense that Zoom plugin tries to hijack this
+					font-size: $footer-title-size ;// nonsense that Zoom plugin tries to hijack this
 				}
-				font-size: 2em ;
-				font-family: $font-gothic !important;	
+				font-family: $footer-title-font !important;	
+				font-size: $footer-title-size-mobile ;
 			}
 		}
 		&-logo svg{
 			@include tablet{
-				font-size: 56px;
+				font-size: $footer-social-icon-size;
 			}
-			font-size: 48px;
+			font-size: $footer-social-icon-size-mobile;
 		}
 	}
 	&__logo{
-		height: 88px;
 		align-self: center;
 		justify-self: center;
+		height: $footer-logo-height;
 		margin: auto auto 0 auto;
 		&-wrapper{
+		display: none;
 		height: 100%;
 		width: 50%;
-		display: none;
 		@include tablet{
 			display: flex;
 		}
@@ -61,11 +61,11 @@
 	}
 }
 .copyright{	
-	color: white;
-	text-align: center;
-	align-self: center;
 	display: flex;
+	align-self: center;
 	margin: auto;
 	font-family: $font-text;
+	text-align: center;
+	color: white;
 }
 

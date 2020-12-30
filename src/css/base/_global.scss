@@ -1,62 +1,63 @@
+//teal!
+// #wpadminbar{
+// 	background-color: $color-swatch-headstand-1 !important;
+// }
+
 html{
 	margin-top: 0 !important;
 }
 body{
-
 	a{
 	text-decoration: none;
-	// color: initial;
 	}
 	background-color: $background-global;
 	//ooooo faanccy
 	@include fadein;
 }
 
-// .content-wrapper{
-// 	overflow-x: hidden;
-// 	// @include tablet{
-// 	// 	overflow-x: auto;
-// 	// 	overflow-y: hidden;
-// 	// }
-// }
 //probably not best practice for font hierarchy. decorator classes? mixins?
 h1{
-	font-family: $font-gothic;
-	font-size: 48px;
-	font-weight: 200;
+	font-family: $h1-global-font;
+	font-size: $h1-global-size-mobile;
+	font-weight: $h1-global-weight;
 	@include tablet{
-		font-size: 56px;
+		font-size: $h1-global-size;
 	}
 }
 
 h2{
-	font-family: $font-headings;
-	font-size: 48px; ;
-	font-weight: 200;
-}
-
-h4{
-	font-family: $font-headings;
-	font-size: 32px; ;
-	font-weight: 200;
+	font-family: $h2-global-font;
+	font-size: $h2-global-size; ;
+	font-weight: $h2-global-weight;
 }
 
 //this is incredibly risky but lets see what happens
-	h3{
-		font-family: $font-headings;
-		font-size: 32px;
-		// margin-top: 0;
-		font-weight: 200;
-		}
+h3{
+	// margin-top: 0;
+	font-family: $h3-global-font;
+	font-size: $h3-global-size;
+	font-weight: $h3-global-weight;
+}
+
+h4{
+	font-family: $h4-global-font;
+	font-size: $h4-global-size ;
+	font-weight: $h4-global-weight;
+}
+
+
 a{
 
 }
 
-p{
-
-}
-
-
+// p{
+// 	font-family: $font-text;
+// 	font-size: $page-generic-font-size-mobile;
+// 	line-height: $page-generic-line-height;
+// 	@include mobile {
+// 		font-size: $page-generic-font-size;
+// 	}
+// }
 
 hr{
 	@include tablet{
