@@ -49,6 +49,11 @@
     @content;
   }
 }
+@mixin desktop-max{
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
 
 @mixin mobile-max{
   @media (max-width: #{$mobile}) {
