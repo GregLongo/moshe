@@ -13,45 +13,44 @@
 }
 
 .learn-panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding-right: $container-margin-large;
     padding-left: $container-margin-large;
     height: 100%;
     width: 100%;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    background-blend-mode: multiply;
+    background-blend-mode: $learn-panel-blend-mode;
     background-color: #666666;
+    color: white;
     &__text{
         display: flex;
-        height: 100%;
         align-items: center;
-        display: flex;
         flex-direction: column;
-        padding-top: 12%;
+        height: 100%;
+        padding-top: $learn-panel-padding-top;
         p{
+            font-family: $learn-font;    
+            font-size: $learn-font-size-mobile;
+            line-height: $learn-line-height;
             @include tablet{
-                font-size: 20px;
+                font-size: $learn-font-size;
             }
-            font-size: 18px;
-            font-family: $font-text;    
-            line-height: 1.2;
         }
         strong{
-            font-size: 2em;
-            font-family: $font-headings;
-            line-height: 1.5;
-            font-weight: 400;
             margin-bottom: 3em;
+            font-family: $learn-header-font;
+            font-size: $learn-header-font-size;
+            line-height: $learn-header-line-height;
+            font-weight: $learn-header-font-weight;
         }
     }
 }
 .learn-panel.one {
     position: relative;
     z-index: -1;
-    background-color: $color-swatch-headstand-2;
+    background-color: $learn-panel-one-bg-color;
 }
 .learn-panel.two {
     .panel__text{
@@ -60,7 +59,7 @@
     }
 }
 .learn-panel.three {
-    background: $color-swatch-headstand-4;
+    background: $learn-panel-three-bg-color;
     .panel__text{
     }
 }
@@ -70,40 +69,40 @@
 }    
 
 .hero--learn{
-    height: 100vh;
+    display: flex;
+    justify-content: $hero-title-learn-justify;
+    align-items: $hero-title-learn-align;
+    height: $hero-learn-height;
     background-size: cover;
     background-blend-mode: multiply;
     background-color: #e2e2e2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     .hero__title--learn{ 
-        text-align: center;
-        font-size: 3em;            
-        font-family: $font-gothic;
-        color: white;
         margin-top: -120px;
+        text-align: $hero-title-learn-justify;
+        font-size: $hero-title-learn-size-mobile;            
+        font-family: $hero-title-learn-font;
+        color: white;
         @include tablet{
-            font-size: 4em;            
+            font-size: $hero-title-learn-size;            
         }
     }
 }
 
 #menu{
-    padding-left: $container-margin-large / 2;
-    position: fixed;
-    z-index: 1000;
-    top: 100vh - 8vh;
     display: flex;
-    width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    font-family: $font-headings;
-    background: white;
-    height: 8vh;
-    font-size: 1.2em;
+    position: fixed; //?
+    z-index: 1000;
+    top: 100vh - $learn-submenu-height;
+    width: 100%;
+    height: $learn-submenu-height;
+    padding-left: $container-margin-large / 2;
+    background: $learn-submenu-bg;
+    font-family: $learn-submenu-font;
+    font-size: $learn-submenu-font-size;
     a{
-        margin-right: 80px;
+        margin-right: $learn-submenu-spacing;
     }
 }
 
@@ -116,9 +115,9 @@
     font-family: $font-text;
     font-size: 1.2em;
     h1{
-        text-align: center;
-        color: black;
-        font-family: $font-headings;
+        text-align: $academics-font-align;
+        color: $academics-font-color;
+        font-family: $academics-font;
     }
 }
 
@@ -134,8 +133,8 @@
             opacity: 1 !important;
             width: 100% !important;
             strong{
-                font-size: 2em;
                 padding-bottom: 2em;
+                font-size: 2em;
             }
             padding-bottom: 200px;
         }
@@ -155,5 +154,5 @@
 
 //breadcrumb
 .selected{
-    color: $color-swatch-headstand-2;
+    color: $learn-submenu-indicator-color
 }

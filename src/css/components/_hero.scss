@@ -10,7 +10,7 @@
 			justify-content: $slider-content-horizontal;	
 			height: $slider-height;
 		}
-		@include tablet-max{
+		@include desktop-max{
 			background-size: auto 100% !important;
 		}
 	}
