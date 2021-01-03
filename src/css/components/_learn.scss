@@ -92,7 +92,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed; //?
+    position: fixed;
     z-index: 1000;
     top: 100vh - $learn-submenu-height;
     width: 100%;
@@ -106,6 +106,11 @@
     }
 }
 
+//indicator
+.selected{
+    color: $learn-submenu-indicator-color
+}
+
 .container--academics{
     padding-right: $container-margin-large;
     padding-left: $container-margin-large;
@@ -113,7 +118,7 @@
     padding-top: 5%;
     padding-bottom: 15%;
     font-family: $font-text;
-    font-size: 1.2em;
+    font-size: $page-generic-font-size;
     h1{
         text-align: $academics-font-align;
         color: $academics-font-color;
@@ -124,26 +129,17 @@
 //going in desktop first , wish me luck 
 @media screen and (max-width: #{$mobile}) , (max-height: 600px){
 
-    .container{
-    }
-
     .learn-panel{
         height: unset;
         &__text{
-            opacity: 1 !important;
             width: 100% !important;
+            padding-bottom: 200px;
             strong{
                 padding-bottom: 2em;
                 font-size: 2em;
             }
-            padding-bottom: 200px;
         }
 
-    }
-
-    .scrollmagic-pin-spacer{
-        height: unset !important;
-        padding-bottom: 0!important;
     }
 
     #menu{
@@ -152,7 +148,3 @@
 
 }
 
-//breadcrumb
-.selected{
-    color: $learn-submenu-indicator-color
-}

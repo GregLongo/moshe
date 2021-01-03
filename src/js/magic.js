@@ -1,279 +1,216 @@
-import ScrollMagic from 'scrollmagic';
-import { TweenMax, TimelineMax } from "gsap"; 
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+import { gsap } from "gsap"; 
+gsap.registerPlugin(ScrollTrigger);
 
-ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
-// lifesaver https://www.npmjs.com/package/scrollmagic-plugin-gsap
 
 $(document).ready(function(){
-
-	var controller = new ScrollMagic.Controller();
 	
-	//section titles
-	if($('.section-title').length){
-			$(".section-title").each(function(){
-				new ScrollMagic.Scene({
-					triggerElement: this,
-					triggerHook: .8,
-					duration: "150%",
-					offset: 50
-				})
-				.setClassToggle(this, "magic__fade--basic")
-				.addTo(controller);
-		});
-	}
-
-//Homepage
-if($('body.home').length){
-
-	//this has been creating problems
-
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".slider",
-	// 	triggerHook: .1,
-	// 	duration: "100%"
-	// })
-	// .setTween(".slider__slide", {y:"8%"})
-	// .addTo(controller);
-
-
-	new ScrollMagic.Scene({
-		triggerElement:".wysiwyg--home",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".wysiwyg__content--home", "magic__fade--basic")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".zoom",
-		triggerHook: .8,
-		duration: "400%",
-		offset: 50
-	})
-	.setClassToggle(".vczapi-list-zoom-meetings--item", "magic__fade--up")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".zoom",
-		triggerHook: .1,
-		duration: "400%",
-		offset: 50
-	})
-	.setClassToggle(".zoom__view-schedule", "magic__fade--up")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".class-gallery__item",
-		triggerHook: .8,
-		duration: "200%",
-		offset: 50
-	})
-	.setClassToggle(".class-gallery__item", "magic__fade--slide")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".anim-section__blurb-1",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".anim-section__blurb-1", "magic__fade--basic")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".anim-section__blurb-2",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".anim-section__blurb-2", "magic__fade--basic")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".anim-section__animation-1",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".anim-section__animation-1", "magic__fade--slide")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".anim-section__animation-2",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".anim-section__animation-2", "magic__fade--slide")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".promo-video",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".promo-video", "magic__fade--basic")
-	.addTo(controller);
-
-	new ScrollMagic.Scene({
-		triggerElement:".qotd",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".qotd", "magic__fade--up")
-	.addTo(controller);
-
-	$(".parallax-gallery__img").each(function(index){
-		var trig = this.parentNode,
-		speed =  30 * (index) + '%';
-		//speed =  (100 * Math.random()) + '%'; experimental random seeding
-		new ScrollMagic.Scene({
-			triggerElement: trig ,
-			triggerHook: "onEnter",
-			duration:'200%'})
-		.setTween(this, {y: speed})
-		.addTo(controller);
+	ScrollTrigger.matchMedia({
+		"(min-width: 800px)": function(){
+		 	addFX()	
+		},
+		"(max-width:799px)": function(){
+			$("*").each(function(){
+				$(this).css({opacity: 1 })
+			});
+			$('.class-gallery__item').each(function(){
+				$(this).addClass("magic__fade--slide")
+			});
+		}
 	});
 
-	new ScrollMagic.Scene({
-		triggerElement: ".cta-parallax__outer",
-		triggerHook: 1,
-		duration: "200%"
-	})
-	.setTween(".cta-parallax", {y:"80%"})
-	.addTo(controller);
+	function addFX(){
 
-}
-//ClassPage
-if ($('body.page-template-class-page').length){
-	new ScrollMagic.Scene({
-		triggerElement: ".hero__wrapper",
-		triggerHook: 0,
-		duration: "100%"
-	})
-	.setTween(".hero--class", {y:"10%"})
-	.addTo(controller);
+		//Homepage
 
-	new ScrollMagic.Scene({
-		triggerElement:".wysiwyg--class",
-		triggerHook: .5,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".wysiwyg__content--class", "magic__fade--up")
-	.addTo(controller);
+		if($('body.home').length){
 
-// subtle effect but cool too bad no workee
-	// new ScrollMagic.Scene({
-	// 	triggerElement: ".windowpane__pane--class",
-	// 	triggerHook: .6,
-	// 	duration: "200%"
-	// })
-	// .setTween(".windowpane__img", {y:"20%"})
-	// .addTo(controller);
+			$(".section-title").each(function(){
+				ScrollTrigger.create({
+					trigger: this,
+					start: 'top bottom',
+					end: 'top top',
+					toggleClass: {targets: this, className: "magic__fade--basic"}
+				})
+			});
 
-	new ScrollMagic.Scene({
-		triggerElement:".windowpane__pane--class",
-		triggerHook: .7,
-		duration: "200%",
-		offset: 50
-	})
-	.setClassToggle(".windowpane__pane--class", "magic__fade--basic")
-	.addTo(controller);
+			ScrollTrigger.create({
+				trigger: ".wysiwyg__content--home",
+				start: 'top bottom',
+				end: 'top top',
+				toggleClass: "magic__fade--up"
+			})
+			
+			//weird edge case break revisit
+			ScrollTrigger.create({
+				trigger: ".zoom",
+				start: 'top bottom',
+				end: 'bottom top',
+				toggleClass: {targets: ['.vczapi-list-zoom-meetings--item', '.zoom__view-schedule'], className: "magic__fade--up"}
+			})
+			
+			ScrollTrigger.create({
+				trigger: ".class-gallery__item",
+				start: 'top bottom',
+				end: 'bottom top',
+				toggleClass: {targets: '.class-gallery__item', className: "magic__fade--slide"}
+			})
 
-	new ScrollMagic.Scene({
-		triggerElement:".wysiwyg--class__description",
-		triggerHook: .7,
-		duration: "100%",
-		offset: 50
-	})
-	.setClassToggle(".wysiwyg--class__description", "magic__fade--basic")
-	.addTo(controller);
+			ScrollTrigger.create({
+				trigger: ".anim-section__blurb-1",
+				start: 'top bottom',
+				end: 'top top',
+				toggleClass: {targets: ['.anim-section__blurb-1', '.anim-section__animation-1'], className:"magic__fade--basic"}
+			})
 
-	// new ScrollMagic.Scene({
-	// 	triggerElement:".class-gallery__item",
-	// 	triggerHook: .8,
-	// 	duration: "150%",
-	// 	offset: 50
-	// })
-	// .setClassToggle(".class-gallery__item", "magic__fade--slide")
-	// .addTo(controller);
-	$('.class-gallery__item').addClass("magic__fade--slide");
+			ScrollTrigger.create({
+				trigger: ".class-gallery__item",
+				start: 'top bottom',
+				end: 'bottom top',
+				toggleClass: {targets: '.class-gallery__item', className: "magic__fade--slide"}
+			})
 
-	new ScrollMagic.Scene({
-		triggerElement:".qotd",
-		triggerHook: .8,
-		duration: "150%",
-		offset: 50
-	})
-	.setClassToggle(".qotd", "magic__fade--up")
-	.addTo(controller);
+			ScrollTrigger.create({
+				trigger: ".anim-section__blurb-1",
+				start: 'top bottom',
+				end: 'top top',
+				toggleClass: {targets: ['.anim-section__blurb-1', '.anim-section__animation-1'], className:"magic__fade--basic"}
+			})
 
-}
+			ScrollTrigger.create({
+				trigger: ".anim-section__blurb-2",
+				start: 'top bottom',
+				end: 'top top',
+				toggleClass: {targets: ['.anim-section__blurb-2', '.anim-section__animation-2'], className:"magic__fade--basic"}
+			})
 
-//About Us Page
+			ScrollTrigger.create({
+				trigger: ".promo-video",
+				start: 'top bottom',
+				end: 'top top',
+				toggleClass: "magic__fade--basic"
+			})
 
-if($('.page__title--about').length){
-	new ScrollMagic.Scene({
-		triggerElement:".wysiwyg--about",
-		triggerHook: .9,
-		duration: "200%",
-		offset: 50
-	})
-	.setClassToggle(".wysiwyg--about", "magic__fade--basic")
-	.addTo(controller);
+			ScrollTrigger.create({
+				trigger: ".qotd",
+				start: 'center bottom',
+				end: 'top top',
+				toggleClass: "magic__fade--up"
+			})
 
+			//there's probably a more gsapee less jqueryee way 
+			$(".parallax-gallery__img").each(function(index){
+				var trig = this.parentNode,
+				speed =  30 * (index) + '%';
+				// speed =  (100 * Math.random()) + '%'; experimental random seeding
+				gsap.to(this, {
+				  scrollTrigger:{
+				  	trigger: this,
+				  	scrub: true
+				  } ,
+				  y: speed,
+				});
+			});
 
-	new ScrollMagic.Scene({
-		triggerElement:".windowpane__pane--about",
-		triggerHook: .5,
-		duration: "200%",
-		offset: -50
-	})
-	.setClassToggle(".windowpane__pane--about", "magic__fade--basic")
-	.addTo(controller);
+			gsap.to(".cta-parallax", {
+			  yPercent: 80,
+			  ease: "none",
+			  scrollTrigger: {
+			    trigger: ".cta-parallax__outer",
+			    scrub: true
+			  }, 
+			});
 
-	new ScrollMagic.Scene({
-		triggerElement:".mission",
-		triggerHook: .8,
-		duration: "200%",
-		offset: 50
-	})
-	.setClassToggle(".mission__content", "magic__fade--basic")
-	.addTo(controller);
-
-}
-
-//service page
-if($('.page__title--services').length){
-	// new ScrollMagic.Scene({
-	// 	triggerElement:".class-gallery__item",
-	// 	triggerHook: .8,
-	// 	duration: "150%",
-	// 	offset: 50
-	// })
-	// .setClassToggle(".class-gallery__item", "magic__fade--slide")
-	// .addTo(controller);
-	$('.class-gallery__item').addClass("magic__fade--slide");
-}
-
-//schedule page
-if($('.page__title--schedule').length){
-
-	new ScrollMagic.Scene({
-		triggerElement:".zoom",
-		triggerHook: .8,
-		duration: "400%",
-		offset: 50
-	})
-	.setClassToggle(".vczapi-list-zoom-meetings--item", "magic__fade--up")
-	.addTo(controller);
-
-}
+		}// homepage
 
 
+		//Class Page
+
+		if($('body.page-template-class-page').length){
+
+			gsap.to(".hero--class", {
+			  yPercent: 10,
+			  ease: "none",
+			  scrollTrigger: {
+			    trigger: ".hero__wrapper",
+			    scrub: true
+			  }, 
+			});
+
+			ScrollTrigger.create({
+				trigger: ".wysiwyg__content--class",
+				start: 'top bottom',
+				end: 'top top',
+				toggleClass: "magic__fade--basic"
+			})
+
+			ScrollTrigger.create({
+				trigger: ".windowpane__pane--class",
+				start: 'center bottom',
+				end: 'bottom top',
+				toggleClass: {targets: '.windowpane__pane--class', className: "magic__fade--basic"}
+			})
+
+			ScrollTrigger.create({
+				trigger: ".wysiwyg--class__description",
+				start: 'center bottom',
+				end: 'center top',
+				toggleClass: "magic__fade--basic"
+			})
+
+			//maybe not show off every page?
+			$('.section-title').addClass("magic__fade--basic");
+			$('.class-gallery__item').addClass("magic__fade--slide");
+
+			ScrollTrigger.create({
+				trigger: ".qotd",
+				start: 'center bottom',
+				end: 'top top',
+				toggleClass: "magic__fade--up"
+			})
+
+		}//class page
+
+
+		//About Page
+
+		if($('.page__title--about').length){
+
+			ScrollTrigger.create({
+				trigger: ".windowpane__pane--about",
+				start: 'center bottom',
+				end: 'bottom top',
+				toggleClass: {targets: '.windowpane__pane--about', className: "magic__fade--basic"}
+			})
+
+			ScrollTrigger.create({
+				trigger: ".wysiwyg--about",
+				start: 'center bottom',
+				end: 'center top',
+				toggleClass: "magic__fade--basic"
+			})
+
+			ScrollTrigger.create({
+				trigger: ".mission",
+				start: 'center bottom',
+				end: 'top top',
+				toggleClass: {targets: '.mission__content', className: "magic__fade--basic"}
+			})
+
+		}//Aboat
+
+
+		//Service Page
+
+		if($('.page__title--services').length){
+			$('.class-gallery__item').addClass("magic__fade--slide");
+		}
+
+
+		//Schedule Page
+
+		if($('.page__title--schedule').length){
+			$('.vczapi-list-zoom-meetings--item').addClass("magic__fade--up");
+		}
+
+	}//function
 });

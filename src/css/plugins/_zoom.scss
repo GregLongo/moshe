@@ -6,8 +6,8 @@
 		background: $zoom-gallery-item-bg;
 		&s{
 			justify-content: center;
-			@include tablet{
-				justify-content: unset;				
+			@include mobile{
+				justify-content: flex-start;				
 			}
 		}
 		&__image{
@@ -127,4 +127,8 @@
 
 .dpn-zvc-shortcode-op-wrapper{
 	font-family: $font-text;
+}
+
+.schedule{
+	margin-bottom: $section-spacer-default;
 }

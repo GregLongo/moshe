@@ -2,10 +2,11 @@
 	width: 100%;
 	&__animation{
 		img{
+			width: 100%;
 			@include mobile{
-				transform: scale(1);
+				transform: scale($anim-shrink-factor);
+				width: auto;
 			}
-			transform: scale($anim-mobile-shrink-factor);
 		}
 		text-align: center;
 		&-2{

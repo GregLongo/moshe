@@ -146,6 +146,7 @@ $slider-content-horizontal: flex-end;
 $slider-content-margin-right: $container-margin-large;
 $slider-content-margin-bottom: 120px;
 $slider-caption-font: $font-gothic;
+$slider-caption-font-color: white;
 $slider-caption-font-size: 90px;
 $slider-caption-font-size-small: 2em;
 $slider-caption-font-size-mobile: 3em;
@@ -162,6 +163,9 @@ $slider-button-font-size-mobile: 24px;
 $slider-button-border: none ;
 $slider-button-background: $button-color;
 $slider-button-width-mobile: 60%;
+$slider-button-float: right;
+
+
 // $slider-scrim: linear-gradient(160deg, rgba(31,142,163,0) 0%,rgba(31,142,163,0) 40%,rgba(31,142,163,1) 80%,rgba(31,142,163,1) 100%);
 $slider-scrim: linear-gradient(166deg, rgba(202,204,144,0) 0%,rgba(202,204,144,0) 40%,rgba(202,204,144,.8) 60%,rgba(202,204,144,1) 100%);
 $slider-scrim-mobile:  rgba(202,204,144,.8);
@@ -170,6 +174,10 @@ $slider-scrim-dark: linear-gradient(160deg, rgba(8,75,131,0) 0%,rgba(8,75,131,0)
 $hero-height: 100vh;
 $hero-caption-font-size: $slider-caption-font-size;
 $hero-button-bottom: 20vh;
+
+$hero-content-justify: flex-end;
+$hero-content-align: flex-end;
+$hero-caption-font-color: $slider-caption-font-color;
 //Nav_____________
 $nav-link-color: $color-swatch-headstand-4;
 $nav-link-size: 1.2em;
@@ -222,7 +230,7 @@ $class-gallery-font-size: 28px;
 $anim-section-vertical-padding: 150px;
 $anim-section-bg: url('../images/goldcurve.png');
 $anim-section-text-size: 24px;
-$anim-mobile-shrink-factor: .8;
+$anim-shrink-factor: .9; //shrinks on desktop
 
 $parallax-gallery-img-width-mobile: 60vw;
 
