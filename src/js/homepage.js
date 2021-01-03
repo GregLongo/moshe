@@ -1,6 +1,7 @@
 //Homepa
-window.$ = $;
-	jQuery(function($) {
+
+$(document).ready(function(){
+
 		$('.slider').slick({
 		  dots: false,
 		  infinite: true,
@@ -11,6 +12,10 @@ window.$ = $;
 		  autoplaySpeed: 4000,
 		  mobileFirst: true,
 		  adaptiveHeight: true,
+		  accesibility: false,
+          draggable: false,
+          swipe: false,
+          touchMove: false
 		});
 
 		// move view schedule button inside class list

@@ -1,4 +1,4 @@
-//teal!
+     //teal!
 // #wpadminbar{
 // 	background-color: $color-swatch-headstand-1 !important;
 // }
@@ -50,6 +50,7 @@ a{
 
 }
 
+//catchall "p" style seems like a bad idea. but maybe some need for a fallback?
 // p{
 // 	font-family: $font-text;
 // 	font-size: $page-generic-font-size-mobile;

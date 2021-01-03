@@ -11,7 +11,7 @@
 			height: $slider-height;
 		}
 		@include desktop-max{
-			background-size: auto 100% !important;
+			background-size:  cover !important;
 		}
 	}
 	&__cta{
@@ -43,7 +43,7 @@
 		font-family: $slider-caption-font;
 		font-weight: $slider-caption-font-weight;
 		text-align: center;
-		color: $text-color-light;
+		color: $slider-caption-font-color;
 		@include small{
 			font-size: $slider-caption-font-size-mobile;			
 		}
@@ -81,7 +81,7 @@
 			left: unset;
 			position: relative;
 			bottom: unset;
-			float: right;			
+			float: $slider-button-float;			
 			transform: none;
 			width: unset;
 			padding: $slider-button-padding;
@@ -115,12 +115,12 @@
 	justify-content: center;
 	align-items: center;
 	height: $hero-height;
-	margin-top: -24px; //fixes weird white space at top. why happen?
+	margin-top: -5vh; //fixes weird white space at top caused by parallax fx i think
 	background-position: center;
 	background-size: auto 100%;		
 	@include tablet{
-		justify-content: flex-end;
-		align-items: flex-end;
+		justify-content: $hero-content-justify;
+		align-items: $hero-content-align;
 		padding-left: $header-padding-left;
 		padding-right: $header-padding-right;
 		background-size: cover;		
@@ -130,7 +130,7 @@
 		z-index: 11;
 		margin-bottom: $slider-caption-margin-bottom;
 		font-size: $slider-caption-font-size-small;
-		color: white;
+		color: $hero-caption-font-color;
 		@include small{
 			font-size: $slider-caption-font-size-mobile;			
 		}
