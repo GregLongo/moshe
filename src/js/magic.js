@@ -35,8 +35,8 @@ $(document).ready(function(){
 
 			ScrollTrigger.create({
 				trigger: ".wysiwyg__content--home",
-				start: 'top bottom',
-				end: 'top top',
+				start: 'center bottom',
+				end: 'center top',
 				toggleClass: "magic__fade--up"
 			})
 			
@@ -85,7 +85,7 @@ $(document).ready(function(){
 
 			ScrollTrigger.create({
 				trigger: ".promo-video",
-				start: 'top bottom',
+				start: 'center bottom',
 				end: 'top top',
 				toggleClass: "magic__fade--basic"
 			})
