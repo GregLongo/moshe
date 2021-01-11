@@ -49,25 +49,25 @@ $font-serif-fallback: Georgia, serif;
 $font-gothic: ltc-globe-gothic, sans-seriff;
 $line-height-global: initial;
 
-$h1-global-size: 56px;
-$h1-global-size-mobile: 48px;
+$h1-global-size: 3.5em;
+$h1-global-size-mobile: 3em;
 $h1-global-size-tablet: tbd;
 $h1-global-weight: 200;
 $h1-global-font: $font-gothic;
 
-$h2-global-size: 48px;
+$h2-global-size: 3em;
 $h2-global-size-mobile: tbd;
 $h2-global-size-tablet: tbd;
 $h2-global-weight: 200;
 $h2-global-font: $font-headings;
 
-$h3-global-size: 32px;
+$h3-global-size: 2em;
 $h3-global-size-mobile: tbd;
 $h3-global-size-tablet: tbd;
 $h3-global-weight: 200;
 $h3-global-font: $font-headings;
 
-$h4-global-size: 32px;
+$h4-global-size: 2em;
 $h4-global-size-mobile: tbd;
 $h4-global-size-tablet: tbd;
 $h4-global-weight: 200;
@@ -90,15 +90,15 @@ $button-padding-class-gallery: 8px 12px 8px 12px;
 $button-border-class-gallery: 1px solid white;
 
 
-$h3-section-title-font: $font-headings;
-$h3-section-title-color: $color-swatch-headstand-4;
-$h3-section-title-size: 36px;
-$h3-section-title-weight: 400;
-$h4-section-subtitle-font: $font-headings;
-$h4-section-subtitle-color: $color-swatch-headstand-4;
-$h4-section-subtitle-size: 18px;
-$h4-section-subtitle-weight: 600;
-$h4-section-subtitle-size-mobile: .9em;
+$section-title-font: $font-headings;
+$section-title-color: $color-swatch-headstand-4;
+$section-title-size: 2.25em;
+$section-title-weight: 400;
+$section-subtitle-font: $font-headings;
+$section-subtitle-color: $color-swatch-headstand-4;
+$section-subtitle-size: 1.125em;
+$section-subtitle-weight: 600;
+$section-subtitle-size-mobile: .9em;
 $section-title-horiz-spacer: 32px;
 $section-title-margin-bottom: 16px;
 
@@ -106,9 +106,9 @@ $section-title-margin-bottom: 16px;
 $header-affix-transition: .2s;
 $header-affix-home: fixed;
 $header-affix-page: fixed;
-$header-padding-left: 2em;
+$header-padding-left: 32px;
 $header-padding-right: 16px;
-$header-padding-mobile: 1em;
+$header-padding-mobile: 16px;
 $header-height: 160px;
 $header-height-mobile: 100px;
 $header-z: 10;
@@ -218,33 +218,33 @@ $h1-page-generic-align: center;
 
 $intro-paragraph-color: white;
 $intro-paragraph-bg: url('../images/goldhalfcurve.png');
-$intro-paragraph-header-mobile: 36px;
-$intro-paragraph-header: 56px;
-$home-intro-text: 24px;
-$home-intro-text-mobile: 20px;
+$intro-paragraph-header-mobile: 2.25em;
+$intro-paragraph-header: 3.5em;
+$home-intro-text: 2em;
+$home-intro-text-mobile: 1.25em;
 $home-intro-text-weight: 400;
 
 $class-gallery-item-height: 300px;
-$class-gallery-font-size: 28px;
+$class-gallery-font-size: 1.75em;
 
 $anim-section-vertical-padding: 150px;
 $anim-section-bg: url('../images/goldcurve.png');
-$anim-section-text-size: 24px;
+$anim-section-text-size: 1.5em;
 $anim-shrink-factor: .7; //shrinks on desktop
 
 $parallax-gallery-img-width-mobile: 40vw;//deprecated, using grid container
 $parallax-gallery-column-gap: 48px;
 
-$qotd-font-size: 32px;
-$qotd-font-size-mobile: 24px;
+$qotd-font-size: 2em;
+$qotd-font-size-mobile: 1.5em;
 $qotd-color: $color-swatch-headstand-4;
 $qotd-font-syle: italic;
 
-$two-col-text: 18px;
+$two-col-text: 1.125em;
 
 $cta-parallax-height: 400px;
-$cta-parallax-header-size: 48px;
-$cta-parallax-header-size-mobile: 32px;
+$cta-parallax-header-size: 3em;
+$cta-parallax-header-size-mobile: 2em;
 
 $newsletter-email-align: center;
 $newsletter-email-height: 3em;
@@ -270,8 +270,8 @@ $buy-course-button-padding: 16px 96px 16px 96px;
 
 //About
 
-$h4-mission-size: 24px;
-$h4-mission-size-mobile: 22px;
+$h4-mission-size: 1.5em;
+$h4-mission-size-mobile: 1.375em;
 $h4-mission-font: $font-text;
 $mission-font-color: white;
 $mission-background-position: 0 50%;
@@ -281,14 +281,14 @@ $mission-background-position: 0 50%;
 $audio-grid-gap: 16px;
 $audio-grid-item-zoom: 105%;
 $audio-grid-label-font: $font-headings;
-$audio-grid-label-size: 20px;
+$audio-grid-label-size: 1.25em;
 
 
 //Learn
 $learn-panel-padding-top: 12%;
 $learn-font: $font-text;
-$learn-font-size: 20px;
-$learn-font-size-mobile:18px;
+$learn-font-size: 1.25em;
+$learn-font-size-mobile: 1.125em;
 $learn-line-height: 1.2;
 $learn-header-font: $font-headings;
 $learn-header-font-size: 2em;
@@ -312,13 +312,14 @@ $learn-submenu-indicator-color: $color-swatch-headstand-2;
 $academics-font: $font-headings;
 $academics-font-color: black;
 $academics-font-align: center;
+
 //Posts_____________
 
 
 
 //404______________
 $fourohfour-font: $font-gothic;
-$fourohfour-font-size: 64px;
+$fourohfour-font-size: 4em;
 $fourohfour-font-color: white;
 
 //==============================================================================
@@ -353,6 +354,6 @@ $zoom-start-link-hover-color: $color-tasteful-green;
 $woo-accent-color: $color-swatch-headstand-1;
 $woo-product-gallery-zoom: none;
 $woo-show-breadcrumb: none;
-$h1-woo-product-title-size: 32px;
+$h1-woo-product-title-size: 2em;
 $h1-woo-product-align: left;
 $h2-woo-product-description-title-size: 2em;

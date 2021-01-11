@@ -14,25 +14,25 @@
 		margin-left: $container-margin-medium;
 		margin-right: $container-margin-medium;		
 	}
-	h3{
+	&__title{
 		margin-top: 0;
 		margin-bottom: $section-title-margin-bottom;
 		margin-right: $section-title-horiz-spacer;
-		font-family: $h3-section-title-font;
-		font-size: $h3-section-title-size !important;
-		font-weight: $h3-section-title-weight;	
-		color: $h3-section-title-color;
+		font-family: $section-title-font;
+		font-size: $section-title-size !important;
+		font-weight: $section-title-weight;	
+		color: $section-title-color;
 	}
 
-	h4{
+	&__subtitle{
 		margin-top: 0;
 		margin-bottom: $section-title-margin-bottom;
-		font-family: $h4-section-subtitle-font;
-		font-size: $h4-section-subtitle-size-mobile !important;
-		font-weight: $h4-section-subtitle-weight;	
-		color: $h4-section-subtitle-color;
+		font-family: $section-subtitle-font;
+		font-size: $section-subtitle-size-mobile !important;
+		font-weight: $section-subtitle-weight;	
+		color: $section-subtitle-color;
 		@include mobile{
-		font-size: $h4-section-subtitle-size !important;
+		font-size: $section-subtitle-size !important;
 		}
 	}
 
