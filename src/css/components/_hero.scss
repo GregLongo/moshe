@@ -58,11 +58,11 @@
 		}
 	}
 	&__button{
-		position: fixed;
+		position: absolute;
 		z-index: 11;
 		white-space: nowrap;
 		left: 50%;
-		bottom: $hero-button-bottom;
+		// bottom: $hero-button-bottom;
 		transform: translateX(-50%);
 		width: fit-content;
 		margin: auto;

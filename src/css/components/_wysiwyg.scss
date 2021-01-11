@@ -19,11 +19,5 @@
 		padding-left: $container-margin-medium;
 		padding-right: $container-margin-medium;		
 	}
-	h1{
-		margin-top:0;
-		font-size: $intro-paragraph-header-mobile;
-		@include tablet{
-			font-size: $intro-paragraph-header;
-		}
-	}
+
 }
