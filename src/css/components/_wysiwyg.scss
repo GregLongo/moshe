@@ -6,6 +6,7 @@
 	padding-bottom: $section-spacer-default * 1.5;
 	background: $intro-paragraph-bg;
 	background-size: auto 100%;
+  	filter: drop-shadow( $curve-shadow);
 	font-family: $font-text;
 	font-size: $home-intro-text-mobile;
 	font-weight: $home-intro-text-weight;

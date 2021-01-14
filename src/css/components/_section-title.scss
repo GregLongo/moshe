@@ -1,14 +1,17 @@
 .section-title{
 	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: $section-spacer-default;
+	text-align: center;
 	@include tablet{
-		justify-content: unset;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: $section-title-justify;
 		margin-top: $section-spacer-default;
+		text-align: initial;
 	}
 	@include xl{
 		margin-left: $container-margin-medium;

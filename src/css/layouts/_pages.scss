@@ -1,14 +1,19 @@
 .page{
+	display: flex;
+    flex-direction: column;
+	min-height:100vh;
+	.content-wrapper{
+		flex: 1;
+	}
 	&__title{
 		padding-top: $page-padding-top-generic-mobile;		
 		text-align: $page-title-align-generic; 
+		color: $page-title-color-generic;
 		@include tablet{
 			padding-top: $header-height;		
 		}
 	}
 	&--generic{
-		display: flex;
-		flex-direction: column;
 		margin-right: $container-margin-large;			
 		margin-left: $container-margin-large;		
 		margin-bottom: $section-spacer-default;
@@ -90,6 +95,7 @@
 }
 
 .page-template-default .section-title{
+	display: none;
 	margin-top: 0;
 	~ .section-title{
 		margin-top: $section-spacer-default !important;

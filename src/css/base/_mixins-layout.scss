@@ -50,7 +50,7 @@
   }
 }
 @mixin desktop-max{
-  @media (max-width: #{$desktop}) {
+  @media (max-width: 1300px) {
     @content;
   }
 }

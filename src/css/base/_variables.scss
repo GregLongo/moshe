@@ -21,15 +21,15 @@ $desktop-xl: 2000px !default;
 // $color-swatch-headstand-2 : #568203 ;
 // $color-swatch-headstand-3 : #296192;
 $color-tasteful-green: #77a464;
-$color-swatch-headstand-1 : #008983;//teal
-$color-swatch-headstand-2 : #C4C581;//gold
-$color-swatch-headstand-3 : #98473E;//rust
-$color-swatch-headstand-4 : #033F63;//slate
-
 // $color-swatch-headstand-1 : #008983;//teal
-// $color-swatch-headstand-2 : #568203 ;//avocado
+// $color-swatch-headstand-2 : #C4C581;//gold
 // $color-swatch-headstand-3 : #98473E;//rust
 // $color-swatch-headstand-4 : #033F63;//slate
+
+$color-swatch-headstand-1 : #008983;//teal
+$color-swatch-headstand-2 : #AFC36C ;//avocado
+$color-swatch-headstand-3 : #98473E;//rust
+$color-swatch-headstand-4 : #033F63;//slate
 
 $charcoal: #333333;
 
@@ -75,6 +75,7 @@ $h4-global-font: $font-headings;
 //==============================================================================
 // Spacing
 //==============================================================================
+$container-header:2.5%;
 $container-margin-large: 15%;
 $container-margin-medium: 20%;
 $section-spacer-default: 120px;
@@ -87,27 +88,28 @@ $button-color: $color-swatch-headstand-1;
 $button-color-hover: $color-swatch-headstand-4;
 $button-font: $font-text;
 $button-padding-class-gallery: 8px 12px 8px 12px;
-$button-border-class-gallery: 1px solid white;
+$button-border-class-gallery: none;
 
 
-$section-title-font: $font-headings;
-$section-title-color: $color-swatch-headstand-4;
-$section-title-size: 2.25em;
+$section-title-font: $font-gothic;
+$section-title-color: $color-swatch-headstand-1;
+$section-title-size: 3em;
 $section-title-weight: 400;
 $section-subtitle-font: $font-headings;
-$section-subtitle-color: $color-swatch-headstand-4;
+$section-subtitle-color: $color-swatch-headstand-1;
 $section-subtitle-size: 1.125em;
 $section-subtitle-weight: 600;
 $section-subtitle-size-mobile: .9em;
-$section-title-horiz-spacer: 32px;
+$section-title-horiz-spacer: none;
 $section-title-margin-bottom: 16px;
+$section-title-justify: space-between;
 
 //Header____________
 $header-affix-transition: .2s;
 $header-affix-home: fixed;
 $header-affix-page: fixed;
-$header-padding-left: 32px;
-$header-padding-right: 16px;
+$header-padding-left: $container-header;
+$header-padding-right: $container-header;
 $header-padding-mobile: 16px;
 $header-height: 160px;
 $header-height-mobile: 100px;
@@ -143,8 +145,9 @@ $slider-height: 100vh;
 $slider-height-mobile: 101vh;
 $slider-content-vertical: flex-end;
 $slider-content-horizontal: flex-end;
-$slider-content-margin-right: $container-margin-large;
+$slider-content-margin-right: $container-header ;
 $slider-content-margin-bottom: 120px;
+$slider-caption-text-align: right;
 $slider-caption-font: $font-gothic;
 $slider-caption-font-color: white;
 $slider-caption-font-size: 4em;
@@ -153,21 +156,22 @@ $slider-caption-font-size-mobile: 3em;
 $slider-caption-font-size-tablet: 4em;
 $slider-caption-font-weight: 500;
 $slider-caption-margin-bottom: 40px;
-$slider-caption-y-mobile: 20vh;
+$slider-caption-y-mobile: 20v;
+$slider-caption-min-width: 30vw;
 $slider-button-padding: 24px 52px 24px 52px;
 $slider-button-padding-mobile: 12px;
 $slider-button-padding-tablet: 12px;
 $slider-button-font: $font-headings ;
 $slider-button-font-size: 1.75em;
 $slider-button-font-size-mobile: 1.5em;
-$slider-button-border: none ;
-$slider-button-background: $button-color;
+$slider-button-border: 4px solid white ;
+$slider-button-background: none;
 $slider-button-width-mobile: 60%;
 $slider-button-float: right;
-
+$slider-button-background-hover: #ffffff33;
 
 // $slider-scrim: linear-gradient(160deg, rgba(31,142,163,0) 0%,rgba(31,142,163,0) 40%,rgba(31,142,163,1) 80%,rgba(31,142,163,1) 100%);
-$slider-scrim: linear-gradient(166deg, rgba(202,204,144,0) 0%,rgba(202,204,144,0) 40%,rgba(202,204,144,.8) 60%,rgba(202,204,144,1) 100%);
+$slider-scrim: linear-gradient(160deg, #AFC36C00 0%, #AFC36C00 40%, #AFC36CCC 80%, #AFC36CFF 100%);
 $slider-scrim-mobile:  rgba(202,204,144,.8);
 $slider-scrim-dark: linear-gradient(160deg, rgba(8,75,131,0) 0%,rgba(8,75,131,0) 40%,rgba(8,75,131,.8) 70%,rgba(8,75,131,1) 100%);
 
@@ -179,7 +183,7 @@ $hero-content-justify: flex-end;
 $hero-content-align: flex-end;
 $hero-caption-font-color: $slider-caption-font-color;
 //Nav_____________
-$nav-link-color: $color-swatch-headstand-4;
+$nav-link-color: $color-swatch-headstand-1;
 $nav-link-size: 1.2em;
 $nav-link-size-sm: 1em;
 $nav-link-margin: 0px;
@@ -188,13 +192,13 @@ $nav-link-font: $font-headings;
 $nav-link-size-mobile: 1.5em;
 $nav-bg-mobile: $color-swatch-headstand-2;
 $nav-link-color-mobile: white;
-$nav-menu-link-color-hover: $color-swatch-headstand-1;
-$hamburger-color: $color-swatch-headstand-4;
+$nav-menu-link-color-hover: $color-swatch-headstand-2;
+$hamburger-color: $color-swatch-headstand-1;
 
 $nav-submenu-bg: white;
 $nav-submenu-flex-direction: column;
 $nav-submenu-link-color: $color-swatch-headstand-1;
-$nav-submenu-bg-filter: blur(40px) ;
+$nav-submenu-bg-filter: blur(40px) ; //think this effect turned off
 //==============================================================================
 // Pages
 //==============================================================================
@@ -202,10 +206,11 @@ $nav-submenu-bg-filter: blur(40px) ;
 //Generic Page_______________
 
 $page-title-align-generic: center;
+$page-title-color-generic: $color-swatch-headstand-1;
 $page-generic-font-size: 1.2em;
 $page-generic-font-size-mobile: 1.1em;
 $page-generic-line-height: 1.5;
-$page-padding-top-generic-mobile: $section-spacer-default/1.75;
+$page-padding-top-generic-mobile: $section-spacer-default;
 
 $page-generic-list-item-font: $font-headings;
 $page-generic-list-item-size: 1.5em;
@@ -217,7 +222,8 @@ $h1-page-generic-align: center;
 //Home______________
 
 $intro-paragraph-color: white;
-$intro-paragraph-bg: url('../images/goldhalfcurve.png');
+$intro-paragraph-bg: url('../images/halfcurvy.svg');
+
 $intro-paragraph-header-mobile: 2.25em;
 $intro-paragraph-header: 2.5em;
 $home-intro-text: 1.5em;
@@ -227,18 +233,21 @@ $home-intro-text-weight: 400;
 $class-gallery-item-height: 300px;
 $class-gallery-font-size: 1.75em;
 
-$anim-section-vertical-padding: 150px;
-$anim-section-bg: url('../images/goldcurve.png');
+$anim-section-vertical-padding: $section-spacer-default  - 32px;;
+$anim-section-bg: url('../images/curvy.svg');
 $anim-section-text-size: 1.5em;
 $anim-shrink-factor: .7; //shrinks on desktop
+
+$curve-shadow: 0px 4px 6px #00000029;
 
 $parallax-gallery-img-width-mobile: 40vw;//deprecated, using grid container
 $parallax-gallery-column-gap: 48px;
 
-$qotd-font-size: 2em;
+$qotd-font-size: 2.25em;
 $qotd-font-size-mobile: 1.5em;
-$qotd-color: $color-swatch-headstand-4;
-$qotd-font-syle: italic;
+$qotd-color: $color-swatch-headstand-1;
+$qotd-font-syle: none;
+$qotd-font: $font-gothic;
 
 $two-col-text: 1.125em;
 
@@ -302,7 +311,7 @@ $hero-title-learn-justify: center;
 $hero-title-learn-align: center;
 $hero-title-learn-font: $font-gothic;
 $hero-title-learn-size: 3em;
-$hero-title-learn-size-mobile:4em;
+$hero-title-learn-size-mobile:3em;
 $learn-submenu-height: 8vh;
 $learn-submenu-font: $font-headings;
 $learn-submenu-bg: white;

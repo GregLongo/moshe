@@ -1,4 +1,5 @@
 .woocommerce{
+
 	&-ordering{
 		float: left!important;			
 		@include tablet{
@@ -31,11 +32,12 @@
 			}
 		}		
 	}
-	a{
+	.product h2{
 		@include tablet{
-			color: $nav-link-color !important;			
+			color: $color-swatch-headstand-4 !important;			
+			font-weight: 600;
 			&:hover{
-				color: $nav-menu-link-color-hover !important;		
+				color: $color-swatch-headstand-1 !important;		
 			}			
 		}
 	}
@@ -50,6 +52,8 @@
 		}
 		&.page-title{
 			text-align: center;
+			margin-top: 0;
+			color: $page-title-color-generic;
 		}
 	}
 	h2{
@@ -72,7 +76,8 @@
 
 //woocomerce tries to hijack site logo wtf
 .woocommerce img.header__logo,
- .woocommerce-page img.header__logo {
+ .woocommerce-page img.header__logo,
+  .woocommerce-page img.footer__logo {
  	height: $header-logo-height-small;				
 	@include small{
 		height: $header-logo-height-mobile;			

@@ -5,13 +5,14 @@
 		align-items: center;
 		height: $slider-height-mobile;
 		justify-content: center;	
+		background-position: center;
 		@include tablet {
 			align-items: $slider-content-vertical;
 			justify-content: $slider-content-horizontal;	
 			height: $slider-height;
 		}
 		@include desktop-max{
-			background-size:  cover !important;
+			background-size:  cover !important; //turn off ken burns at 1300px
 		}
 	}
 	&__cta{
@@ -19,10 +20,8 @@
 		position: absolute;
 		z-index: 11;
 		text-align: center;
-		@include mobile{
-			margin-right: $container-margin-large;	
-			margin-left: $container-margin-large;			
-		}
+		margin-right: $container-margin-large;	
+		margin-left: $container-margin-large;			
 		@include tablet{
 			align-items: unset;
 			position: unset;
@@ -32,6 +31,8 @@
 			margin-bottom: $slider-content-margin-bottom;	
 			width: unset;
 			text-align: right;
+			width: $slider-caption-min-width;
+
 		}
 	}
 	&__caption{
@@ -51,11 +52,14 @@
 			font-size: $slider-caption-font-size-tablet;			
 		}
 		@include tablet{
-			white-space: nowrap;
 			position: initial;
-			text-align: initial;
+			text-align: $slider-caption-text-align;
 			font-size: $slider-caption-font-size;
 		}
+		@include widescreen{
+			whitespace: nowrap;
+		}
+
 	}
 	&__button{
 		position: absolute;
@@ -75,7 +79,7 @@
 		text-align: center;
 		color: $text-color-light;
 		@include mobile{
-			padding: $slider-button-padding-tablet;			
+			padding: $slider-button-padding-tablet auto;			
 		}
 		@include tablet{
 			left: unset;
@@ -83,12 +87,14 @@
 			bottom: unset;
 			float: $slider-button-float;			
 			transform: none;
-			width: unset;
-			padding: $slider-button-padding;
+			width: $slider-caption-min-width;
 			font-size: $slider-button-font-size;
 		}
 		&:hover{
-			background-color: $color-swatch-headstand-4;
+			background-color: $slider-button-background-hover;
+		}
+		a{
+			outline: none;
 		}
 	}
 	&__scrim{

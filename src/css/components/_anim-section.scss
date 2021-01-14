@@ -24,13 +24,24 @@
 			}		
 		}
 	}&__blurb{
+
 		&-1{
-			color: $color-swatch-headstand-4;
+			h2 {
+				// margin-top: 0;
+				font-family: $font-gothic;
+				color: $color-swatch-headstand-1;
+			}
+			p{
+				color: grey //weird little thang
+			}
 			@include tablet{
-				text-align: right;			
+				text-align: left;			
 			}
 		}
 		&-2{
+			h2 {
+				font-family: $font-gothic;		
+			}
 			order:2;
 		@include tablet{
 			order:1;			
@@ -51,6 +62,7 @@
 			padding: $anim-section-vertical-padding $container-margin-medium ;			
 		}
 		&:nth-child(1){
+			margin-top: -32px //wysiwyg h2 compensation
 		}
 		&:nth-child(2){
 			overflow-y: visible;
@@ -58,6 +70,7 @@
 			background-image: $anim-section-bg;
 			background-size: auto 100%;
 			background-repeat: no-repeat;
+			filter: drop-shadow( $curve-shadow);
 			color: white;
 			@include tablet{
 				padding-bottom: $anim-section-vertical-padding;

@@ -17,15 +17,17 @@ jQuery(document).ready(function() {
     $('.mm-ocd__backdrop').on('click mousedown touchstart', function(e) {
         e.preventDefault();
         $('a[href="#nav-mobile"]').removeClass('is-active');
+        $(this).find('.nav__submenu').css('opacity', 0);
     });
 
 
 //submenus too just for fun
-	$('.menu-item-has-children').hover(function(){
-		$(this).find('.nav__submenu').toggleClass('open');
+	$('.nav--main').find('.nav__submenu').addClass('close');
+	$('.nav--main').find('.menu-item-has-children').hover(function(){
+		$(this).toggleClass('hovered');
+		$(this).find('.nav__submenu').toggleClass("close");
+		$(this).find('.nav__submenu').toggleClass("open");
 	});
-
-
 });
 
 
