@@ -8,8 +8,11 @@
 	background-size:cover;
 	background-affix: fixed;
 	background-position: -50%;
-	background-color: $color-swatch-headstand-2;
+	background-color: #AFC36C93;
 	background-blend-mode: multiply;
+	&__outer{
+		clip-path: url("#svgmask")
+	}
 	&__inner{
 		position: relative;
 		top: 50%;
@@ -18,7 +21,9 @@
 		text-align: center;
 		@include tablet{
 			top: 25%;
-			margin-top: $section-spacer-default/1.5;			
+			margin-top: $section-spacer-default/1.5;
+			margin-left: $container-margin-large/2;			
+			text-align: left;
 		}
 	}
 	&__msg{

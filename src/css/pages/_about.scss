@@ -22,9 +22,11 @@
 .wysiwyg--about{
 	flex: 100%;
 	padding-bottom: $section-spacer-default /2 ;
-	font-family: $font-text;
-	font-size: $home-intro-text;
-	font-weight: $home-intro-text-weight;
+	p{
+		font-family: $font-text;
+		font-size: $home-intro-text;
+		font-weight: $home-intro-text-weight;
+	}
 	@include tablet{
 		padding-right: $section-spacer-default/2;
 		padding-bottom: 2 * $section-spacer-default;

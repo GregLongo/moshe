@@ -6,11 +6,12 @@
 	grid-row-gap: 32px;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
-	margin-bottom: $section-spacer-default * 2;
+	margin-bottom: $section-spacer-default ;
 	margin-top: $section-spacer-default/2;
 	@include xl{
 		margin-right: $container-margin-medium;
 		margin-left: $container-margin-medium;		
+		margin-bottom: $section-spacer-default *3;
 	}
 	@include tablet{
 		grid-template-columns: repeat(4, 1fr);

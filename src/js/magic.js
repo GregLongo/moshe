@@ -5,10 +5,10 @@ gsap.registerPlugin(ScrollTrigger);
 $(document).ready(function(){
 	
 	ScrollTrigger.matchMedia({
-		"(min-width: 800px)": function(){
+		"(min-width: 770px)": function(){
 		 	addFX()	
 		},
-		"(max-width:799px)": function(){
+		"(max-width:769px)": function(){
 			$("*").each(function(){
 				$(this).css({opacity: 1 })
 			});
@@ -105,7 +105,9 @@ $(document).ready(function(){
 				gsap.to(this, {
 				  scrollTrigger:{
 				  	trigger: this,
-				  	scrub: true
+				  	scrub: true,
+				  	start: 'top bottom',
+					end: 'top top',
 				  } ,
 				  y: speed,
 				});
@@ -116,7 +118,9 @@ $(document).ready(function(){
 			  ease: "none",
 			  scrollTrigger: {
 			    trigger: ".cta-parallax__outer",
-			    scrub: true
+			    scrub: true,
+			    start: 'top bottom',
+				end: 'top top',
 			  }, 
 			});
 

@@ -4,12 +4,12 @@
 	align-items: center;
 	padding-top: $section-spacer-default;
 	background: none;
-	font-family: $font-text;
+	font-family: $qotd-font;
 	font-size: $qotd-font-size-mobile;
 	color: $qotd-color;
 	font-style: $qotd-font-syle;
-	@include desktop{
-		padding: 48px;
+	padding: 48px;
+	@include widescreen{
 		font-size: $qotd-font-size;		
 	}
 }
@@ -29,10 +29,10 @@
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;
 	margin-top: $section-spacer-default;
-	margin-bottom: $section-spacer-default;		
+	margin-bottom: $section-spacer-default - 48px;//account for svg mask under		
 	@include desktop{
 		display: flex;
 		height: 360px;
-		margin-bottom: $section-spacer-default * 2;		
+		// margin-bottom: $section-spacer-default * 2;		
 	}
 }

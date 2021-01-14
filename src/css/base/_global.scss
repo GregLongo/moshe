@@ -17,6 +17,7 @@ body{
 
 //probably not best practice for font hierarchy. decorator classes? mixins?
 h1{
+	margin-top: 0;
 	font-family: $h1-global-font;
 	font-size: $h1-global-size-mobile;
 	font-weight: $h1-global-weight;
@@ -61,9 +62,9 @@ a{
 // }
 
 hr{
-	@include tablet{
-		margin-top: $section-spacer-default - 32px;
-	}
+	// @include tablet{
+	// 	margin-top: $section-spacer-default - 32px; //?
+	// }
 	margin-top: $section-spacer-default;
 	margin-right: $container-margin-large;
 	margin-left: $container-margin-large;

@@ -1,14 +1,14 @@
 .class{
 	&__description{
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		align-items: center;
 		margin-top: $section-spacer-default;
 		margin-bottom: none;
 		padding-left: $container-margin-large;
 		padding-right: $container-margin-large;
 		font-family: $font-text;
-		@include tablet{
+		@include desktop{
 			flex-direction: row;
 			margin-bottom: $section-spacer-default;
 		}
@@ -18,20 +18,31 @@
 		}
 		.windowpane{
 			margin-bottom: $section-spacer-default;
-			@include tablet{
-				margin-bottom: inherit;
+			@include desktop{
+				margin-bottom: $section-spacer-default - $windowpane-vert-offset;
 			}
 		}
 	}
 }
 
 .wysiwyg--class__description{
+	margin-bottom: $section-spacer-default;
 	padding-left: $container-margin-large/2;
 	background: none;
 	font-family: $font-text;
 	font-size: $page-generic-font-size;
 }
 
+.wysiwyg__content--class{
+	h1{
+		margin: 0;
+		font-size: $intro-paragraph-header;
+	}
+	h3{
+		margin: 0;
+		font-size: 1.5em;
+	}
+}
 .buy-course{
 	display: flex;
 	flex-direction: column;
@@ -46,6 +57,7 @@
 	background-image: $anim-section-bg;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
+	filter: drop-shadow( $curve-shadow);
 	text-align: center;
 	@include tablet{
 		flex-direction: row;

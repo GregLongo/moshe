@@ -33,7 +33,7 @@
 		font-size: $two-col-text;	
 		line-height: $page-generic-line-height;	
 		@include widescreen{
-			padding: 4em;		
+			padding: 0 4em;		
 		}
 	}
 }

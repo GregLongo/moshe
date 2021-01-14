@@ -103,13 +103,16 @@
     font-size: $learn-submenu-font-size;
     a{
         margin-right: $learn-submenu-spacing;
+        color: $color-swatch-headstand-4;
+        font-weight: 500;
+        //indicator
+        &.selected{
+            color: $learn-submenu-indicator-color 
+        }
     }
 }
 
-//indicator
-.selected{
-    color: $learn-submenu-indicator-color
-}
+
 
 .container--academics{
     padding-right: $container-margin-large;

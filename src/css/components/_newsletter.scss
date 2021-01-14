@@ -5,6 +5,7 @@
 	height: 100%;
 	@include tablet{
 		margin-top: 4em;
+		justify-content: flex-start;
 	}
 }
 
@@ -38,7 +39,7 @@
 	@include tablet{
 		width: $newsletter-email-width-mobile;
 		height: $newsletter-email-height;
-		margin: 0 2em;		
+		margin: 0 2em 0 0;		
 	}
 }
 
