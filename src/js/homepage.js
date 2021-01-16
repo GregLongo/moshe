@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 		$('.slider').slick({
 		  dots: false,
+		  arrows: false,
 		  infinite: true,
 		  fade: true,
 		  speed: 2000,
