@@ -55,7 +55,7 @@ $h1-global-size-tablet: tbd;
 $h1-global-weight: 200;
 $h1-global-font: $font-gothic;
 
-$h2-global-size: 3em;
+$h2-global-size: 2em;
 $h2-global-size-mobile: tbd;
 $h2-global-size-tablet: tbd;
 $h2-global-weight: 200;
@@ -172,7 +172,10 @@ $slider-button-background-hover: #ffffff33;
 
 // $slider-scrim: linear-gradient(160deg, rgba(31,142,163,0) 0%,rgba(31,142,163,0) 40%,rgba(31,142,163,1) 80%,rgba(31,142,163,1) 100%);
 $slider-scrim: linear-gradient(160deg, #AFC36C00 0%, #AFC36C00 40%, #AFC36CCC 80%, #AFC36CFF 100%);
-$slider-scrim-mobile:  rgba(202,204,144,.8);
+// $slider-scrim-mobile:  rgba(202,204,144,.8);
+$slider-scrim-mobile:  rgba(175, 195, 108, .8);// thi sis a puke color
+// $slider-scrim-mobile:  rgba(100, 100, 100, .4);//honestly just a subtle grey scrim is best
+
 $slider-scrim-dark: linear-gradient(160deg, rgba(8,75,131,0) 0%,rgba(8,75,131,0) 40%,rgba(8,75,131,.8) 70%,rgba(8,75,131,1) 100%);
 
 $hero-height: 100vh;
@@ -301,7 +304,7 @@ $learn-font-size-mobile: 1.125em;
 $learn-line-height: 1.2;
 $learn-header-font: $font-headings;
 $learn-header-font-size: 2em;
-$learn-header-line-height: 1.5;
+$learn-header-line-height: 2;
 $learn-header-font-weight: 400;
 $learn-panel-blend-mode: multiply;
 $learn-panel-one-bg-color: $color-swatch-headstand-2;

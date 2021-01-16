@@ -27,7 +27,7 @@ $(document).ready(function(){
 			$(".section-title").each(function(){
 				ScrollTrigger.create({
 					trigger: this,
-					start: 'top bottom',
+					start: 'bottom bottom',
 					end: 'top top',
 					toggleClass: {targets: this, className: "magic__fade--basic"}
 				})
@@ -37,20 +37,20 @@ $(document).ready(function(){
 				trigger: ".wysiwyg__content--home",
 				start: 'center bottom',
 				end: 'center top',
-				toggleClass: "magic__fade--up"
+				toggleClass: "magic__fade--basic"
 			})
 			
 			//weird edge case break revisit
 			ScrollTrigger.create({
 				trigger: ".zoom",
-				start: 'top bottom',
+				start: 'center bottom',
 				end: 'bottom top',
 				toggleClass: {targets: ['.vczapi-list-zoom-meetings--item', '.zoom__view-schedule'], className: "magic__fade--up"}
 			})
 			
 			ScrollTrigger.create({
 				trigger: ".class-gallery__item",
-				start: 'top bottom',
+				start: 'center bottom',
 				end: 'bottom top',
 				toggleClass: {targets: '.class-gallery__item', className: "magic__fade--slide"}
 			})
