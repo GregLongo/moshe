@@ -11,16 +11,16 @@ $(document).ready(function(){
 		  autoplay: true,
 		  autoplaySpeed: 4000,
 		  mobileFirst: true,
-		  adaptiveHeight: true,
+		  adaptiveHeight: false,
 		  accesibility: false,
           draggable: false,
           swipe: false,
-          touchMove: false
+          touchMove: false,
+          pauseOnFocus: false,
+          pauseOnHover: false,
+
 		});
 
-		// move view schedule button inside class list
-		$("#schedule-btn").detach().appendTo('.vczapi-list-zoom-meetings--items');
-		//move countdown timer
-		// $("#dpn-zvc-timer").detach().appendTo('.deepn-zvc-single-featured-img');
 
 });
+

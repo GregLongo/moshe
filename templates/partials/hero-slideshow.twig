@@ -4,7 +4,7 @@
 				<div class="slider__scrim"></div>
 				<div class="slider__cta">
 					<div class="slider__caption">{{ Image(image).caption }}</div>
-					<div class="slider__button"><a>Sign Up for Classes</a></div>
+					<div class="slider__button"><a href={{post.meta('cta-link')}}>{{post.meta('cta-text')}}</a></div>
 				</div>
 			</div>
 	{% endfor %}

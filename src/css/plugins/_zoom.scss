@@ -4,10 +4,21 @@
 		min-width: $zoom-gallery-item-min-width;
 		border: $zoom-gallery-item-border;
 		background: $zoom-gallery-item-bg;
+		@include desktop{
+			width: 8% !important;
+			margin-right: 16px !important;
+		}
+		@include widescreen{
+			margin-right: 0px !important;
+		}
 		&s{
 			justify-content: center;
-			@include mobile{
-				justify-content: flex-start;				
+			margin-bottom: 56px;
+			@include desktop{
+				justify-content: flex-start;
+			}
+			@include widescreen{
+				justify-content: space-between;				
 			}
 		}
 		&__image{
@@ -67,11 +78,16 @@
 .zoom{
 	margin-left: $container-margin-large;
 	margin-right: $container-margin-large;
+	text-align: center;
+	@include tablet{
+		text-align: left;
+	}
 	@include xl{
 	margin-left: $container-margin-medium;
 	margin-right: $container-margin-medium;		
 	}
 	&__view-schedule{
+		margin-top: 200px;
 		align-self: center;
 		height: fit-content;
 		padding: $zoom-gallery-item-button-padding;	
@@ -101,6 +117,12 @@
 	p{
 		line-height: $page-generic-line-height;
 	}
+
+}
+
+.deepn-zvc-single-featured-img img{
+	max-height: 50vw;
+	overflow-y: hidden;
 }
 
 .btn-join-link{
@@ -115,6 +137,7 @@
 			background-color: $zoom-start-link-hover-color !important;
 		}
 }
+
 .dpn-zvc-sidebar-content{
 	background-color: $zoom-sidebar-color !important;			
 }
@@ -131,4 +154,23 @@
 
 .schedule{
 	margin-bottom: $section-spacer-default;
+}
+
+.vczapi-woocommerce-email-mtg-details{
+	display: block !important;
+	> li 
+		{
+			font-weight: unset;
+			a{
+			line-height: 4;
+			font-size: 16px !important;
+			margin-top: 32px;
+			padding: 10px 20px;
+			color: white;
+			background-color: $zoom-join-link-color !important;
+			&:hover{
+			background-color: $button-color-hover !important;
+			}	
+		}			
+	}
 }
