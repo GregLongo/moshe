@@ -7,7 +7,7 @@
 }
 
 @keyframes kenBurns{
-	from {background-size: 100%}
+	from {background-size: $ken-burns-origin}
 	to {background-size: $ken-burns-depth}
 }
 

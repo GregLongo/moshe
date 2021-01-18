@@ -22,6 +22,7 @@ $(document).ready(function(){
 
 		});
 
-
+// move view schedule button inside class list
+		$("#schedule-btn").detach().appendTo('.vczapi-list-zoom-meetings--items');
 });
 
