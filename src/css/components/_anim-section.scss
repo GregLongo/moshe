@@ -24,11 +24,11 @@
 			}		
 		}
 	}&__blurb{
-
 		&-1{
 			h2 {
 				// margin-top: 0;
 				font-family: $font-gothic;
+				font-size: $h2-global-size;
 				color: $color-swatch-headstand-1;
 			}
 			p{
@@ -40,6 +40,7 @@
 		}
 		&-2{
 			h2 {
+				font-size: $h2-global-size;
 				font-family: $font-gothic;		
 			}
 			order:2;
@@ -62,7 +63,7 @@
 			padding: $anim-section-vertical-padding $container-margin-medium ;			
 		}
 		&:nth-child(1){
-			margin-top: -32px //wysiwyg h2 compensation
+			// margin-top: -32px //wysiwyg h2 compensation
 		}
 		&:nth-child(2){
 			overflow-y: visible;
