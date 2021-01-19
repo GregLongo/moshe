@@ -12,15 +12,36 @@
 	to {background-size: $ken-burns-depth auto}
 }
 
-@keyframes kenBurnsFix{
-	from {background-size: auto $ken-burns-origin }
-	to {background-size: auto $ken-burns-depth }
+
+
+@media screen and (min-height: 1440px) {
+	.slider__slide{
+		background-size: cover !important  ;
+	}
 }
 
+// @media screen and (max-width: 1500px) and (min-height: 1080px){
+// 	.slider__slide{
+// 		background-size: cover !important  ;
+// 	}	
+// }
 
-//account for repeats at weird resolutions
+// @media screen and (max-width: 1200px) and (min-height: 800px){
+// 	.slider__slide{
+// 		background-size: cover !important  ;
+// 	}	
+// }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px){
+@media screen and (max-width: 1700px) and (min-height: 1080px){
+	.slider__slide{
+		background-size: auto $ken-burns-depth ;
+	}
+	.ken-burns .slick-active .slider__slide{
+		animation: kenBurnsFix $ken-burns-speed;
+	}	
+}
+
+@media screen and (max-width: 1200px) and (min-height: 800px){
 	.slider__slide{
 		background-size: auto $ken-burns-depth ;
 	}
@@ -29,10 +50,20 @@
 	}
 }
 
-@media screen and (min-width: 1500px) and  (min-height: 1440px) {
-	.slider__slide{
-		background-size: cover !important  ;
-	}
+
+
+// @media screen and (min-width: 1000px) and (max-width: 1500px){
+// 	.slider__slide{
+// 		background-size: auto $ken-burns-depth ;
+// 	}
+// 	.ken-burns .slick-active .slider__slide{
+// 		animation: kenBurnsFix $ken-burns-speed;
+// 	}
+// }
+
+@keyframes kenBurnsFix{
+	from {background-size: auto $ken-burns-origin }
+	to {background-size: auto $ken-burns-depth }
 }
 
 
@@ -141,9 +172,7 @@
 		height: 200% !important;
 		position: relative;
 		top: -100%;
-		@include mobile{
-			top: -200%;
-		}
+
 		@include tablet{
 			top: -200%;		
 		}
