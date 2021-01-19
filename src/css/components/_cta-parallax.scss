@@ -5,9 +5,10 @@
 	position:relative;
 	z-index: 1;
 	height: $cta-parallax-height;
+	background-repeat: no-repeat;
 	background-size:cover;
 	background-affix: fixed;
-	background-position: -50%;
+	background-position-y: -50%;
 	background-color: #AFC36C93;
 	background-blend-mode: multiply;
 	&__outer{
