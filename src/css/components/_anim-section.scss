@@ -46,7 +46,7 @@
 			order:2;
 		@include tablet{
 			order:1;			
-			transform: translateY(-56px)
+			// transform: translateY(-56px)?
 			}		
 		}
 	}
@@ -67,7 +67,7 @@
 		}
 		&:nth-child(2){
 			overflow-y: visible;
-			padding-bottom: $anim-section-vertical-padding * 1.5;
+			padding-bottom: $anim-section-vertical-padding * 2.5;
 			background-image: $anim-section-bg;
 			background-size: auto 100%;
 			background-repeat: no-repeat;

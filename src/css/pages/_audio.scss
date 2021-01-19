@@ -5,7 +5,12 @@
 	}
 	&__wysiwyg{//this is not ideal but. should the image be a hero? i dunno. i'm tired
 		margin-top: $section-spacer-default;
-
+		h2{
+			font-size: $h2-global-size !important;
+		}
+		h3{
+			font-size: $h3-global-size !important;
+		}
 		img{
 			width: 100%;
 			margin-top: $section-spacer-default/2;

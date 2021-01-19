@@ -2,13 +2,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: $section-spacer-default;
+	padding-top: $section-spacer-default/2;
 	background: none;
 	font-family: $qotd-font;
 	font-size: $qotd-font-size-mobile;
 	color: $qotd-color;
 	font-style: $qotd-font-syle;
-	padding: 48px;
+	@include desktop{
+		padding-left: 48px;
+		padding-top: 0;
+	}
 	@include widescreen{
 		font-size: $qotd-font-size;		
 	}

@@ -45,7 +45,7 @@
 		h1{
 			text-align: $h1-page-generic-align;
 		}
-		img{
+		img[class^="wp-image"]{
 			display: flex;
 			width: 100%;
 			height: auto;
