@@ -11,8 +11,8 @@
 			justify-content: $slider-content-horizontal;	
 			height: $slider-height;
 		}
-		@include desktop-max{
-			background-size:  cover !important; //turn off ken burns at 1300px
+		@include tablet-max{
+			background-size:  cover !important; //turn off ken burns at ###
 		}
 	}
 	&__cta{

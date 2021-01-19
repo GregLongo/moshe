@@ -1,5 +1,6 @@
+
 .slider__slide{
-	background-size: $ken-burns-depth;
+	background-size: $ken-burns-depth auto;
 }
 
 .ken-burns .slick-active .slider__slide{
@@ -7,9 +8,33 @@
 }
 
 @keyframes kenBurns{
-	from {background-size: $ken-burns-origin}
-	to {background-size: $ken-burns-depth}
+	from {background-size: $ken-burns-origin auto}
+	to {background-size: $ken-burns-depth auto}
 }
+
+@keyframes kenBurnsFix{
+	from {background-size: auto $ken-burns-origin }
+	to {background-size: auto $ken-burns-depth }
+}
+
+
+//account for repeats at weird resolutions
+
+@media screen and (min-width: 1000px) and (max-width: 1500px){
+	.slider__slide{
+		background-size: auto $ken-burns-depth ;
+	}
+	.ken-burns .slick-active .slider__slide{
+		animation: kenBurnsFix $ken-burns-speed;
+	}
+}
+
+@media screen and (min-width: 1500px) and  (min-height: 1440px) {
+	.slider__slide{
+		background-size: cover !important  ;
+	}
+}
+
 
 //'flash' effect
 // .ken-burns .slick-slide[aria-hidden="true"] .slider__slide { visibility: hidden }
@@ -100,10 +125,10 @@
 		}
 	}
 	margin-top: $section-spacer-default;
-	margin-bottom: $section-spacer-default*4 !important;
+	// margin-bottom: $section-spacer-default*4 !important;
 	@include tablet-max{
 		margin-top: $section-spacer-default/2;
-		margin-bottom: $section-spacer-default !important;
+		// margin-bottom: $section-spacer-default !important;
 	}
 }
 

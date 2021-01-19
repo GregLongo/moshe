@@ -11,7 +11,10 @@
 	background-color: #AFC36C93;
 	background-blend-mode: multiply;
 	&__outer{
-		clip-path: url("#svgmask")
+		clip-path: url("#svgmask");
+		@include xl{
+			clip-path: url("#svgmasklg");
+		}
 	}
 	&__inner{
 		position: relative;

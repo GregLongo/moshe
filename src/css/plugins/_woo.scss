@@ -89,3 +89,50 @@
 		height: $header-logo-height !important; 		
 	}
 }
+
+//my account stuff
+.woocommerce-MyAccount-content{
+	font-family: $font-text;
+	.woocommerce-Message{
+		@include tablet-max{
+			display: flex;
+			flex-direction: column-reverse;		
+			.button{
+				margin-top: 64px;
+				margin-left: -24px;
+			}			
+		}
+	}
+}
+.woocommerce-MyAccount-navigation{
+	width: 25%;
+	margin-bottom: $section-spacer-default/2;
+	ul{
+		display: unset;
+	}
+}
+.woocommerce-MyAccount-navigation-link{
+	&:hover{
+		color: $color-swatch-headstand-2;
+	}
+	&.is-active{
+		color: $color-swatch-headstand-1;
+	}
+}
+
+//login stuff
+
+.show-password-input{
+	top: 4pxem !important;
+}
+
+//highly experimental but i wann turn the grey button another color
+.woocommerce button.button{
+	background-color: $button-color !important;
+	color: white !important;
+	font-family: $font-headings;
+	font-weight: 400 !important;
+	&:hover{
+		background-color: $button-color-hover !important
+	}
+}
