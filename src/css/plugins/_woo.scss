@@ -15,10 +15,10 @@
 			color: $woo-accent-color !important;
 		}
 	}
-	.content-wrapper{
+	.container.content-wrapper{
 	padding-right: $container-margin-large;
 	padding-left: $container-margin-large;
-	padding-top: $section-spacer-default/4;
+	margin-top: $section-spacer-default/1.5;
 	font-family: $font-text;
 	@include tablet{
 		padding-top: $section-spacer-default/1.5;
@@ -123,7 +123,7 @@
 //login stuff
 
 .show-password-input{
-	top: 4pxem !important;
+	top: 4px !important;
 }
 
 //highly experimental but i wann turn the grey button another color

@@ -11,6 +11,7 @@ jQuery(document).ready(function() {
 		);
 	$( 'a[href="#nav-mobile"]' ).on('click mousedown touchstart', function(e){
         e.preventDefault()
+        $('.is-active').removeClass('is-active');
         $(this).addClass('is-active');
 		drawer.open();
 	});

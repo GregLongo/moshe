@@ -24,10 +24,10 @@ $("#menu").on("click","a", function (e) {
 
 
 ScrollTrigger.matchMedia({
-	"(min-width: 800px) and (min-height: 768px)": function(){
+	"(min-width: 1000px) and (min-height: 600px)": function(){
 	 	addPinning()	
 	},
-	"(max-width:799px) or (max-height: 768px)": function(){
+	"(max-width:1000px) or (max-height: 600px)": function(){
 		$("p").each(function(){
 			$(this).css({opacity: 1})
 		});
