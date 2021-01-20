@@ -59,7 +59,7 @@
     }
 }
 .learn-panel.three {
-    background: $learn-panel-three-bg-color;
+    background-color: $learn-panel-three-bg-color;
     .panel__text{
     }
 }
@@ -90,7 +90,7 @@
 
 #menu{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 1000;
@@ -98,6 +98,7 @@
     width: 100%;
     height: $learn-submenu-height;
     padding-left: $container-margin-large / 2;
+    padding-right: $container-margin-large / 2;
     background: $learn-submenu-bg;
     font-family: $learn-submenu-font;
     font-size: $learn-submenu-font-size;
@@ -130,7 +131,7 @@
 }
 
 //going in desktop first , wish me luck 
-@media screen and (max-width: #{$mobile}) , (max-height: 600px){
+@media screen and (max-width: #{$tablet}) , (max-height: 600px){
 
     .learn-panel{
         height: unset;
@@ -138,8 +139,12 @@
             width: 100% !important;
             padding-bottom: 200px;
             strong{
+                opacity: 1 !important;
                 padding-bottom: 2em;
                 font-size: 2em;
+            }
+            p{
+                opacity: 1 !important;                
             }
         }
 

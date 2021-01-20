@@ -17,14 +17,14 @@
 		}
 	}
 	&__cta{
-		align-items: flex-end;
+		// align-items: flex-end;
 		position: absolute;
 		z-index: 11;
 		text-align: center;
 		margin-right: $container-margin-large;	
 		margin-left: $container-margin-large;			
 		@include tablet{
-			align-items: unset;
+			// align-items: unset;
 			position: unset;
 			bottom: unset;
 			margin-top:unset;
@@ -148,16 +148,21 @@
 			font-size: $hero-caption-font-size;		
 		}
 	}
-	.slider__scrim{
-		position: absolute;
-		z-index: 1;
-		height: $hero-height;
-		background: $slider-scrim-mobile;
-		@include tablet{
-			top: 32px;//for some reason
-			background: $slider-scrim;
+	.slider{
+		&__scrim{
+			position: absolute;
+			z-index: 1;
+			height: $hero-height;
+			background: $slider-scrim-mobile;
+			@include tablet{
+				top: 32px;//for some reason
+				background: $slider-scrim;
+				}
+			}
+		&__cta{
+			z-index: 1;
+			}	
 		}
-	}
 }
 
 

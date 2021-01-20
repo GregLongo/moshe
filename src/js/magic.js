@@ -43,7 +43,7 @@ $(document).ready(function(){
 			//weird edge case break revisit
 			ScrollTrigger.create({
 				trigger: ".zoom",
-				start: 'center bottom',
+				start: 'top bottom',
 				end: 'bottom top',
 				toggleClass: {targets: ['.vczapi-list-zoom-meetings--item', '.zoom__view-schedule'], className: "magic__fade--up"}
 			})

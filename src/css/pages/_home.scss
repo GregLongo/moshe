@@ -1,6 +1,6 @@
 .home{
 	.section-title{
-		@include tablet-max{
+		@include mobile-max{
 		margin-top: 0;
 		//all but first title override. slightly hacky but kinda neat
 		~ .section-title{
