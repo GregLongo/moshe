@@ -26,11 +26,12 @@
     color: white;
     &__text{
         display: flex;
-        align-items: center;
+        // align-items: center;
         flex-direction: column;
         height: 100%;
         padding-top: $learn-panel-padding-top;
-        p{
+        p{  
+            margin: 10px;
             font-family: $learn-font;    
             font-size: $learn-font-size-mobile;
             line-height: $learn-line-height;
@@ -39,7 +40,7 @@
             }
         }
         strong{
-            margin-bottom: 48px;
+            margin-bottom: 0px;
             font-family: $learn-header-font;
             font-size: $learn-header-font-size;
             line-height: $learn-header-line-height;
