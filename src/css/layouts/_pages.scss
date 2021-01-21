@@ -45,6 +45,15 @@
 		h1{
 			text-align: $h1-page-generic-align;
 		}
+		h2{
+			font-size: $h2-global-size;
+		}
+		h3{
+			font-size: $h3-global-size;			
+		}
+		hr{
+		margin-bottom: $section-spacer-default;
+		}
 		img[class^="wp-image"], img[class*="wp-image"]{
 			display: flex;
 			max-width: 100%;
@@ -56,6 +65,10 @@
 			}
 			&.aligncenter{
 				justify-self: center;
+			}
+			&.alignnone,&.alignleft{
+				margin-left: unset;
+				margin-right: unset;
 			}
 		}
 
