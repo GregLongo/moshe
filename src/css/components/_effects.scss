@@ -169,12 +169,12 @@
 		height: 480px;
 }
 .cta-parallax {
-		height: 200% !important;
+		height: 250% !important;
 		position: relative;
-		top: -100%;
+		top: -200%;
 
 		@include tablet{
-			top: -200%;		
+			top: -250%;		
 		}
 }
 

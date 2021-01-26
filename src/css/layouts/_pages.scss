@@ -92,9 +92,9 @@
 
 .single .site-main{
 	margin-top: $header-height-mobile;				
-	@include tablet{
-		margin-top: $header-height;				
-	}
+	// @include tablet{
+	// 	margin-top: $header-height;				
+	// }
 }
 
 .content-wrapper{

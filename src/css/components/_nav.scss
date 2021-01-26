@@ -55,7 +55,7 @@
     		min-width: 40%;
 			}
 			li:last-child a{
-				padding-right:0;
+				// padding-right:0;
 			}
 		}
 	}
@@ -65,6 +65,7 @@
 		@include tablet{
 			flex-direction: $nav-submenu-flex-direction;
 			position: absolute;
+			min-width: 125px;
 			opacity:0;
 			transition: all .2s ease;
 			pointer-events: none; //slightly hacky workaround to account for menu recursion
