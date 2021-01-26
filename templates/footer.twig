@@ -5,7 +5,9 @@
 		<div class="footer__social">
 			{% for item in options.social_media %}
 				<div class="footer__social-logo">
+				<a href="{{item.social_url}}">
 					<span class="fab fa-{{ item.social_channel }}" aria-hidden="true"></span>
+				</a>
 				</div>
 			{% endfor %}
 		</div>

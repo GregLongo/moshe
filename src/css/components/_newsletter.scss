@@ -35,7 +35,10 @@
 	width: $newsletter-email-width;
 	margin: 0 1em 1em 1em;
 	border: none;
+	outline: none;
 	text-align: $newsletter-email-align;
+	padding-left: 16px;
+	padding-right: 16px;
 	@include tablet{
 		width: $newsletter-email-width-mobile;
 		height: $newsletter-email-height;

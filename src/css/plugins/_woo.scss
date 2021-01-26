@@ -64,6 +64,8 @@
 	}
 	.button.button.alt{
 		outline: none;
+		font-family: $font-headings;
+		font-weight: 400 !important;
 		background-color: $button-color !important;
 		&:hover{
 			background-color: $button-color-hover !important;			
@@ -127,12 +129,12 @@
 }
 
 //highly experimental but i wann turn the grey button another color
-.woocommerce button.button{
-	background-color: $button-color !important;
-	color: white !important;
-	font-family: $font-headings;
-	font-weight: 400 !important;
-	&:hover{
-		background-color: $button-color-hover !important
-	}
-}
+// .woocommerce button.button{
+// 	background-color: $button-color !important;
+// 	color: white !important;
+// 	font-family: $font-headings;
+// 	font-weight: 400 !important;
+// 	&:hover{
+// 		background-color: $button-color-hover !important
+// 	}
+// }
